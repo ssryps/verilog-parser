@@ -4,6 +4,7 @@
 */
 
 #include "verilog_preprocessor.h"
+#include "verilog_cmd_parser.h"
 
 verilog_preprocessor_context * verilog_new_preprocessor_context()
 {
@@ -146,6 +147,7 @@ verilog_include_directive * verilog_preprocessor_include(
     filename = filename + 1; // Remove leading quote mark.
     size_t length = strlen(filename);
     
+
     toadd -> filename = ast_strdup(filename);
     toadd -> filename[length-1] = '\0';
     toadd -> lineNumber = lineNumber;
@@ -157,12 +159,16 @@ verilog_include_directive * verilog_preprocessor_include(
     for(d = 0; d < yy_preproc -> search_dirs -> items; d ++)
     {
         char * dir       = ast_list_get(yy_preproc -> search_dirs, d);
-        size_t dirlen    = strlen(dir)+1;
+        size_t dirlen    = strlen(dir);
         size_t namelen   = strlen(toadd -> filename);
-        char * full_name = ast_calloc(dirlen+namelen, sizeof(char));
 
+        char * full_name = ast_calloc(dirlen + namelen + 1, sizeof(char));
         strcat(full_name, dir);
+        if(full_name[dirlen - 1] != KPathSeparator) {
+            full_name[dirlen] = KPathSeparator;
+        }
         strcat(full_name, toadd -> filename);
+
 
         FILE * handle = fopen(full_name,"r");
         if(handle)

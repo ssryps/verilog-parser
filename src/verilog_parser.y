@@ -773,12 +773,16 @@ grammar_begin :
     assert(yy_verilog_source_tree != NULL);
     yy_verilog_source_tree -> libraries = 
         ast_list_concat(yy_verilog_source_tree -> libraries, $1);
+    printf("library _Text");
 }
 | config_declaration {
     assert(yy_verilog_source_tree != NULL);
     ast_list_append(yy_verilog_source_tree -> configs, $1);
+    printf("config declaration");
 }
 | source_text {
+    printf("source _Text");
+
     assert(yy_verilog_source_tree != NULL);
 
     unsigned int i;
@@ -1027,7 +1031,7 @@ use_clause :
 
 /* A.1.3 Module and primitive source text. */
 
-source_text : 
+source_text :
   description {
     $$ = ast_list_new();
     ast_list_append($$,$1);
@@ -1058,7 +1062,8 @@ module_declaration :
   SEMICOLON
   non_port_module_item_os
   KW_ENDMODULE{
-    $$ = ast_new_module_declaration($1,$3,$4,$5,$7);
+    // New style of port declaration, the port declaration should be used directly
+    $$ = ast_new_module_declaration($1,$3,$4,$5,$7); printf("haha1%s\n", $3->identifier);
 }
 | attribute_instances
   module_keyword
@@ -1070,7 +1075,7 @@ module_declaration :
   KW_ENDMODULE{
     // Old style of port declaration, don't pass them directly into the 
     // function.
-    $$ = ast_new_module_declaration($1,$3,$4,NULL,$7);
+    $$ = ast_new_module_declaration($1,$3,$4,NULL,$7);printf("haha2 %s\n", $3->identifier);
 }
 ;
 
@@ -1220,7 +1225,7 @@ port_expression :
 ;
 
 port_reference  : 
-  port_identifier{
+  port_identifier{ printf("identifier %s", $1->identifier);
     $$ = $1;
 }
 | port_identifier OPEN_SQ_BRACKET constant_expression CLOSE_SQ_BRACKET {
@@ -2225,7 +2230,7 @@ block_variable_type : variable_identifier {$$=$1;}
 
 delay2_o : delay2 {$$=$1;}| {$$=NULL;};
 
-gate_instantiation      : 
+gate_instantiation      :
   cmos_switchtype cmos_switch_instances SEMICOLON{
     $$ = ast_new_gate_instantiation(GATE_CMOS);
     $$ -> switches = ast_new_switches($1,$2);
@@ -3150,7 +3155,7 @@ net_assignment : net_lvalue EQ expression{
 /* A.6.2 Procedural blocks and assignments */
 
 initial_construct   : KW_INITIAL statement{$$ = $2;};
-always_construct    : KW_ALWAYS statement {$$ = $2;};
+always_construct    : KW_ALWAYS statement {$$ = $2;printf("\nalways construct %d \n", $2->type); };
 
 blocking_assignment : variable_lvalue EQ delay_or_event_control_o expression{
     $$ = ast_new_blocking_assignment($1,$4,$3);   
@@ -3409,7 +3414,7 @@ event_control :
         id);
     $$ = ast_new_event_control(EVENT_CTRL_TRIGGERS, ct);
   }
-| AT OPEN_BRACKET event_expression CLOSE_BRACKET{
+| AT OPEN_BRACKET event_expression CLOSE_BRACKET{ printf("dec 3\n");
     $$ = ast_new_event_control(EVENT_CTRL_TRIGGERS, $3);
   }
 | AT STAR{

@@ -92,6 +92,8 @@ set(PARSER_LIB_SRC ${BINARY_DIR}/${FLEX_OUTPUT}
                    ${SOURCE_DIR}/verilog_ast_common.c
                    ${SOURCE_DIR}/verilog_parser_wrapper.c
                    ${SOURCE_DIR}/verilog_preprocessor.c
+                   ${SOURCE_DIR}/verilog_cmd_parser.c
+
 )
 
 add_library(${LIBRARY_NAME} ${PARSER_LIB_SRC})

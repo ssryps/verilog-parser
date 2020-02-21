@@ -1,0 +1,26 @@
+/media/mason/DATA/cstools/IDE/clion-2019.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/mason/Desktop/work/verilog-parser
+-- Build Type: Debug
+-- NOT building with coverage.
+-- Parser Build Flags Debug:   -g -O0 -Wall -W
+-- Parser Link Flags Debug:   -O3 -DNDEBUG
+-- Parser Build Flags Release: -O3 -DNDEBUG
+-- Parser Link Flags Release: 
+CMake Warning (dev) at src/CMakeLists.txt:60 (ADD_CUSTOM_COMMAND):
+  Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
+  Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The SOURCE signatures of add_custom_command are no longer supported.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at src/CMakeLists.txt:68 (ADD_CUSTOM_COMMAND):
+  Policy CMP0050 is not set: Disallow add_custom_command SOURCE signatures.
+  Run "cmake --help-policy CMP0050" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The SOURCE signatures of add_custom_command are no longer supported.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mason/Desktop/work/verilog-parser/cmake-build-debug

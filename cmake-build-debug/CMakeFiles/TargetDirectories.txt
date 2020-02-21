@@ -1,0 +1,13 @@
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles/verilogparser-test.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles/test.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/src/CMakeFiles/test.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/src/CMakeFiles/verilogparser.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/src/CMakeFiles/parser.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/CMakeFiles/rebuild_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/CMakeFiles/edit_cache.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/CMakeFiles/verilogparser-docs.dir
+/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/CMakeFiles/test.dir

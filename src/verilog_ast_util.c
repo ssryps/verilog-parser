@@ -181,3 +181,28 @@ ast_hashtable * verilog_modules_get_children(
 
     return tr;
 }
+
+/*!
+@brief log record when log = INFO(default case)
+*/
+void info_log(const char *format, ...) {
+    va_list args;
+    va_start(args, format);
+
+    printf(format, args);
+
+    va_end(args);
+}
+
+/*!
+@brief log record when log = DEBUG
+*/
+void debug_log(const char *format, ...) {
+    va_list args;
+    va_start(args, format);
+
+
+    printf(format, args);
+
+    va_end(args);
+}

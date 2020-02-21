@@ -69,6 +69,12 @@ ast_hashtable * verilog_modules_get_children(
     verilog_source_tree * source
 );
 
+
+/*!
+@brief log record when log = INFO
+*/
+void info_log(const char *format, ...);
+
 /*! @} */
 
 #endif

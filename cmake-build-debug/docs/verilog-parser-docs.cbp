@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="verilog-parser-docs"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\docs\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="verilogparser-docs">
+				<Option working_dir="/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 verilogparser-docs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mason/Desktop/work/verilog-parser/cmake-build-debug/docs/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mason/Desktop/work/verilog-parser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mason/Desktop/work/verilog-parser/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/mason/Desktop/work/verilog-parser/docs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\docs\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
