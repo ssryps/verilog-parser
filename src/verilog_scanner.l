@@ -279,6 +279,7 @@ STRING              \".*\"
 STAR                "\*"
 PLUS                "+"
 MINUS               "-"
+MODULE_COMMENT      "--"
 ASL                 "<<<"
 ASR                 ">>>"
 LSL                 "<<"
@@ -531,7 +532,7 @@ TERNARY             "?"
         
         // Set the "current file" to the one the macro was defined in.
         ast_stack_push(yy_preproc -> current_file, macro -> src_file);
-
+        cur -> yy_bs_lineno = yylineno;
         yy_switch_to_buffer(cur);
         yypush_buffer_state(n);
     }
@@ -559,6 +560,7 @@ TERNARY             "?"
 {CLOSE_SQ_BRACE}       {EMIT_TOKEN(CLOSE_SQ_BRACE);}
 {STAR}                 {yylval.operator=OPERATOR_STAR   ; EMIT_TOKEN(STAR);}
 {PLUS}                 {yylval.operator=OPERATOR_PLUS   ; EMIT_TOKEN(PLUS);}
+{MODULE_COMMENT}       {yylval.operator=OPERATOR_MODULE_COMMENT  ; EMIT_TOKEN(MODULE_COMMENT); }
 {MINUS}                {yylval.operator=OPERATOR_MINUS  ; EMIT_TOKEN(MINUS);}
 {ASL}                  {yylval.operator=OPERATOR_ASL    ; EMIT_TOKEN(ASL);}
 {ASR}                  {yylval.operator=OPERATOR_ASR    ; EMIT_TOKEN(ASR);}
@@ -568,7 +570,7 @@ TERNARY             "?"
 {POW}                  {yylval.operator=OPERATOR_POW    ; EMIT_TOKEN(POW);}
 {MOD}                  {yylval.operator=OPERATOR_MOD    ; EMIT_TOKEN(MOD);}
 {GTE}                  {yylval.operator=OPERATOR_GTE    ; EMIT_TOKEN(GTE);}
-{LTE}                  {yylval.operator=OPERATOR_LTE    ; EMIT_TOKEN(LTE);}
+{LTE}                  {yylval.operator=OPERATOR_LTE    ; EMIT_TOKEN(LTE); }
 {GT}                   {yylval.operator=OPERATOR_GT     ; EMIT_TOKEN(GT);}
 {LT}                   {yylval.operator=OPERATOR_LT     ; EMIT_TOKEN(LT);}
 {L_NEG}                {yylval.operator=OPERATOR_L_NEG  ; EMIT_TOKEN(L_NEG);}
@@ -738,7 +740,7 @@ TERNARY             "?"
 
 {STRING}               {yylval.string= yytext;EMIT_TOKEN(STRING);}
 
-<*>{NEWLINE}              {/*EMIT_TOKEN(NEWLINE); IGNORE */   }
+<*>{NEWLINE}              {/*EMIT_TOKEN(NEWLINE); IGNORE */  }
 <*>{SPACE}                {/*EMIT_TOKEN(SPACE);   IGNORE */   }
 <*>{TAB}                  {/*EMIT_TOKEN(TAB);     IGNORE */   }
 

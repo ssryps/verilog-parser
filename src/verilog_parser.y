@@ -119,6 +119,7 @@
     ast_udp_port                 * udp_port;
     ast_udp_sequential_entry     * udp_seqential_entry;
     ast_wait_statement           * wait_statement;
+    ast_port_reference           * port_reference;
 
     char                   boolean;
     char                 * string;
@@ -177,6 +178,7 @@
 
 %token <string> COMMENT_LINE
 %token <string> COMMENT_BLOCK
+%token <string> MODULE_COMMENT
 
 %token <string> STRING
 
@@ -225,7 +227,7 @@
 %left   B_NAND B_AND
 %left   L_EQ C_EQ L_NEQ C_NEQ
 %left   GT LT GTE LTE
-%left   LSL LSR ASR ASL
+%left   LSL LSR ASR ASL MODULE_COMMENT
 %left   PLUS MINUS
 %left   STAR DIV MOD
 %left   POW
@@ -497,9 +499,13 @@
 %type   <identifier>                 output_identifier
 %type   <identifier>                 output_port_identifier
 %type   <identifier>                 parameter_identifier
-%type   <identifier>                 port
+%type   <port_reference>                 port
 %type   <identifier>                 port_identifier
-%type   <identifier>                 port_reference
+%type   <port_reference>                 port_reference
+%type   <identifier>                 module_info_comment
+%type   <identifier>                 module_comment_identifier
+%type   <identifier>                 port_info_comment
+%type   <identifier>                 port_comment_identifier
 %type   <identifier>                 real_identifier
 %type   <identifier>                 real_type
 %type   <identifier>                 simple_arrayed_identifier
@@ -676,7 +682,7 @@
 %type   <port_declaration>           input_declaration
 %type   <port_declaration>           output_declaration
 %type   <port_declaration>           port_declaration
-%type   <port_declaration>           port_declaration_l
+%type   <port_reference>             port_declaration_l
 %type   <port_direction>             port_dir
 %type   <primary>                    constant_primary
 %type   <primary>                    module_path_primary
@@ -1060,10 +1066,11 @@ module_declaration :
   module_parameter_port_list
   list_of_port_declarations
   SEMICOLON
+  module_info_comment
   non_port_module_item_os
   KW_ENDMODULE{
     // New style of port declaration, the port declaration should be used directly
-    $$ = ast_new_module_declaration($1,$3,$4,$5,$7); printf("haha1%s\n", $3->identifier);
+    $$ = ast_new_module_declaration($1,$3,$4, AST_TRUE, $5,$7, $8);
 }
 | attribute_instances
   module_keyword
@@ -1071,11 +1078,12 @@ module_declaration :
   module_parameter_port_list
   list_of_ports
   SEMICOLON
+  module_info_comment
   module_item_os
   KW_ENDMODULE{
     // Old style of port declaration, don't pass them directly into the 
-    // function.
-    $$ = ast_new_module_declaration($1,$3,$4,NULL,$7);printf("haha2 %s\n", $3->identifier);
+    // function. The attribute of input\output ports should be searched in module_item_os
+    $$ = ast_new_module_declaration($1, $3, $4, AST_FALSE, $5, $7, $8);
 }
 ;
 
@@ -1137,36 +1145,28 @@ port_declarations :
 }
 ;
 
+
+
 port_declaration_l: 
-  net_type_o signed_o range_o port_identifier{
-    ast_list * names = ast_list_new();
-    ast_list_append(names, $4);
-    $$ = ast_new_port_declaration(PORT_NONE, $1, $2,
-    AST_FALSE,AST_FALSE,$3,names);
+  net_type_o signed_o range_o port_identifier port_info_comment{
+    $$ = ast_new_full_port_reference(PORT_NONE, $1, $2,
+    AST_FALSE,AST_FALSE,$3, $4, $5);
 }
-|            signed_o range_o port_identifier{
-    ast_list * names = ast_list_new();
-    ast_list_append(names, $3);
-    $$ = ast_new_port_declaration(PORT_NONE, NET_TYPE_NONE, $1,
-    AST_FALSE,AST_FALSE,$2,names);
+|            signed_o range_o port_identifier port_info_comment{
+    $$ = ast_new_full_port_reference(PORT_NONE, NET_TYPE_NONE, $1,
+    AST_FALSE,AST_FALSE,$2, $3, $4);
 }
-| KW_REG     signed_o range_o port_identifier eq_const_exp_o{
-    ast_list * names = ast_list_new();
-    ast_list_append(names, $4);
-    $$ = ast_new_port_declaration(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
-    AST_TRUE,AST_FALSE,$3,names);
+| KW_REG     signed_o range_o port_identifier eq_const_exp_o port_info_comment{
+    $$ = ast_new_full_port_reference(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
+    AST_TRUE,AST_FALSE,$3, $4, $6);
 }
-| output_variable_type_o      port_identifier{
-    ast_list * names = ast_list_new();
-    ast_list_append(names, $2);
-    $$ = ast_new_port_declaration(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
-    AST_FALSE,AST_TRUE,NULL,names);
+| output_variable_type_o      port_identifier port_info_comment{
+    $$ = ast_new_full_port_reference(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
+    AST_FALSE,AST_TRUE,NULL, $2, $3);
 }
-| output_variable_type        port_identifier eq_const_exp_o{
-    ast_list * names = ast_list_new();
-    ast_list_append(names, $2);
-    $$ = ast_new_port_declaration(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
-    AST_FALSE,AST_TRUE,NULL,names);
+| output_variable_type        port_identifier eq_const_exp_o port_info_comment{
+    $$ = ast_new_full_port_reference(PORT_NONE, NET_TYPE_NONE, AST_FALSE,
+    AST_FALSE,AST_TRUE,NULL, $2, $4);
 }
 ;
 
@@ -1205,11 +1205,11 @@ ports           : {$$ = ast_list_new();}
 ;
 
 port            : 
-  port_expression{
-    $<list>$ = $1;
+  port_reference{
+    $$ = $1;
   }
-| DOT port_identifier OPEN_BRACKET port_expression CLOSE_BRACKET{
-    $$ = $2;
+| DOT port_identifier OPEN_BRACKET port_reference CLOSE_BRACKET{
+    $$ = $4;
 }
 ;
 
@@ -1225,16 +1225,19 @@ port_expression :
 ;
 
 port_reference  : 
-  port_identifier{ printf("identifier %s", $1->identifier);
-    $$ = $1;
+  port_identifier port_info_comment{
+    $$ = ast_new_default_port_reference($1, $2);
 }
-| port_identifier OPEN_SQ_BRACKET constant_expression CLOSE_SQ_BRACKET {
-    $$ = $1;
+| port_identifier OPEN_SQ_BRACKET constant_expression CLOSE_SQ_BRACKET port_info_comment{
+    $$ = ast_new_default_port_reference($1, $5);
 }
-| port_identifier OPEN_SQ_BRACKET range_expression CLOSE_SQ_BRACKET{
-    $$ = $1;
+| port_identifier OPEN_SQ_BRACKET range_expression CLOSE_SQ_BRACKET port_info_comment{
+    $$ = ast_new_default_port_reference($1, $5);
 }
 ;
+
+
+
 
 /* A.1.5 Module Items */
 
@@ -1368,16 +1371,16 @@ module_or_generate_item_declaration :
  ;
 
 non_port_module_item : 
-  attribute_instances generated_instantiation{
+    attribute_instances module_or_generate_item{
+    $$ = $2;
+}
+|  attribute_instances generated_instantiation{
     $$ = ast_new_module_item($1, MOD_ITEM_GENERATED_INSTANTIATION);
     $$ -> generated_instantiation = $2;
   }
 | attribute_instances local_parameter_declaration{
     $$ = ast_new_module_item($1,MOD_ITEM_PARAMETER_DECLARATION);
     $$ -> parameter_declaration = $2;
-}
-| attribute_instances module_or_generate_item{
-    $$ = $2;
 }
 | attribute_instances parameter_declaration SEMICOLON{
     $$ = ast_new_module_item($1,MOD_ITEM_PARAMETER_DECLARATION);
@@ -1396,6 +1399,79 @@ non_port_module_item :
 parameter_override  : 
   KW_DEFPARAM list_of_param_assignments SEMICOLON{$$ = $2;}
 ;
+
+
+/* A.1.6 Module New Comment */
+
+module_info_comment :
+  MODULE_COMMENT module_comment_identifier {
+    $$ = $2;
+}
+| {
+    $$ = NULL;
+
+}
+
+module_comment_identifier                 :
+  identifier {
+     $$=$1; $$ -> type = ID_MODULE_COMMENT;
+  }
+  | module_comment_identifier DOT identifier {
+    int len = strlen($1->identifier);
+    char* n_identifier = ast_calloc(1, len + strlen($3) + 1);
+    strcat(n_identifier, $1->identifier);
+    strcat(n_identifier, ".");
+    strcat(n_identifier, $3->identifier);
+    $1->identifier = n_identifier;
+    $$ = $1;
+
+  }
+  | module_comment_identifier  identifier {
+    int len = strlen($1->identifier);
+    char* n_identifier = ast_calloc(1, len + strlen($2) + 1);
+    strcat(n_identifier, $1->identifier);
+    strcat(n_identifier, " ");
+    strcat(n_identifier, $2->identifier);
+    $1->identifier = n_identifier;
+    $$ = $1;
+  }
+
+;
+
+port_info_comment :
+  MODULE_COMMENT port_comment_identifier {
+    $$ = $2;
+}
+| {
+    $$ = NULL;
+
+}
+
+port_comment_identifier                 :
+  identifier {
+     $$=$1; $$ -> type = ID_MODULE_COMMENT;
+  }
+  | port_comment_identifier DOT identifier {
+      int len = strlen($1->identifier);
+      char* n_identifier = ast_calloc(1, len + strlen($3) + 1);
+      strcat(n_identifier, $1->identifier);
+      strcat(n_identifier, ".");
+      strcat(n_identifier, $3->identifier);
+      $1->identifier = n_identifier;
+      $$ = $1;
+
+    }
+  | port_comment_identifier  identifier {
+      int len = strlen($1->identifier);
+      char* n_identifier = ast_calloc(1, len + strlen($2) + 1);
+      strcat(n_identifier, $1->identifier);
+      strcat(n_identifier, " ");
+      strcat(n_identifier, $2->identifier);
+      $1->identifier = n_identifier;
+      $$ = $1;
+  }
+;
+
 
 /* A.2.1.1 Module Parameter Declarations */
 
@@ -1460,23 +1536,22 @@ reg_o       : KW_REG   {$$=1;}| {$$=0;};
 
 inout_declaration : 
   KW_INOUT net_type_o signed_o range_o list_of_port_identifiers{
-$$ = ast_new_port_declaration(PORT_INOUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5);
+$$ = ast_new_port_declaration(PORT_INOUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5, NULL);
   }
 ;
 
 input_declaration : 
   KW_INPUT net_type_o signed_o range_o list_of_port_identifiers{
-$$ = ast_new_port_declaration(PORT_INPUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5);
+$$ = ast_new_port_declaration(PORT_INPUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5, NULL);
   }
 ;
 
 output_declaration: 
   KW_OUTPUT net_type_o signed_o range_o list_of_port_identifiers{
-$$ = ast_new_port_declaration(PORT_OUTPUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5);
+$$ = ast_new_port_declaration(PORT_OUTPUT, $2,$3,AST_FALSE,AST_FALSE,$4,$5, NULL);
   }
 | KW_OUTPUT reg_o signed_o range_o list_of_port_identifiers{
-$$ = ast_new_port_declaration(PORT_OUTPUT,
-NET_TYPE_NONE,$3,$2,AST_FALSE,$4,$5);
+$$ = ast_new_port_declaration(PORT_OUTPUT, NET_TYPE_NONE,$3,$2,AST_FALSE,$4,$5, NULL);
   }
 | KW_OUTPUT output_variable_type_o list_of_port_identifiers{
     $$ = ast_new_port_declaration(PORT_OUTPUT, NET_TYPE_NONE,
@@ -1484,7 +1559,7 @@ NET_TYPE_NONE,$3,$2,AST_FALSE,$4,$5);
         AST_FALSE,
         AST_TRUE,
         NULL,
-        $3);
+        $3, NULL);
   }
 | KW_OUTPUT output_variable_type list_of_variable_port_identifiers{
     $$ = ast_new_port_declaration(PORT_OUTPUT, NET_TYPE_NONE,
@@ -1492,14 +1567,14 @@ NET_TYPE_NONE,$3,$2,AST_FALSE,$4,$5);
         AST_FALSE,
         AST_TRUE,
         NULL,
-        $3);
+        $3, NULL);
   }
 | KW_OUTPUT KW_REG signed_o range_o list_of_variable_port_identifiers{
     $$ = ast_new_port_declaration(PORT_OUTPUT,
                                   NET_TYPE_NONE,
                                   $3, AST_TRUE,
                                   AST_FALSE,
-                                  $4, $5);
+                                  $4, $5, NULL);
   }
 ;
 
@@ -1601,7 +1676,7 @@ net_dec_p_delay :
     $$ -> identifiers = $1;
   }
 | list_of_net_decl_assignments  SEMICOLON{
-    $$ = ast_new_type_declaration(DECLARE_NET);
+    $$ = ast_new_type_declaration(DECLARE_NET_ASSIGNMENT);
     $$ -> identifiers = $1;
   }
 ;
@@ -2698,7 +2773,7 @@ module_instances : module_instance{
 ;
 
 ordered_parameter_assignment : expression{
-    $$=$1;
+    $$ = ast_new_named_port_connection(NULL, $1);
 };
 
 named_parameter_assignment : 
@@ -2856,6 +2931,7 @@ generate_loop_statement :
  SEMICOLON genvar_assignment CLOSE_BRACKET KW_BEGIN COLON
  generate_block_identifier generate_items KW_END{
     $$ = ast_new_generate_loop_statement($12, $3,$7,$5);
+    printf("loop *********", $5);
  }
 ;
 
@@ -3155,7 +3231,7 @@ net_assignment : net_lvalue EQ expression{
 /* A.6.2 Procedural blocks and assignments */
 
 initial_construct   : KW_INITIAL statement{$$ = $2;};
-always_construct    : KW_ALWAYS statement {$$ = $2;printf("\nalways construct %d \n", $2->type); };
+always_construct    : KW_ALWAYS statement {$$ = $2;};
 
 blocking_assignment : variable_lvalue EQ delay_or_event_control_o expression{
     $$ = ast_new_blocking_assignment($1,$4,$3);   
@@ -3163,7 +3239,7 @@ blocking_assignment : variable_lvalue EQ delay_or_event_control_o expression{
 
 nonblocking_assignment : variable_lvalue LTE delay_or_event_control_o 
                       expression{
-    $$ = ast_new_nonblocking_assignment($1,$4,$3);   
+    $$ = ast_new_nonblocking_assignment($1,$4,$3);
 };
 
 delay_or_event_control_o : delay_or_event_control{$$=$1;} | {$$=NULL;};
@@ -3278,12 +3354,13 @@ statement :
     $$ = ast_new_statement($1,AST_FALSE, $2, STM_TASK_ENABLE);
   }
 | attribute_instances nonblocking_assignment SEMICOLON{
-    $$ = ast_new_statement($1,AST_FALSE, $2, STM_ASSIGNMENT);
+     $$ = ast_new_statement($1,AST_FALSE, $2, STM_ASSIGNMENT);
   }
 | attribute_instances case_statement{
     $$ = ast_new_statement($1,AST_FALSE, $2, STM_CASE);
   }
 | attribute_instances conditional_statement{
+    printf("condtion state %d\n", yylineno);
     $$ = ast_new_statement($1,AST_FALSE, $2, STM_CONDITIONAL);
   }
 | attribute_instances disable_statement{
@@ -3410,11 +3487,11 @@ event_control :
     ast_primary * p = ast_new_primary(PRIMARY_IDENTIFIER);
     p -> value.identifier = $2;
     ast_expression * id = ast_new_expression_primary(p);
-    ast_event_expression * ct = ast_new_event_expression(EVENT_CTRL_TRIGGERS,
+    ast_event_expression * ct = ast_new_event_expression(EDGE_ANY,
         id);
     $$ = ast_new_event_control(EVENT_CTRL_TRIGGERS, ct);
   }
-| AT OPEN_BRACKET event_expression CLOSE_BRACKET{ printf("dec 3\n");
+| AT OPEN_BRACKET event_expression CLOSE_BRACKET{
     $$ = ast_new_event_control(EVENT_CTRL_TRIGGERS, $3);
   }
 | AT STAR{
@@ -4757,7 +4834,7 @@ hierarchical_identifier         : simple_hierarchical_identifier {$$=$1;}
 hierarchical_net_identifier     : hierarchical_identifier
     {$$=$1; $$ -> type = ID_HIERARCHICAL_NET;};
 hierarchical_variable_identifier: hierarchical_identifier
-    {$$=$1; $$ -> type = ID_HIERARCHICAL_VARIABLE;};
+    {$$=$1; $$ -> type = ID_HIERARCHICAL_VARIABLE; };
 hierarchical_task_identifier    : hierarchical_identifier
     {$$=$1; $$ -> type = ID_HIERARCHICAL_TASK;};
 hierarchical_block_identifier   : hierarchical_identifier
@@ -4827,13 +4904,14 @@ port_identifier                 :
   }
 ;
 
+
 real_identifier                 : identifier 
     {$$=$1; $$ -> type = ID_REAL;};
 
 identifier : 
-  simple_identifier  {$$=$1;}
-| escaped_identifier {$$=$1;}
-| text_macro_usage {$$=$1;}
+  simple_identifier  {$$=$1; }
+| escaped_identifier {$$=$1; }
+| text_macro_usage {$$=$1; }
 ;
 
 simple_identifier: 
@@ -4858,7 +4936,7 @@ simple_arrayed_identifier       : simple_identifier range_o {
 };
 
 simple_hierarchical_identifier  : 
-  simple_hierarchical_branch {$$=$1;}
+  simple_hierarchical_branch {$$=$1; }
 | simple_hierarchical_branch DOT escaped_identifier {
     $$ = ast_append_identifier($1,$3);
   }

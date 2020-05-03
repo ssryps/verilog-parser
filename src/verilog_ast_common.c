@@ -106,6 +106,10 @@ void      ast_list_remove_at(ast_list * list, unsigned int i)
             assert(i-1 == list -> current_item);
             list -> walker -> next = list -> walker -> next -> next;
             list -> items -= 1;
+
+            if(i == list->items){
+                list->tail = list->walker;
+            }
             //ast_list_element * toremove =  list -> walker -> next;
             //free(toremove);
         } else {

@@ -40,6 +40,7 @@ typedef enum ast_operator_e{
     OPERATOR_STAR    , //!<
     OPERATOR_PLUS    , //!<
     OPERATOR_MINUS   , //!<
+    OPERATOR_MODULE_COMMENT,
     OPERATOR_ASL     , //!< Arithmetic shift left
     OPERATOR_ASR     , //!< Arithmetic shift right
     OPERATOR_LSL     , //!< logical shift left
@@ -111,6 +112,7 @@ typedef enum ast_port_direction_e{
     PORT_OUTPUT,    //!< Output port.
     PORT_INOUT,     //!< Bi-directional port.
     PORT_NONE,  //!< Used for when we don't know at declaration time.
+    PORT_INTERNAL // !<Used for internal signals
 } ast_port_direction;
 
 /*!
@@ -980,7 +982,6 @@ typedef struct ast_case_statement_t{
     ast_case_statement_type type;   //!< CASE, CASEX or CASEZ.
     ast_boolean       is_function;  //!< Is this a function_case_statement?
 } ast_case_statement;
-
 /*!
 @brief Create and return a new item in a cast statement.
 @param conditions - The conditions on which the item is executed.
@@ -1057,7 +1058,7 @@ ast_if_else * ast_new_if_else(
 statement.
 @param conditional_statements - the existing if-else tree.
 @param new_statement - The new statement to add at the end of the existing
-if-then conditions, but before any else_condtion.
+if-then conditions, but before any else_condition.
 */
 void  ast_extend_if_else(
     ast_if_else                 * conditional_statements,
@@ -1807,6 +1808,8 @@ typedef struct ast_module_instantiation_t {
     };
     ast_list              * module_parameters;
     ast_list              * module_instances;
+    struct ast_module_instantiation_t* pre_instance;
+    ast_module_declaration* module_ptr;
 } ast_module_instantiation;
 
 /*!
@@ -2391,6 +2394,7 @@ typedef struct ast_port_declaration_t{
     ast_boolean         is_variable;    //!< Variable or net?
     ast_range         * range;          //!< Bus width.
     ast_list          * port_names;     //!< The names of the ports.
+    ast_identifier      port_info_comment; //!< The comment for mark
 } ast_port_declaration;
 
 /*!
@@ -2403,8 +2407,39 @@ ast_port_declaration * ast_new_port_declaration(
     ast_boolean         is_reg,         //!< [in] Is explicitly a "reg"
     ast_boolean         is_variable,    //!< [in] Variable or net?
     ast_range         * range,          //!< [in] Bus width.
-    ast_list          * port_names      //!< [in] The names of the ports.
+    ast_list          * port_names,      //!< [in] The names of the ports.
+    ast_identifier      port_info_comment //!< [in] Info comment of the port
 );
+
+//! Fully describes a single port declaration
+typedef struct ast_port_reference_t{
+    ast_metadata    meta;   //!< Node metadata.
+    ast_port_direction  direction;      //!< Input / output / inout etc.
+    ast_net_type        net_type;       //!< Wire/reg etc
+    ast_boolean         net_signed;     //!< Signed value?
+    ast_boolean         is_reg;         //!< Is explicitly a "reg"
+    ast_boolean         is_variable;    //!< Variable or net?
+    ast_range         * range;          //!< Bus width.
+    ast_identifier      port_name;      //!< Tast_identifier      port_name; //!< The comment for mark
+    ast_identifier      port_info_comment; //!< The comment for mark
+} ast_port_reference;
+
+ast_port_reference * ast_new_default_port_reference (
+    ast_identifier      port_name, //!< The comment for mark
+    ast_identifier      port_info_comment //!< The comment for mark
+);
+
+ast_port_reference * ast_new_full_port_reference(
+        ast_port_direction  direction,      //!< [in] Input / output / inout etc.
+        ast_net_type        net_type,       //!< [in] Wire/reg etc
+        ast_boolean         net_signed,     //!< [in] Signed value?
+        ast_boolean         is_reg,         //!< [in] Is explicitly a "reg"
+        ast_boolean         is_variable,    //!< [in] Variable or net?
+        ast_range         * range,          //!< [in] Bus width.
+        ast_identifier      port_name,      //!< [in] The names of the ports.
+        ast_identifier      port_info_comment //!< [in] Info comment of the port
+);
+
 
 /*! @} */
 
@@ -2426,6 +2461,7 @@ typedef enum ast_declaration_type_e{
     DECLARE_REALTIME,
     DECLARE_REAL,
     DECLARE_NET,
+    DECLARE_NET_ASSIGNMENT,
     DECLARE_REG,
     DECLARE_UNKNOWN //!< For when we don't know the type when instancing.
 } ast_declaration_type;
@@ -2868,7 +2904,7 @@ ast_module_item * ast_new_module_item(
 trigger and statements.
 */
 ast_statement_block * ast_extract_statement_block(
-    ast_statement_type  type,
+    ast_block_type  type,
     ast_statement     * body
 );
 
@@ -2890,6 +2926,8 @@ struct ast_module_declaration_t{
     ast_metadata    meta;   //!< Node metadata.
     ast_node_attributes * attributes; //!< Tool specific attributes.
     ast_identifier        identifier; //!< The name of the module.
+    ast_identifier    module_comment; //!< mudule comment used for analysis
+    ast_boolean       is_new_style;
     ast_list * always_blocks; //!< ast_statement_block
     ast_list * continuous_assignments; //!< ast_single_assignment
     ast_list * event_declarations; //!< ast_var_declaration
@@ -2914,6 +2952,7 @@ struct ast_module_declaration_t{
     ast_list * time_declarations; //!< ast_var_declaration
     ast_list * udp_instantiations; //!< ast_udp_instantiation
 
+    ast_list * signals_db;
 } ;
 
 /*!
@@ -2929,7 +2968,9 @@ ast_module_declaration * ast_new_module_declaration(
     ast_node_attributes * attributes,
     ast_identifier        identifier,
     ast_list            * parameters,
+    ast_boolean           is_new_style,
     ast_list            * ports,
+    ast_identifier        module_comment,
     ast_list            * constructs
 );
 
@@ -2987,6 +3028,7 @@ typedef enum ast_identifier_type_e{
     ID_OUTPUT_PORT,
     ID_PARAMETER,
     ID_PORT,
+    ID_MODULE_COMMENT,
     ID_REAL,
     ID_SIMPLE_ARRAYED,
     ID_SIMPLE_HIERARCHICAL_BRANCH,

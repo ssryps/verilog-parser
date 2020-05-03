@@ -98,7 +98,7 @@ void verilog_resolve_modules(
         }
     }
     //printf("Resolved Modules: %d\t Unresolved Modules: %d\n", 
-    //    resolved,unresolved);
+    //    resolved,unresolved);chaofeng
 }
 
 

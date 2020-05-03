@@ -2029,7 +2029,8 @@ ast_port_declaration * ast_new_port_declaration(
     ast_boolean         is_reg,         //!< [in] Is explicitly a "reg"
     ast_boolean         is_variable,    //!< [in] Variable or net?
     ast_range         * range,          //!< [in] Bus width.
-    ast_list          * port_names      //!< [in] The names of the ports.
+    ast_list          * port_names,      //!< [in] The names of the ports.
+    ast_identifier      port_info_comment //!< [in] Info comment of the port
 ){
     ast_port_declaration * tr = ast_calloc(1,sizeof(ast_port_declaration));
     ast_set_meta_info(&(tr->meta));
@@ -2041,9 +2042,58 @@ ast_port_declaration * ast_new_port_declaration(
     tr -> is_variable =  is_variable;
     tr -> range       =  range      ;
     tr -> port_names  = port_names  ;
-    
+    tr -> port_info_comment = port_info_comment;
+    if(port_info_comment != NULL) {
+        printf("INFO> Port info %s", port_info_comment->identifier);
+    }
     return tr;
 }
+
+ast_port_reference * ast_new_default_port_reference (
+        ast_identifier      port_name, //!< The comment for mark
+        ast_identifier      port_info_comment //!< The comment for mark
+){
+    ast_port_reference *tr = ast_calloc(1, sizeof(ast_port_reference));
+    ast_set_meta_info(&(tr->meta));
+
+    tr -> direction   =  PORT_NONE  ;
+    tr -> net_type    =  NET_TYPE_NONE   ;
+    tr -> net_signed  =  AST_FALSE ;
+    tr -> is_reg      =  AST_FALSE     ;
+    tr -> is_variable =  AST_FALSE;
+    tr -> range       =  NULL      ;
+
+    tr->port_name = port_name;
+    tr->port_info_comment = port_info_comment;
+}
+
+
+
+ast_port_reference * ast_new_full_port_reference(
+        ast_port_direction  direction,      //!< [in] Input / output / inout etc.
+        ast_net_type        net_type,       //!< [in] Wire/reg etc
+        ast_boolean         net_signed,     //!< [in] Signed value?
+        ast_boolean         is_reg,         //!< [in] Is explicitly a "reg"
+        ast_boolean         is_variable,    //!< [in] Variable or net?
+        ast_range         * range,          //!< [in] Bus width.
+        ast_identifier      port_names,      //!< [in] The names of the ports.
+        ast_identifier      port_info_comment //!< [in] Info comment of the port
+){
+    ast_port_reference * tr = ast_calloc(1,sizeof(ast_port_declaration));
+    ast_set_meta_info(&(tr->meta));
+
+    tr -> direction   =  direction  ;
+    tr -> net_type    =  net_type   ;
+    tr -> net_signed  =  net_signed ;
+    tr -> is_reg      =  is_reg     ;
+    tr -> is_variable =  is_variable;
+    tr -> range       =  range      ;
+    tr -> port_name  = port_names  ;
+    tr -> port_info_comment = port_info_comment;
+
+    return tr;
+}
+
 
 /*!
 @brief Creates and returns a node to represent the declaration of a new
@@ -2088,24 +2138,50 @@ ast_list * ast_new_net_declaration(
     assert(type_dec -> identifiers != NULL);
 
     ast_list * tr = ast_list_new();
-    
-    unsigned int i = 0;
-    for (i = 0; i < type_dec -> identifiers -> items; i ++)
-    {
-        ast_net_declaration * toadd =ast_calloc(1,sizeof(ast_net_declaration));
-        toadd -> meta       = type_dec -> meta;
 
-        toadd -> identifier = ast_list_get(type_dec -> identifiers, i);
-        toadd -> type       = type_dec -> net_type;
-        toadd -> delay      = type_dec -> delay;
-        toadd -> drive      = type_dec -> drive_strength;
-        toadd -> range      = type_dec -> range;
-        toadd -> vectored   = type_dec -> vectored;
-        toadd -> scalared   = type_dec -> scalared;
-        toadd -> is_signed  = type_dec -> is_signed;
-        toadd -> value      = NULL;
+    if(type_dec->type == DECLARE_NET){
+        unsigned int i = 0;
+        for (i = 0; i < type_dec -> identifiers -> items; i ++)
+        {
+            ast_net_declaration * toadd =ast_calloc(1,sizeof(ast_net_declaration));
+            toadd -> meta       = type_dec -> meta;
 
-        ast_list_append(tr,toadd);
+            toadd -> identifier = ast_list_get(type_dec -> identifiers, i);
+            toadd -> value      = NULL;
+
+            toadd -> type       = type_dec -> net_type;
+            toadd -> delay      = type_dec -> delay;
+            toadd -> drive      = type_dec -> drive_strength;
+            toadd -> range      = type_dec -> range;
+            toadd -> vectored   = type_dec -> vectored;
+            toadd -> scalared   = type_dec -> scalared;
+            toadd -> is_signed  = type_dec -> is_signed;
+
+            ast_list_append(tr,toadd);
+        }
+
+    } else if(type_dec->type == DECLARE_NET_ASSIGNMENT){
+        unsigned int i = 0;
+        for (i = 0; i < type_dec -> identifiers -> items; i ++)
+        {
+            ast_net_declaration * toadd =ast_calloc(1,sizeof(ast_net_declaration));
+            toadd -> meta       = type_dec -> meta;
+
+            ast_single_assignment* ss = ast_list_get(type_dec -> identifiers, i);
+            toadd -> identifier = ss->lval->data.identifier;
+            toadd -> value      = ss->expression;
+
+            toadd -> type       = type_dec -> net_type;
+            toadd -> delay      = type_dec -> delay;
+            toadd -> drive      = type_dec -> drive_strength;
+            toadd -> range      = type_dec -> range;
+            toadd -> vectored   = type_dec -> vectored;
+            toadd -> scalared   = type_dec -> scalared;
+            toadd -> is_signed  = type_dec -> is_signed;
+
+            ast_list_append(tr,toadd);
+        }
+
     }
 
     return tr;
@@ -2408,11 +2484,10 @@ ast_module_item * ast_new_module_item(
 trigger and statements.
 */
 ast_statement_block * ast_extract_statement_block(
-    ast_statement_type  type,
+    ast_block_type  type,
     ast_statement     * body
 ){
     //printf("Reforming block from line %d of %s\n", body -> meta.line,body -> meta.file);
-
     if(body -> type == STM_BLOCK)
     {
         // Extract the statement block, and return that. There are no timing
@@ -2455,11 +2530,12 @@ ast_statement_block * ast_extract_statement_block(
             ast_list_append(stm_list, stm);
 
             ast_statement_block * tr = ast_new_statement_block(
-                STM_BLOCK,
+                type,
                 ast_new_identifier("Unnamed block", body -> meta.line),
                 ast_list_new(), // Empty list, no declarations are made.
                 stm_list
             );
+            tr->trigger = trigger;
 
             return tr;
         }
@@ -2474,11 +2550,12 @@ ast_statement_block * ast_extract_statement_block(
         ast_list_append(stm_list, body);
 
         ast_statement_block * tr = ast_new_statement_block(
-            STM_BLOCK,
+            type,
             ast_new_identifier("Unnamed block", body -> meta.line),
             ast_list_new(), // Empty list, no declarations are made.
             stm_list
         );
+        tr->trigger = NULL;
 
         return tr;
     }
@@ -2495,22 +2572,37 @@ ast_module_declaration * ast_new_module_declaration(
     ast_node_attributes * attributes,
     ast_identifier        identifier,
     ast_list            * parameters,
+    ast_boolean           is_new_style,
     ast_list            * ports,
+    ast_identifier        module_comment,
     ast_list            * constructs
 ){
+    if(module_comment == NULL)
+        printf("INFO> Module  %s has no comment\n", identifier->identifier);
+    else
+        printf("INFO> Module %s has comment %s \n", identifier->identifier, module_comment->identifier);
+
     ast_module_declaration * tr = ast_calloc(1,sizeof(ast_module_declaration));
     ast_set_meta_info(&(tr->meta));
 
     tr -> attributes = attributes;
     tr -> identifier = identifier;
     tr -> module_parameters = parameters;
+    tr -> module_comment = module_comment;
+    tr -> is_new_style = is_new_style;
 
     // Are we using the old or new style of port declaration?
-    if(ports == NULL) {
-        // Old style - search in internal module items for ports.
-        tr -> module_ports      = ast_list_new();
-    } else {
+    if(is_new_style == AST_TRUE) {
         // New style, just use the passed ports.
+        tr -> module_ports      = ports;
+    } else {
+        // Old style - search in internal module items for ports.
+        for(int i = 0; i < ports -> items; i++) {
+            ast_port_reference *port_reference = ast_list_get(ports, i);
+            printf("INFO> Port %s has comment %s\n", port_reference->port_name->identifier,
+                        port_reference->port_info_comment == NULL? "NULL": port_reference->port_info_comment->identifier);
+
+        }
         tr -> module_ports      = ports;
     }
     
@@ -2542,12 +2634,25 @@ ast_module_declaration * ast_new_module_declaration(
     {
         ast_module_item * construct = ast_list_get(constructs, i);
 
-        if(construct -> type == MOD_ITEM_PORT_DECLARATION && ports == NULL){
+        if(construct -> type == MOD_ITEM_PORT_DECLARATION && is_new_style == AST_FALSE){
             // Only accept ports declared this way iff the ports argument to
             // this function is NULL, signifying the old style of port 
             // declaration.
-            ast_list_append(tr -> module_ports, 
-                            construct -> port_declaration);
+            ast_port_declaration* dec = construct -> port_declaration;
+            for(int i = 0; i < tr->module_ports->items; i++) {
+                ast_port_reference *port_reference = ast_list_get(tr->module_ports, i);
+                for(int j = 0; j < dec->port_names->items; j++) {
+                    ast_identifier n = ast_list_get(dec->port_names, j);
+
+                    if (strcmp(port_reference->port_name->identifier, n->identifier) == 0) {
+                        port_reference->direction = dec->direction;
+                        port_reference->net_type = dec->net_type;
+                        port_reference->net_signed = dec->net_signed;
+                        port_reference->is_reg = dec->is_reg;
+                        port_reference->is_variable = dec->is_variable;
+                    }
+                }
+            }
         }
         else if(construct -> type == MOD_ITEM_GENERATED_INSTANTIATION){
             ast_list_append(tr -> generate_blocks,

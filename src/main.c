@@ -10,6 +10,7 @@
 #include "verilog_preprocessor.h"
 #include "verilog_ast_util.h"
 #include "verilog_cmd_parser.h"
+#include "verilog_new_syntax_check.h"
 
 /*!
 @brief Prints the help text and exists, depending on the parameters.
@@ -127,7 +128,7 @@ int main(int argc, char ** argv)
 
     int i = 0;
     for(i = args->input_files_start + 1; i <= args->input_files_end; i++) {
-        printf("parsing %s \n", argv[i]);
+        printf("INFO > Parsing %s \n", argv[i]);
         // Load the file.
         FILE * fh = fopen(argv[i], "r");
 
@@ -148,5 +149,8 @@ int main(int argc, char ** argv)
 
         verilog_resolve_modules(yy_verilog_source_tree);
     }
+
+    verilog_new_syntax_check(yy_verilog_source_tree);
+
     return 0;
 }

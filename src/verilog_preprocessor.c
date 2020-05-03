@@ -201,7 +201,7 @@ void verilog_preprocessor_macro_define(
     char * macro_text,  //!< The value the macro expands to.
     size_t text_len     //!< Length in bytes of macro_text.
 ){
-    verilog_macro_directive * toadd = 
+    verilog_macro_directive * toadd =
         ast_calloc(1, sizeof(verilog_macro_directive));
     
     toadd -> line = line;
