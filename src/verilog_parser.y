@@ -3360,7 +3360,6 @@ statement :
     $$ = ast_new_statement($1,AST_FALSE, $2, STM_CASE);
   }
 | attribute_instances conditional_statement{
-    printf("condtion state %d\n", yylineno);
     $$ = ast_new_statement($1,AST_FALSE, $2, STM_CONDITIONAL);
   }
 | attribute_instances disable_statement{
