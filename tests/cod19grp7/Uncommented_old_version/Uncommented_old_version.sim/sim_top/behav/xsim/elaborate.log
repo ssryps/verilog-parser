@@ -1,0 +1,81 @@
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: /media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto e9175dbb58d94ed79ba9d9425cf70779 --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 23 for port flash_a [/home/mason/Desktop/work/verilog-parser/tests/cod19grp7/Uncommented/testbench/top/top_tb.sv:54]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 12 for port addra [/home/mason/Desktop/work/verilog-parser/tests/cod19grp7/Uncommented/src/peripheral/bootrom_controller.sv:19]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 12 for port addrb [/home/mason/Desktop/work/verilog-parser/tests/cod19grp7/Uncommented/src/peripheral/bootrom_controller.sv:22]
+WARNING: [VRFC 10-727] function getTime has no return value assignment [../../../../../Uncommented/testbench/model/include/TimingData.svh:182]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.registers
+Compiling module xil_defaultlib.cp0
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id_type
+Compiling module xil_defaultlib.branch
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.hilo
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.tlb_lookup
+Compiling module xil_defaultlib.tlb
+Compiling module xil_defaultlib.mmu_default
+Compiling module xil_defaultlib.cpu
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_bootrom
+Compiling module xil_defaultlib.bootrom_controller
+Compiling module xil_defaultlib.sram_controller
+Compiling module xil_defaultlib.flash_controller
+Compiling module xil_defaultlib.BaudTickGen(Oversampling=8)
+Compiling module xil_defaultlib.async_receiver_default
+Compiling module xil_defaultlib.BaudTickGen_default
+Compiling module xil_defaultlib.async_transmitter_default
+Compiling module xil_defaultlib.ext_serial_controller
+Compiling module xil_defaultlib.usb_controller
+Compiling module xil_defaultlib.intomips_top
+Compiling module xil_defaultlib.fake_sram
+Compiling module xil_defaultlib.fake_sram0
+Compiling module xil_defaultlib.DataErrorModule
+Compiling module xil_defaultlib.CUIdecoder1_2
+Compiling module xil_defaultlib.CUIdecoder_Busy1_1
+Compiling module xil_defaultlib.CUIdecoder2_2
+Compiling module xil_defaultlib.KernelModule_1
+Compiling module xil_defaultlib.ReadModule_1
+Compiling module xil_defaultlib.OutputBufferModule_1
+Compiling module xil_defaultlib.StatusRegModule_1
+Compiling module xil_defaultlib.MemoryModule(FILENAME_MEM="kerne...
+Compiling module xil_defaultlib.ProgramModule_1
+Compiling module xil_defaultlib.BuffEnhancedFactProgramModule_1
+Compiling module xil_defaultlib.ProtectRegModule_1
+Compiling module xil_defaultlib.EraseModule_1
+Compiling module xil_defaultlib.BlankCheckModule_1
+Compiling module xil_defaultlib.BlockLockModule_1
+Compiling module xil_defaultlib.ProgramBufferModule_1
+Compiling module xil_defaultlib.SignatureModule_1
+Compiling module xil_defaultlib.CFIqueryModule_1
+Compiling module xil_defaultlib.ConfigRegModule_1
+Compiling module xil_defaultlib.BurstModule_1
+Compiling module xil_defaultlib.BankLib
+Compiling module xil_defaultlib.TimingDataModule
+Compiling module xil_defaultlib.TimingLibModule_1
+Compiling module xil_defaultlib.DebugModule
+Compiling module xil_defaultlib.x28fxxxp30(FILENAME_MEM="kernel....
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Compiling package xil_defaultlib.$unit__home_mason_Desktop_work_v...
+Compiling package xil_defaultlib.$unit__home_mason_Desktop_work_v...
+Compiling package xil_defaultlib.$unit__home_mason_Desktop_work_v...
+Compiling package xil_defaultlib.$unit__home_mason_Desktop_work_v...
+Built simulation snapshot top_tb_behav

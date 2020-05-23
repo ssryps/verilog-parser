@@ -1,0 +1,196 @@
+looking for header files in /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/pc.v 
+INFO> Module pc has comment this.pc 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/if_id.v 
+INFO> Module if_id has comment this.if_id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/id.v 
+INFO> Module id has comment this.id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/id_ex.v 
+INFO> Module id_ex has comment this.id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/ex.v 
+INFO> Module ex has comment this.ex 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/ex_mem.v 
+INFO> Module ex_mem has comment this.ex 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/mem.v 
+INFO> Module mem has comment this.mem 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/mem_wb.v 
+INFO> Module mem_wb has comment this.mem 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/memcontrol.v 
+INFO> Module memcontrol has comment this.memcontrol no_check 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/cp0.v 
+INFO> Module cp0 has comment this.registerfiles 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/registers.v 
+INFO> Module registers has comment this.registerfiles 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/hilo.v 
+INFO> Module hilo has comment this.registerfiles 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/defines.v 
+ - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/cpu.v 
+INFO> Module cpu has comment this 
+source _Text - Parse successful
+INFO> can't solve module mmu
+INFO> can't solve module rom
+INFO> can't solve module sramcontrol
+INFO> can't solve module flashcontrol
+INFO> can't solve module serialcontrol
+INFO> start analysing pipeline structure
+this
+INFO>registers.writeAddr_i has right dependency
+INFO>registers.writeData_i has right dependency
+INFO>registers.writeEnable_i has right dependency
+INFO>hilo.writeEnable_i has right dependency
+INFO>hilo.writeDataHi_i has right dependency
+INFO>hilo.writeDataLo_i has right dependency
+INFO>cp0.writeAddr_i has right dependency
+INFO>cp0.writeData_i has right dependency
+INFO>cp0.writeEnable_i has right dependency
+INFO>cp0.inDelaySlot_i has right dependency
+INFO>cp0.exception_i has right dependency
+INFO>cp0.insAddr_i has right dependency
+INFO>cp0.badVAddr_i has right dependency
+INFO>pc.branchEnable_i has right dependency
+INFO>pc.branchAddr_i has right dependency
+Error>pc.bubble_i has wrong dependency, it's not back from this.ex
+INFO>pc.pauseControl_i has right dependency
+INFO>pc.flush_i has right dependency
+INFO>pc.excAddr_i has right dependency
+INFO>if_id.insAddr_i has right dependency
+INFO>if_id.ins_i has right dependency
+Error>if_id.bubble_i has wrong dependency, it's not back from this.ex
+INFO>if_id.pauseControl_i has right dependency
+INFO>if_id.flush_i has right dependency
+INFO>if_id.exception_i has right dependency
+INFO>if_id.badVAddr_i has right dependency
+INFO>id.insAddr_i has right dependency
+INFO>id.ins_i has right dependency
+INFO>id.inDelaySlot_i has right dependency
+INFO>id.exception_i has right dependency
+INFO>id.badVAddr_i has right dependency
+INFO>id.ex_writeReg_i has right dependency
+INFO>id.ex_writeRegAddr_i has right dependency
+INFO>id.ex_writeData_i has right dependency
+INFO>id.ex_writeRegHiLo_i has right dependency
+INFO>id.ex_writeDataHi_i has right dependency
+INFO>id.ex_writeDataLo_i has right dependency
+Error>id.ex_memOp_i has wrong dependency, it's not back from this.ex
+INFO>id.ex_writeCP0_i has right dependency
+INFO>id.ex_writeCP0Addr_i has right dependency
+INFO>id.mem_writeReg_i has right dependency
+INFO>id.mem_writeRegAddr_i has right dependency
+INFO>id.mem_writeData_i has right dependency
+INFO>id.mem_writeRegHiLo_i has right dependency
+INFO>id.mem_writeDataHi_i has right dependency
+INFO>id.mem_writeDataLo_i has right dependency
+INFO>id.mem_writeCP0_i has right dependency
+INFO>id.mem_writeCP0Addr_i has right dependency
+INFO>id_ex.flush_i has right dependency
+INFO>ex.insAddr_i has right dependency
+INFO>ex.aluOp_i has right dependency
+INFO>ex.operand1_i has right dependency
+INFO>ex.operand2_i has right dependency
+INFO>ex.storeData_i has right dependency
+INFO>ex.memOp_i has right dependency
+INFO>ex.writeRegAddr_i has right dependency
+INFO>ex.writeReg_i has right dependency
+INFO>ex.writeRegHiLo_i has right dependency
+INFO>ex.writeCP0_i has right dependency
+INFO>ex.writeCP0Addr_i has right dependency
+INFO>ex.inDelaySlot_i has right dependency
+INFO>ex.exception_i has right dependency
+INFO>ex.badVAddr_i has right dependency
+INFO>ex_mem.insValid_i has right dependency
+INFO>mem.writeData_i has right dependency
+INFO>mem.storeData_i has right dependency
+INFO>mem.memOp_i has right dependency
+INFO>mem.insValid_i has right dependency
+INFO>mem.insAddr_i has right dependency
+INFO>mem.inDelaySlot_i has right dependency
+INFO>mem.exception_i has right dependency
+INFO>mem.badVAddr_i has right dependency
+INFO>mem.writeReg_i has right dependency
+INFO>mem.writeRegAddr_i has right dependency
+INFO>mem.writeDataHi_i has right dependency
+INFO>mem.writeDataLo_i has right dependency
+INFO>mem.writeRegHiLo_i has right dependency
+INFO>mem.writeCP0_i has right dependency
+INFO>mem.writeCP0Addr_i has right dependency
+leaf node : this.registerfiles
+leaf node : this.memcontrol
+INFO> neglect to check memcontrol
+leaf node : this.pc
+INFO>pc.insAddr_o has right dependency
+leaf node : this.if_id
+INFO>if_id.insAddr_o has right dependency
+INFO>if_id.ins_o has right dependency
+INFO>if_id.exception_o has right dependency
+INFO>if_id.badVAddr_o has right dependency
+INFO>if_id.insValid_o has right dependency
+leaf node : this.id
+INFO>id_ex.insAddr_o has right dependency
+INFO>id_ex.operand1_o has right dependency
+INFO>id_ex.operand2_o has right dependency
+INFO>id_ex.aluOp_o has right dependency
+INFO>id_ex.storeData_o has right dependency
+INFO>id_ex.memOp_o has right dependency
+INFO>id_ex.writeReg_o has right dependency
+INFO>id_ex.writeRegAddr_o has right dependency
+INFO>id_ex.writeRegHiLo_o has right dependency
+INFO>id_ex.writeCP0_o has right dependency
+INFO>id_ex.writeCP0Addr_o has right dependency
+INFO>id_ex.insValid_o has right dependency
+INFO>id_ex.inDelaySlot_o has right dependency
+INFO>id_ex.exception_o has right dependency
+INFO>id_ex.badVAddr_o has right dependency
+leaf node : this.ex
+INFO>ex_mem.writeData_o has right dependency
+INFO>ex_mem.insAddr_o has right dependency
+INFO>ex_mem.storeData_o has right dependency
+INFO>ex_mem.memOp_o has right dependency
+INFO>ex_mem.writeReg_o has right dependency
+INFO>ex_mem.writeRegAddr_o has right dependency
+INFO>ex_mem.writeDataHi_o has right dependency
+INFO>ex_mem.writeDataLo_o has right dependency
+INFO>ex_mem.writeRegHiLo_o has right dependency
+INFO>ex_mem.writeCP0_o has right dependency
+INFO>ex_mem.writeCP0Addr_o has right dependency
+INFO>ex_mem.insValid_o has right dependency
+INFO>ex_mem.inDelaySlot_o has right dependency
+INFO>ex_mem.exception_o has right dependency
+INFO>ex_mem.badVAddr_o has right dependency
+leaf node : this.mem
+INFO>mem_wb.writeReg_o has right dependency
+INFO>mem_wb.writeRegAddr_o has right dependency
+INFO>mem_wb.writeData_o has right dependency
+INFO>mem_wb.writeDataHi_o has right dependency
+INFO>mem_wb.writeDataLo_o has right dependency
+INFO>mem_wb.writeRegHiLo_o has right dependency
+INFO>mem_wb.writeCP0_o has right dependency
+INFO>mem_wb.writeCP0Addr_o has right dependency
+INFO>mem_wb.exception_o has right dependency
+INFO>mem_wb.insAddr_o has right dependency
+INFO>mem_wb.badVAddr_o has right dependency
+INFO>mem_wb.inDelaySlot_o has right dependency
+INFO> start check verilog syntaxs
+INFO> start check verilog signal assignment
+INFO> Pass signal assignment check 
+INFO> start check verilog sequential assignment
+INFO> Pass sequential trigger check 
+INFO> start check verilog condition case statement syntaxs
+Error> Case statement(end at line 930) in id(/home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/id.v) should provide assignment to a same set of signals in every case branch
+branch1: regEnable1_o regReadAddr1_o regEnable2_o regReadAddr2_o operand1_o operand2_o aluOp_o writeReg_o writeRegAddr_o exception_o
+branch3: regEnable1_o regReadAddr1_o regEnable2_o regReadAddr2_o operand1_o operand2_o aluOp_o writeRegHiLo_o exception_o
+Error> Case statement(end at line 1106) in id(/home/mason/Desktop/work/verilog-parser/tests/CPU_sample/Commented/id.v) should provide assignment to a same set of signals in every case branch
+branch1: CP0ReadEnable_o CP0ReadAddr_o operand1_o aluOp_o writeReg_o writeRegAddr_o exception_o
+branch2: regReadAddr1_o regEnable1_o operand1_o aluOp_o writeCP0 writeCP0Addr exception_o

@@ -23,6 +23,13 @@ src/CMakeFiles/verilogparser.dir/verilog_ast_util.o: ../src/verilog_ast_util.h
 src/CMakeFiles/verilogparser.dir/verilog_cmd_parser.o: ../src/verilog_cmd_parser.c
 src/CMakeFiles/verilogparser.dir/verilog_cmd_parser.o: ../src/verilog_cmd_parser.h
 
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_ast.h
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_ast_common.h
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_ast_mem.h
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_ast_util.h
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_new_syntax_check.c
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_new_syntax_check.h
+
 src/CMakeFiles/verilogparser.dir/verilog_parser.tab.o: ../src/verilog_ast.h
 src/CMakeFiles/verilogparser.dir/verilog_parser.tab.o: ../src/verilog_ast_common.h
 src/CMakeFiles/verilogparser.dir/verilog_parser.tab.o: ../src/verilog_ast_mem.h

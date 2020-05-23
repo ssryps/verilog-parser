@@ -213,6 +213,12 @@
 		<Unit filename="/home/mason/Desktop/work/verilog-parser/src/verilog_cmd_parser.h">
 			<Option target="verilogparser"/>
 		</Unit>
+		<Unit filename="/home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.c">
+			<Option target="verilogparser"/>
+		</Unit>
+		<Unit filename="/home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.h">
+			<Option target="verilogparser"/>
+		</Unit>
 		<Unit filename="/home/mason/Desktop/work/verilog-parser/src/verilog_parser_wrapper.c">
 			<Option target="verilogparser"/>
 		</Unit>

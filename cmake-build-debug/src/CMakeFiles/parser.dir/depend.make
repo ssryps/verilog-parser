@@ -7,6 +7,7 @@ src/CMakeFiles/parser.dir/main.o: ../src/verilog_ast_common.h
 src/CMakeFiles/parser.dir/main.o: ../src/verilog_ast_mem.h
 src/CMakeFiles/parser.dir/main.o: ../src/verilog_ast_util.h
 src/CMakeFiles/parser.dir/main.o: ../src/verilog_cmd_parser.h
+src/CMakeFiles/parser.dir/main.o: ../src/verilog_new_syntax_check.h
 src/CMakeFiles/parser.dir/main.o: ../src/verilog_parser.h
 src/CMakeFiles/parser.dir/main.o: ../src/verilog_preprocessor.h
 

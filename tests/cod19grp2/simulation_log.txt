@@ -1,0 +1,699 @@
+
+start_gui
+open_project /home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.xpr
+open_project /home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.xpr
+INFO: [Project 1-313] Project file moved from 'D:/codes/hw-2019autumn/org-net/cod19grp2' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/baseram.mem', nor could it be found using path '/home/mason/D:/codes/hw-2019autumn/org-net/cod19grp2/thinpad_top.srcs/sim_1/new/baseram.mem'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/extram.mem', nor could it be found using path '/home/mason/D:/codes/hw-2019autumn/org-net/cod19grp2/thinpad_top.srcs/sim_1/new/extram.mem'.
+CRITICAL WARNING: [Project 1-311] Could not find the file '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/tb_behav.wcfg', nor could it be found using path '/home/mason/D:/codes/hw-2019autumn/org-net/cod19grp2/tb_behav.wcfg'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.ip_user_files', nor could it be found using path '/home/mason/D:/codes/hw-2019autumn/org-net/cod19grp2/thinpad_top.ip_user_files'.
+CRITICAL WARNING: [Project 1-505] Unrecognized Option Name MEMEnableMemoryMapGeneration
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+WARNING: [IP_Flow 19-2162] IP 'pll_example' is locked:
+* Project containing IP 'pll_example' is read-only.
+* IP definition 'Clocking Wizard (6.0)' for IP 'pll_example' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+WARNING: [IP_Flow 19-2162] IP 'eth_mac' is locked:
+* Project containing IP 'eth_mac' is read-only.
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'eth_mac' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-5178] IP eth_mac will not be generated with lower license level. If you would like to generate with the current available license levels, please reset and regenerate.
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+WARNING: [IP_Flow 19-2162] IP 'tabn_axis_fifo' is locked:
+* Project containing IP 'tabn_axis_fifo' is read-only.
+* IP definition 'FIFO Generator (13.2)' for IP 'tabn_axis_fifo' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+WARNING: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* Project containing IP 'blk_mem_gen_0' is read-only.
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [Project 1-231] Project 'thinpad_top.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
+save_project_as Uncommented_old_verison /home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison -force
+WARNING: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'blk_mem_gen_0' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'blk_mem_gen_0' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'eth_mac' is locked:
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'eth_mac' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'eth_mac' is locked:
+* IP definition 'Tri Mode Ethernet MAC (9.0)' for IP 'eth_mac' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-5178] IP eth_mac will not be generated with lower license level. If you would like to generate with the current available license levels, please reset and regenerate.
+WARNING: [IP_Flow 19-2162] IP 'pll_example' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'pll_example' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'pll_example' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'pll_example' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'tabn_axis_fifo' is locked:
+* IP definition 'FIFO Generator (13.2)' for IP 'tabn_axis_fifo' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'tabn_axis_fifo' is locked:
+* IP definition 'FIFO Generator (13.2)' for IP 'tabn_axis_fifo' (customized with software release 2018.3) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/tx_ptp_pkt_buff_init.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/lookup.mem'
+WARNING: [SIM-utils-42] Failed to copy file '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/mem_init_files/baseram.mem' to '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim' : error copying "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/mem_init_files/baseram.mem": no such file or directory
+WARNING: [SIM-utils-42] Failed to copy file '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/mem_init_files/extram.mem' to '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim' : error copying "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/mem_init_files/extram.mem": no such file or directory
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/example_frame.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/CFImemory64Mb_top.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/CFImemory64Mb_bottom.mem'
+INFO: [SIM-utils-43] Exported '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/example_frame.mem'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+CRITICAL WARNING: [IP_Flow 19-5008] Invalid value for parameter usage type 'simulation.rtl'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L xil_defaultlib -prj tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/eth_mac/eth_mac_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_reset_sync
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_reset_sync__1
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__1
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__2
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__3
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__4
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__5
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_clk_en_gen
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_rgmii_v2_0_if
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support_clocking
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support_resets
+INFO: [VRFC 10-311] analyzing module eth_mac_CRC32_8
+INFO: [VRFC 10-311] analyzing module eth_mac_CRC32_8_5
+INFO: [VRFC 10-311] analyzing module eth_mac_DECODE_FRAME
+INFO: [VRFC 10-311] analyzing module eth_mac_PARAM_CHECK
+INFO: [VRFC 10-311] analyzing module eth_mac_STATE_MACHINES
+INFO: [VRFC 10-311] analyzing module eth_mac_TX_STATE_MACH
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_addr_filter
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_addr_filter_wrap
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_control
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_gmii_mii_rx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_gmii_mii_tx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_pfc_tx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_axi_intf
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_sync_req
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_6
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_7
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_8
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset_2
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset_3
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_0
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_1
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_4
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_axi_intf
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_pause
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v" into library fifo_generator_v13_2_3
+INFO: [VRFC 10-311] analyzing module fifo_generator_vlog_beh
+INFO: [VRFC 10-2458] undeclared symbol wr_rst_busy_i, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1249]
+INFO: [VRFC 10-2458] undeclared symbol wr_eop_ad, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1331]
+INFO: [VRFC 10-2458] undeclared symbol rd_eop_ad, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1332]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_axis, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1574]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wach, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2099]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wdch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2319]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wrch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2486]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rach, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2866]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rdch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:3099]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_CONV_VER
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:4153]
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:4361]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_sync_stage
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_beh_ver_ll_afifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_ss
+INFO: [VRFC 10-2458] undeclared symbol srst_wrst_busy, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:7793]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_preload0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_axic_reg_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.v" into library fifo_generator_v13_2_3
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3
+INFO: [VRFC 10-2458] undeclared symbol sleep_i, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.v:519]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/tabn_axis_fifo/sim/tabn_axis_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tabn_axis_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" into library blk_mem_gen_v8_4_2
+INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_clr_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_pre_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_ce_clr_v8_4
+INFO: [VRFC 10-311] analyzing module write_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module read_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_write_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_read_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_regs_fwd_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_output_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_softecc_output_reg_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_mem_module
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arp_module
+INFO: [VRFC 10-311] analyzing module arp_request_sender
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_table.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arp_table
+WARNING: [VRFC 10-756] identifier _output is used before its declaration [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_table.v:28]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/buffer_pushing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer_pushing
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_conf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_conf
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_bram_tdp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_bram_tdp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_rx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_rx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_sync_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_sync_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_tx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_tx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ipv4_module
+INFO: [VRFC 10-2458] undeclared symbol src_ip, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v:372]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/lookup_table_trie.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_table_trie
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/multi_byte.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_setter
+INFO: [VRFC 10-311] analyzing module async_getter
+INFO: [VRFC 10-311] analyzing module async_equal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/pkg_classify.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pkg_classify
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_address_swap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_address_swap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/lookup_table.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_table
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/lookup_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/def_op.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+WARNING: [VRFC 10-2096] empty statement in sequential block [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v:185]
+WARNING: [VRFC 10-2096] empty statement in sequential block [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v:201]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/28F640P30.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BankLib
+INFO: [VRFC 10-311] analyzing module TimingDataModule
+INFO: [VRFC 10-311] analyzing module TimingLibModule
+INFO: [VRFC 10-311] analyzing module BlockLockModule
+INFO: [VRFC 10-311] analyzing module CFIqueryModule
+INFO: [VRFC 10-311] analyzing module DataErrorModule
+INFO: [VRFC 10-311] analyzing module ConfigRegModule
+INFO: [VRFC 10-311] analyzing module SignatureModule
+INFO: [VRFC 10-311] analyzing module CUIdecoder1
+INFO: [VRFC 10-311] analyzing module CUIdecoder2
+INFO: [VRFC 10-311] analyzing module CUIdecoder_Busy1
+INFO: [VRFC 10-311] analyzing module EraseModule
+INFO: [VRFC 10-311] analyzing module MemoryModule
+INFO: [VRFC 10-311] analyzing module OutputBufferModule
+INFO: [VRFC 10-311] analyzing module ProgramModule
+INFO: [VRFC 10-311] analyzing module BuffEnhancedFactProgramModule
+INFO: [VRFC 10-311] analyzing module ProtectRegModule
+INFO: [VRFC 10-311] analyzing module ReadModule
+INFO: [VRFC 10-311] analyzing module StatusRegModule
+INFO: [VRFC 10-311] analyzing module KernelModule
+INFO: [VRFC 10-311] analyzing module x28fxxxp30
+INFO: [VRFC 10-311] analyzing module BurstModule
+INFO: [VRFC 10-311] analyzing module BlankCheckModule
+INFO: [VRFC 10-311] analyzing module ProgramBufferModule
+INFO: [VRFC 10-311] analyzing module DebugModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-1315] redeclaration of ansi port clk_50M is not allowed [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/clock.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/cpld_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpld_model
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/flag_sync_cpld.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flag_sync_cpld
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/sram_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/rgmii_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rgmii_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2458] undeclared symbol clk_125M, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv:136]
+INFO: [VRFC 10-2458] undeclared symbol clk_125M_90deg, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv:137]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/glbl.v:6]
+xvhdl --incr --relax -prj tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.vhd" into library fifo_generator_v13_2_3
+INFO: [VRFC 10-307] analyzing entity input_blk
+INFO: [VRFC 10-307] analyzing entity output_blk
+INFO: [VRFC 10-307] analyzing entity shft_wrapper
+INFO: [VRFC 10-307] analyzing entity shft_ram
+INFO: [VRFC 10-307] analyzing entity wr_pf_as
+INFO: [VRFC 10-307] analyzing entity wr_pf_ss
+INFO: [VRFC 10-307] analyzing entity rd_pe_as
+INFO: [VRFC 10-307] analyzing entity rd_pe_ss
+INFO: [VRFC 10-307] analyzing entity synchronizer_ff
+INFO: [VRFC 10-307] analyzing entity delay
+INFO: [VRFC 10-307] analyzing entity bin_cntr
+INFO: [VRFC 10-307] analyzing entity clk_x_pntrs_builtin
+INFO: [VRFC 10-307] analyzing entity logic_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth
+INFO: [VRFC 10-307] analyzing entity builtin_top
+INFO: [VRFC 10-307] analyzing entity reset_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_low_latency
+INFO: [VRFC 10-307] analyzing entity builtin_top_v6
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_2_3_builtin
+INFO: [VRFC 10-307] analyzing entity bram_sync_reg
+INFO: [VRFC 10-307] analyzing entity bram_fifo_rstlogic
+INFO: [VRFC 10-307] analyzing entity reset_blk_ramfifo
+INFO: [VRFC 10-307] analyzing entity axi_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_top
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_2_3_synth
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6334.570 ; gain = 0.000 ; free physical = 209 ; free virtual = 5622
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: /media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto ab42cc29591440169cd74d98cf6385f9 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L fifo_generator_v13_2_3 -L blk_mem_gen_v8_4_2 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 25 differs from formal bit length 1 for port wea [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/lookup_table_trie.v:81]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 4 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v:92]
+WARNING: [VRFC 10-278] actual bit length 6 differs from formal bit length 3 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v:233]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 8 for port opcode [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v:361]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 3 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v:322]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 3 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v:327]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 2 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v:337]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 32 for port value [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v:372]
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port index [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v:387]
+WARNING: [VRFC 10-727] function getTime has no return value assignment [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/include/TimingData.h:182]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=20.0,...
+Compiling module xil_defaultlib.pll_example_pll_example_clk_wiz
+Compiling module xil_defaultlib.pll_example
+Compiling module xil_defaultlib.eth_conf
+Compiling module xil_defaultlib.SEG7_LUT
+Compiling module xil_defaultlib.BaudTickGen(ClkFrequency=5000000...
+Compiling module xil_defaultlib.async_receiver(ClkFrequency=5000...
+Compiling module xil_defaultlib.BaudTickGen(ClkFrequency=5000000...
+Compiling module xil_defaultlib.async_transmitter(ClkFrequency=5...
+Compiling module xil_defaultlib.vga(WIDTH=12,HSIZE=800,HFP=856,H...
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block...
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block...
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block...
+Compiling module xil_defaultlib.eth_mac_eth_mac_clk_en_gen
+Compiling module unisims_ver.RAM64X1D
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.FDSE_default
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module unisims_ver.FDSE(INIT=1'b0)
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_CRC32_8_5
+Compiling module xil_defaultlib.eth_mac_PARAM_CHECK
+Compiling module xil_defaultlib.eth_mac_DECODE_FRAME
+Compiling module xil_defaultlib.eth_mac_STATE_MACHINES
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module unisims_ver.FDPE_default
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_CRC32_8
+Compiling module xil_defaultlib.eth_mac_TX_STATE_MACH
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module xil_defaultlib.eth_mac_tri_mode_ethernet_mac_v9...
+Compiling module unisims_ver.BUFIO
+Compiling module unisims_ver.BUFR_default
+Compiling module unisims_ver.ODDR(DDR_CLK_EDGE="SAME_EDGE")
+Compiling module unisims_ver.IDELAYE2_default
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IDDR(DDR_CLK_EDGE="SAME_EDGE_PIP...
+Compiling module xil_defaultlib.eth_mac_eth_mac_rgmii_v2_0_if
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block...
+Compiling module xil_defaultlib.eth_mac_eth_mac_block
+Compiling module unisims_ver.IDELAYCTRL_default
+Compiling module unisims_ver.BUFGCTRL(PRESELECT_I0="TRUE")
+Compiling module unisims_ver.MMCME2_ADV(CLKIN1_PERIOD=8.0,CLK...
+Compiling module xil_defaultlib.eth_mac_eth_mac_support_clocking
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_reset_sync
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_reset_sync...
+Compiling module xil_defaultlib.eth_mac_eth_mac_block_sync_block...
+Compiling module xil_defaultlib.eth_mac_eth_mac_support_resets
+Compiling module xil_defaultlib.eth_mac_eth_mac_support
+Compiling module xil_defaultlib.eth_mac
+Compiling module xil_defaultlib.eth_mac_reset_sync
+Compiling module xil_defaultlib.eth_mac_sync_block
+Compiling module xil_defaultlib.eth_mac_bram_tdp(DATA_WIDTH=9)
+Compiling module xil_defaultlib.eth_mac_rx_client_fifo
+Compiling module xil_defaultlib.arp_table_default
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=12...
+Compiling module xil_defaultlib.lookup_table_trie_default
+Compiling module xil_defaultlib.buffer_pushing
+Compiling module xil_defaultlib.async_equal_default
+Compiling module xil_defaultlib.async_setter_default
+Compiling module xil_defaultlib.async_setter(LEN=4)
+Compiling module xil_defaultlib.async_getter_default
+Compiling module xil_defaultlib.arp_module
+Compiling module xil_defaultlib.async_getter(LEN=4,ADDR_WIDTH=2)
+Compiling module xil_defaultlib.async_getter(LEN=24,ADDR_WIDTH=6...
+Compiling module xil_defaultlib.arp_request_sender
+Compiling module xil_defaultlib.async_setter(LEN=4,ADDR_WIDTH=2)
+Compiling module xil_defaultlib.ipv4_module
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="art...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.pkg_classify
+Compiling module xil_defaultlib.eth_mac_sync_block_2
+Compiling module xil_defaultlib.eth_mac_tx_client_fifo_default
+Compiling module xil_defaultlib.eth_mac_wrapper
+Compiling module xil_defaultlib.pc_reg
+Compiling module xil_defaultlib.if_id
+Compiling module xil_defaultlib.id
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.id_ex
+Compiling module xil_defaultlib.ex
+Compiling module xil_defaultlib.ex_mem
+Compiling module xil_defaultlib.mem
+Compiling module xil_defaultlib.mem_wb
+Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.thinpad_top
+Compiling module xil_defaultlib.clock
+Compiling module xil_defaultlib.flag_sync_cpld
+Compiling module xil_defaultlib.cpld_model
+Compiling module xil_defaultlib.sram_model
+Compiling module xil_defaultlib.DataErrorModule
+Compiling module xil_defaultlib.CUIdecoder1_2
+Compiling module xil_defaultlib.CUIdecoder_Busy1_1
+Compiling module xil_defaultlib.CUIdecoder2_2
+Compiling module xil_defaultlib.KernelModule_1
+Compiling module xil_defaultlib.ReadModule_1
+Compiling module xil_defaultlib.OutputBufferModule_1
+Compiling module xil_defaultlib.StatusRegModule_1
+Compiling module xil_defaultlib.MemoryModule(FILENAME_MEM="/tmp/...
+Compiling module xil_defaultlib.ProgramModule_1
+Compiling module xil_defaultlib.BuffEnhancedFactProgramModule_1
+Compiling module xil_defaultlib.ProtectRegModule_1
+Compiling module xil_defaultlib.EraseModule_1
+Compiling module xil_defaultlib.BlankCheckModule_1
+Compiling module xil_defaultlib.BlockLockModule_1
+Compiling module xil_defaultlib.ProgramBufferModule_1
+Compiling module xil_defaultlib.SignatureModule_1
+Compiling module xil_defaultlib.CFIqueryModule_1
+Compiling module xil_defaultlib.ConfigRegModule_1
+Compiling module xil_defaultlib.BurstModule_1
+Compiling module xil_defaultlib.BankLib
+Compiling module xil_defaultlib.TimingDataModule
+Compiling module xil_defaultlib.TimingLibModule_1
+Compiling module xil_defaultlib.DebugModule
+Compiling module xil_defaultlib.x28fxxxp30(FILENAME_MEM="/tmp/ke...
+Compiling module xil_defaultlib.rgmii_model_default
+WARNING: [XSIM 43-3373] "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/rgmii_model.sv" Line 49. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+Compiling module xil_defaultlib.lookup_table_default
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:06 . Memory (MB): peak = 300.844 ; gain = 0.000 ; free physical = 152 ; free virtual = 5036
+INFO: [Common 17-206] Exiting Webtalk at Sat May 23 12:18:51 2020...
+run_program: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 6334.570 ; gain = 0.000 ; free physical = 730 ; free virtual = 5614
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+WARNING: [USF-XSim-17] WCFG file does not exist:/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/tb_behav.wcfg
+WARNING: [USF-XSim-17] WCFG file does not exist:/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/tb_behav.wcfg
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb.dut.eth_mac_wraper_i.pkg_classify_inst.blk_mem_inst.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+[        0 ns]  --- Device is Busy  (start up time) --- 
+WARNING: file baseram.mem could not be opened
+Failed to open BaseRAM init file
+BaseRAM Init Size(words):           0
+WARNING: file extram.mem could not be opened
+Failed to open ExtRAM init file
+ExtRAM Init Size(words):           0
+[        0 ns]  ASynchronous Read Mode
+[        0 ns]  VDD Voltage is OK
+[        0 ns]  VDDQ Voltage is OK
+[        0 ns] Inizialize the Memory to default value
+WARNING: file /tmp/kernel.elf could not be opened
+[        0 ns] Warning: File: /tmp/kernel.elf not found
+[ex.v] aluop xx not support
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. tb.dut.eth_mac_wraper_i.pkg_classify_inst.lookup_table_trie_inst.trie_sdpram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb/dut/eth_mac_wraper_i/pkg_classify_inst/lookup_table_trie_inst/trie_sdpram/xpm_memory_base_inst/Initial270_5471  File: /wrk/2018.1/nightly/2018_04_04_2188600/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb.dut.eth_mac_wraper_i.pkg_classify_inst.lookup_table_trie_inst.trie_sdpram.xpm_memory_base_inst.config_drc  0
+Time: 1 ps  Iteration: 0  Process: /tb/dut/eth_mac_wraper_i/pkg_classify_inst/lookup_table_trie_inst/trie_sdpram/xpm_memory_base_inst/Initial270_5471  File: /wrk/2018.1/nightly/2018_04_04_2188600/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
+[ex.v] aluop 00 not support
+[       60 ns]  --- Device is Ready (end of start-up time) --- 
+[lookup] modify end, node cnt  9
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 6334.570 ; gain = 0.000 ; free physical = 603 ; free virtual = 5519

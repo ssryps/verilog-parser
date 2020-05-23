@@ -190,8 +190,8 @@ void ast_find_primary_from_expression(ast_expression* exp, ast_list* signals_db,
                 case PRIMARY_IDENTIFIER:{
                     ast_signal_dependency* dependency = ast_signal_dependency_from_string(exp->primary->value.identifier,
                                                                                           SIGNAL_DEPENDENCY_CONCURRENT,  signals_db);
-                    assert(dependency != NULL);
-                    ast_list_append(result, dependency);
+                    if(dependency != NULL)
+                        ast_list_append(result, dependency);
                     break;
                 }
                 case PRIMARY_NUMBER: {
@@ -348,13 +348,13 @@ void verilog_new_syntax_check(verilog_source_tree * source) {
     printf("INFO> start check verilog syntaxs\n");
     verilog_check_special_syntax(source, root);
 
-    printf("INFO> start check verilog condition case statement syntaxs\n");
-    verilog_condition_case_check(source);
 }
 
 void verilog_check_special_syntax(verilog_source_tree * source, ast_pipeline_tree* root){
     verilog_signal_singel_value_assignment_check(source);
     verilog_sequential_logic_check(source);
+    verilog_condition_case_check(source);
+
 }
 
 void verilog_signal_singel_value_assignment_check(verilog_source_tree * source){
@@ -477,6 +477,10 @@ void verilog_sequential_logic_check(verilog_source_tree * source){
 }
 
 void verilog_condition_case_check(verilog_source_tree * source){
+    printf("INFO> start check verilog condition case statement syntaxs\n");
+
+    ast_boolean error = AST_FALSE;
+
     for (int i = 0; i < source->modules->items; i++) {
         ast_module_declaration *module = ast_list_get(source->modules, i);
 
@@ -487,7 +491,8 @@ void verilog_condition_case_check(verilog_source_tree * source){
             ast_timing_control_statement *trigger = always_block->trigger;
             if (trigger == NULL) {
                 ast_list *outside_assigns = ast_list_new();
-                verilog_analysis_condition_case_statement(ast_list_get(always_block->statements, 0), module, module->signals_db, outside_assigns);
+                verilog_analysis_condition_case_statement(ast_list_get(always_block->statements, 0), module,
+                        module->signals_db, outside_assigns, &error);
             } else {
                 switch (trigger->type) {
                     case TIMING_CTRL_EVENT_CONTROL: {
@@ -495,12 +500,14 @@ void verilog_condition_case_check(verilog_source_tree * source){
                             case EVENT_CTRL_TRIGGERS: {
                                 ast_event_expression *always_block_sensitives = trigger->event_ctrl->expression;
                                 ast_list* outside_assigns = ast_list_new();
-                                verilog_analysis_condition_case_statement(trigger->statement, module, module->signals_db, outside_assigns);
+                                verilog_analysis_condition_case_statement(trigger->statement, module, module->signals_db,
+                                        outside_assigns, &error);
                                 break;
                             }
                             case EVENT_CTRL_ANY: {
                                 ast_list *outside_assigns = ast_list_new();
-                                verilog_analysis_condition_case_statement(trigger->statement, module, module->signals_db, outside_assigns);
+                                verilog_analysis_condition_case_statement(trigger->statement, module, module->signals_db,
+                                        outside_assigns, &error);
 
                                 break;
                             }
@@ -520,18 +527,22 @@ void verilog_condition_case_check(verilog_source_tree * source){
             }
         }
     }
+
+    if(error == AST_FALSE){
+        printf("INFO> Pass condition case statement check\n");
+    }
+
 }
 ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, ast_module_declaration* module,
-        ast_list* signals_db, ast_list* outside_assigns){
+        ast_list* signals_db, ast_list* outside_assigns, ast_boolean* error){
     switch (statement->type) {
         case STM_CONDITIONAL:{
             ast_if_else *control_statement = (ast_if_else *)statement->conditional;
 
             ast_list* all_assignment = NULL;
-            ast_boolean error = AST_FALSE;
             for(int i = 0; i < control_statement->conditional_statements->items; i++){
                 ast_conditional_statement* c_statement = ast_list_get(control_statement->conditional_statements, i);
-                ast_list* assign = verilog_analysis_condition_case_statement(c_statement->statement, module, signals_db, outside_assigns);
+                ast_list* assign = verilog_analysis_condition_case_statement(c_statement->statement, module, signals_db, outside_assigns, error);
                 if(all_assignment == NULL){
                     all_assignment = assign;
                 } else {
@@ -551,13 +562,14 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
                             printf(" %s", signal->signal_name->identifier);
                         }
                         printf("\n");
-                        error = AST_TRUE;
+                        *error = AST_TRUE;
                         break;
                     }
                 }
             }
             if(control_statement->else_condition != NULL){
-                ast_list* assign = verilog_analysis_condition_case_statement(control_statement->else_condition, module, signals_db, outside_assigns);
+                ast_list* assign = verilog_analysis_condition_case_statement(control_statement->else_condition, module,
+                        signals_db, outside_assigns, error);
                 if(verilog_compare_assignment_list(all_assignment, assign, outside_assigns) == AST_FALSE && error == AST_FALSE){
                     printf("Error> Conditional statement(end at line %d) in %s(%s) should provide assignment to a same set "
                            "of signals in every branch\n", statement->meta.line + 1, module->identifier->identifier, statement->meta.file);
@@ -573,7 +585,7 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
                         printf(" %s", signal->signal_name->identifier);
                     }
                     printf("\n");
-                    error = AST_TRUE;
+                    *error = AST_TRUE;
                 }
 
             }
@@ -591,8 +603,9 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
 
             for(int i = 0; i < slist->items; i++){
                 ast_statement* s = ast_list_get(slist, i);
-                ast_list* tmp_list = verilog_analysis_condition_case_statement(s, module, signals_db, result);
-                ast_list_concat(result, tmp_list);
+                ast_list* tmp_list = verilog_analysis_condition_case_statement(s, module, signals_db, result, error);
+
+                if(tmp_list != NULL) ast_list_concat(result, tmp_list);
             }
             return result;
         }
@@ -663,12 +676,12 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
                     assert(0);
                 }
             }
-            break;
+            return NULL;
         }
 
         case STM_TIMING_CONTROL:{
             // used for simulation, just neglect it
-            break;
+            return NULL;
         }
         case STM_CASE:{
             ast_case_statement* case_statement = statement->case_statement;
@@ -676,7 +689,8 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
 
             for(int i = 0; i < case_statement->cases->items; i++){
                 ast_case_item* c_item = ast_list_get(case_statement->cases, i);
-                ast_list* assign = verilog_analysis_condition_case_statement(c_item->body, module, signals_db, outside_assigns);
+                if(c_item->body == NULL) continue;
+                ast_list* assign = verilog_analysis_condition_case_statement(c_item->body, module, signals_db, outside_assigns, error);
                 if(all_assignment == NULL){
                     all_assignment = assign;
                 } else {
@@ -695,11 +709,16 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
                             printf(" %s", signal->signal_name->identifier);
                         }
                         printf("\n");
+                        *error = AST_TRUE;
                         break;
                     }
                 }
             }
             return all_assignment;
+        }
+        case STM_FUNCTION_CALL: {
+
+            return NULL;
         }
         default:{
             printf("Unsupported statement type: %d\n", statement->type);
@@ -853,7 +872,6 @@ ast_boolean check_in_signal(ast_module_instantiation *instance, ast_list* signal
                     ast_signal_dependency *dependency_iter = ast_list_get(primarys_iter, yy);
                     if (strcmp(dependency_iter->signal->signal_name->identifier,
                                dependency_signal->signal_name->identifier) == 0) {
-                        found_in_previous_instance = AST_TRUE;
                         for (int z = 0; z < instance->pre_instance->declaration->signals_db->items; z++) {
                             ast_module_signal *dep_iter = ast_list_get(
                                     instance->pre_instance->declaration->signals_db, z);
@@ -930,6 +948,7 @@ ast_boolean check_back_signal(ast_module_instantiation *instance, ast_list* sign
                 return 0;
             }
 
+
             for(int x = 0; x < pre_pipeline->instances->items; x++) {
                 ast_module_instantiation* pre_instance = ast_list_get(pre_pipeline->instances, x);
 
@@ -945,23 +964,25 @@ ast_boolean check_back_signal(ast_module_instantiation *instance, ast_list* sign
                         ast_signal_dependency *dependency_iter = ast_list_get(primarys_iter, yy);
                         if (strcmp(dependency_iter->signal->signal_name->identifier,
                                    dependency_signal->signal_name->identifier) == 0) {
-                            found_in_previous_instance = AST_TRUE;
+                           // found_in_previous_instance = AST_TRUE;
                             for (int z = 0; z < pre_instance->declaration->signals_db->items; z++) {
                                 ast_module_signal *dep_iter = ast_list_get(
                                         pre_instance->declaration->signals_db, z);
+
+                                ast_boolean tmp0 = (dep_iter->direction == PORT_OUTPUT);
                                 ast_boolean tmp1 = (port_connection_iter->port_name == NULL) && (dep_iter->index == y);
                                 ast_boolean tmp2 = (port_connection_iter->port_name != NULL);
                                 if (tmp2 == AST_TRUE) {
                                     tmp2 = (strcmp(dep_iter->signal_name->identifier,
                                                    port_connection_iter->port_name->identifier) == 0);
                                 }
-                                if (tmp1 || tmp2) {
-//                                    if (strcmp(dep_iter->signal_info_comment->identifier,
-//                                               "out_signal") != 0) {
+                                if ((tmp1 || tmp2) && tmp0) {
+                                 //   printf("foudn %s\n", dep_iter->signal_name->identifier);
+//                                    if (dep_iter->signal_info_comment == NULL || strcmp(dep_iter->signal_info_comment->identifier, "out_signal") != 0) {
 //                                        printf("Error> %s.%s has wrong dependency, %s is not a pipeline out_signal\n",
 //                                               instance->declaration->identifier->identifier,
 //                                               portConnection->port_name->identifier,
-//                                               dependency_signal->signal_name->identifier);
+//                                               dep_iter->signal_name->identifier);
 //                                    } else {
                                         found_in_previous_instance = AST_TRUE;
 //                                    }
@@ -992,9 +1013,9 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
                         continue;
                     if (strcmp(module_signal->signal_info_comment->identifier, "in_signal") == 0) {
                         if(check_in_signal(instance, signals_db, module_signal, node) == AST_TRUE){
-//                            printf("INFO>%s.%s has right dependency\n",
-//                                    instance->declaration->identifier->identifier,
-//                                    module_signal->signal_name->identifier);
+                            printf("INFO>%s.%s has right dependency\n",
+                                    instance->declaration->identifier->identifier,
+                                    module_signal->signal_name->identifier);
                         } else {
                             printf("Error>%s.%s has wrong dependency\n",
                                     instance->declaration->identifier->identifier,
@@ -1008,13 +1029,13 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
                     } else if (strncmp(module_signal->signal_info_comment->identifier, "back ", 5) == 0){
                         char* name = module_signal->signal_info_comment->identifier + 5;
                         if(check_back_signal(instance, signals_db, module_signal, node, name) == AST_TRUE){
-//                            printf("INFO>%s.%s has right dependency\n",
-//                                   instance->declaration->identifier->identifier,
-//                                   module_signal->signal_name->identifier);
-                        } else {
-                            printf("Error>%s.%s has wrong dependency\n",
+                            printf("INFO>%s.%s has right dependency\n",
                                    instance->declaration->identifier->identifier,
-                                   module_signal->signal_name->identifier );
+                                   module_signal->signal_name->identifier);
+                        } else {
+                            printf("Error>%s.%s has wrong dependency, it's not back from %s\n",
+                                   instance->declaration->identifier->identifier,
+                                   module_signal->signal_name->identifier, name);
 
                         }
 
@@ -1036,7 +1057,8 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
             ast_module_instantiation* instance = ast_list_get(node->instances, i);
             for(int j = 0; j < instance->declaration->signals_db->items; j++){
                 ast_module_signal* signal_dep = ast_list_get(instance->declaration->signals_db, j);
-                if(signal_dep->signal_info_comment != NULL &&(strcmp(signal_dep->signal_info_comment->identifier, "in_signal") == 0)) {
+                if(signal_dep->signal_info_comment != NULL &&((strcmp(signal_dep->signal_info_comment->identifier, "in_signal") == 0)
+                || (strncmp(signal_dep->signal_info_comment->identifier, "back ", 5) == 0))) {
                     has_in_signal = AST_TRUE;
                 }
             }
@@ -1044,6 +1066,10 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
 
         for(int i = 0; i < node->instances->items; i++){
             ast_module_instantiation* instance = ast_list_get(node->instances, i);
+            if(instance->declaration->module_comment_attributes != NULL &&
+                strcmp(instance->declaration->module_comment_attributes->identifier, "no_check") == 0) {
+                printf("INFO> neglect to check %s\n", instance->declaration->identifier->identifier);
+            }
             for(int j = 0; j < instance->declaration->signals_db->items; j++){
                 ast_module_signal* signal_dep = ast_list_get(instance->declaration->signals_db, j);
                 if(signal_dep->signal_info_comment != NULL &&(strcmp(signal_dep->signal_info_comment->identifier, "out_signal") == 0)){
@@ -1076,7 +1102,8 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
                             clk_found = AST_TRUE;
                         } else if(strcmp(signal->signal_info_comment->identifier, "reset") == 0) {
                             rst_found = AST_TRUE;
-                        } else if(strcmp(signal->signal_info_comment->identifier, "in_signal") == 0) {
+                        } else if((strcmp(signal->signal_info_comment->identifier, "in_signal") == 0)
+                                  || (strncmp(signal->signal_info_comment->identifier, "back ", 5) == 0)) {
                             in_signal_found = AST_TRUE;
                         }
                     }
@@ -1087,7 +1114,7 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
                                 instance->declaration->identifier->identifier,
                                 signal_dep->signal_name->identifier);
                     else {
-                        printf("Error>%s.%s has wrong dependency, %s %s %s\n",
+                        printf("Error>%s.%s has wrong dependency, %s%s%s\n",
                                instance->declaration->identifier->identifier,
                                signal_dep->signal_name->identifier,
                                clk_found == AST_TRUE ? "" : "it doesn't depends on clock, ",
@@ -1095,8 +1122,9 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
                                in_signal_found == AST_TRUE ? "" : "it doesn't depends on in_signal, ");
                         for (int k = 0; k < remove_dup_result->items; k++) {
                             ast_module_signal *signal = ast_list_get(remove_dup_result, k);
-                            printf("%s\n", signal->signal_name->identifier);
+                            printf("%s ", signal->signal_name->identifier);
                         }
+                        printf("\n");
                     }
                 }
             }
@@ -1107,6 +1135,7 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
 
 void verilog_iter_module_dependency(ast_module_instantiation* instance, ast_module_signal* signal, ast_list* signals,
         ast_boolean is_in_module, ast_pipeline_tree* node, ast_list* module_result){
+   // printf("iter %s %s\n", instance->declaration->identifier->identifier, signal->signal_name->identifier);
     ast_list_append(signals, signal);
     if(is_in_module == AST_TRUE){
         ast_list* result = ast_list_new();
@@ -1189,19 +1218,38 @@ void verilog_iter_module_dependency(ast_module_instantiation* instance, ast_modu
                                     found_in_other = AST_TRUE;
                                     for(int z = 0; z < instance_iter->declaration->signals_db->items; z++){
                                         ast_module_signal* tmp_signal = ast_list_get(instance_iter->declaration->signals_db, z);
-                                        if(tmp_signal->index == y){
-                                            ast_boolean dup = AST_FALSE;
-                                            for(int zz = 0; zz < signals->items; zz++){
-                                                ast_module_signal* tttmp_signal = ast_list_get(signals, zz);
-                                                if(strcmp(tttmp_signal->signal_name->identifier, tmp_signal->signal_name->identifier) == 0 &&
-                                                   strcmp(tttmp_signal->module_name->identifier, tmp_signal->module_name->identifier) == 0){
-                                                    dup = AST_TRUE;
-                                                }
-                                            }
-                                            if(dup == AST_FALSE)
-                                                verilog_iter_module_dependency(instance_iter, tmp_signal, signals, AST_TRUE,  node, module_result);
 
+                                        if(port_connection_iter->port_name == NULL) {
+                                            if(tmp_signal->index == y){
+                                                ast_boolean dup = AST_FALSE;
+                                                for(int zz = 0; zz < signals->items; zz++){
+                                                    ast_module_signal* tttmp_signal = ast_list_get(signals, zz);
+                                                    if(strcmp(tttmp_signal->signal_name->identifier, tmp_signal->signal_name->identifier) == 0 &&
+                                                       strcmp(tttmp_signal->module_name->identifier, tmp_signal->module_name->identifier) == 0){
+                                                        dup = AST_TRUE;
+                                                    }
+                                                }
+                                                if(dup == AST_FALSE)
+                                                    verilog_iter_module_dependency(instance_iter, tmp_signal, signals, AST_TRUE,  node, module_result);
+
+                                            }
+
+                                        } else {
+                                            if(strcmp(tmp_signal->signal_name->identifier, port_connection_iter->port_name->identifier) == 0){
+                                                ast_boolean dup = AST_FALSE;
+                                                for(int zz = 0; zz < signals->items; zz++){
+                                                    ast_module_signal* tttmp_signal = ast_list_get(signals, zz);
+                                                    if(strcmp(tttmp_signal->signal_name->identifier, tmp_signal->signal_name->identifier) == 0 &&
+                                                       strcmp(tttmp_signal->module_name->identifier, tmp_signal->module_name->identifier) == 0){
+                                                        dup = AST_TRUE;
+                                                    }
+                                                }
+                                                if(dup == AST_FALSE)
+                                                    verilog_iter_module_dependency(instance_iter, tmp_signal, signals, AST_TRUE,  node, module_result);
+
+                                            }
                                         }
+
 
                                     }
                                 }
@@ -1533,13 +1581,18 @@ void analysis_signal_dependency(int statement_idx, ast_statement* statement, ast
 
             for(int i = 0; i < case_statement->cases->items; i++){
                 ast_case_item* c_item = ast_list_get(case_statement->cases, i);
-                analysis_signal_dependency(statement_idx, c_item->body, signals_db, current_sensitives);
+                if(c_item->body != NULL)
+                    analysis_signal_dependency(statement_idx, c_item->body, signals_db, current_sensitives);
             }
 
             int end = current_sensitives->items;
             for(int j = start; j < end; j++){
                 ast_list_remove_at(current_sensitives, start);
             }
+            break;
+        }
+        case STM_FUNCTION_CALL: {
+
             break;
         }
         default:{

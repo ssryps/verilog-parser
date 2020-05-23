@@ -1,0 +1,15 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module top_tb.intomips_top_instance.bootrom_controller_instance.rom_instance.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING: File CFImemory64Mb_top.mem referenced on /home/mason/Desktop/work/verilog-parser/tests/cod19grp7/Uncommented/testbench/model/28F640P30.sv at line 977 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+[        0 ns]  --- Device is Busy  (start up time) --- 
+WARNING: File memory_byte.mem referenced on /home/mason/Desktop/work/verilog-parser/tests/cod19grp7/Uncommented/testbench/top/top_tb.sv at line 15 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+[        0 ns]  ASynchronous Read Mode
+[        0 ns]  VDD Voltage is OK
+[        0 ns]  VDDQ Voltage is OK
+[        0 ns] Inizialize the Memory to default value
+[        0 ns] Load Memory from file: kernel.bin
+WARNING: Insufficient data from the input file for $fread
+[       60 ns]  --- Device is Ready (end of start-up time) --- 

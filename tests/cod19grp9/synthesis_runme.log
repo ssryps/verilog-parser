@@ -1,0 +1,1473 @@
+
+*** Running vivado
+    with args -log thinpad_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source thinpad_top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source thinpad_top.tcl -notrace
+Command: synth_design -top thinpad_top -part xc7a100tfgg676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 34228 
+WARNING: [Synth 8-1102] /* in comment [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:195]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 384.711 ; gain = 117.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'thinpad_top' [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:5]
+INFO: [Synth 8-6157] synthesizing module 'pll_example' [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/pll_example_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pll_example' (1#1) [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/pll_example_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'UART_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:127]
+INFO: [Synth 8-6155] done synthesizing module 'UART_if' (1#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:127]
+INFO: [Synth 8-6157] synthesizing module 'Flash_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:116]
+INFO: [Synth 8-6155] done synthesizing module 'Flash_if' (1#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:116]
+INFO: [Synth 8-6157] synthesizing module 'VGA_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:158]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_if' (1#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:158]
+INFO: [Synth 8-6157] synthesizing module 'SEG7_LUT' [G:/cod19grp9/thinpad_top.srcs/sources_1/new/SEG7_LUT.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SEG7_LUT' (2#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/new/SEG7_LUT.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (2#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (2#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'pc_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/pc/pc_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (3#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/pc/pc_reg.v:3]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/if_id.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (4#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/if_id.v:3]
+INFO: [Synth 8-6157] synthesizing module 'id' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/id.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id' (5#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/id.v:2]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/regfile.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (6#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/regfile.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/id_ex.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (7#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/id_ex.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ex' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/ex.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (8#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/ex.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/ex_mem.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (9#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/ex_mem.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mem' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:3]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:112]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:138]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:215]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:238]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:261]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:307]
+INFO: [Synth 8-226] default block is never used [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:333]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (10#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/wb/mem_wb.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (11#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/wb/mem_wb.v:2]
+INFO: [Synth 8-6157] synthesizing module 'hilo_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/wb/hilo_reg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'hilo_reg' (12#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/wb/hilo_reg.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ctrl' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ctrl.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl' (13#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cp0_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/cp0/cp0_reg.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'cp0_write_mask' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/cp0/cp0_write_mask.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/cp0/cp0_write_mask.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'cp0_write_mask' (14#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/cp0/cp0_write_mask.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'cp0_reg' (15#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/cp0/cp0_reg.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'except' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/except.sv:4]
+WARNING: [Synth 8-6104] Input port 'except' has an internal driver [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/except.sv:48]
+WARNING: [Synth 8-87] always_comb on 'except_req_reg[extra]' did not result in combinational logic [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/except.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'except' (16#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/except.sv:4]
+WARNING: [Synth 8-3848] Net data_bus\.use_cpld_uart in module/entity cpu does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:28]
+WARNING: [Synth 8-3848] Net inst_bus\.data_w in module/entity cpu does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:29]
+WARNING: [Synth 8-3848] Net inst_bus\.mask in module/entity cpu does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:29]
+WARNING: [Synth 8-3848] Net inst_bus\.use_cpld_uart in module/entity cpu does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'Bus_if' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6155] done synthesizing module 'Bus_if' (17#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/per_defs.svh:86]
+INFO: [Synth 8-6157] synthesizing module 'data_bus' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:69]
+WARNING: [Synth 8-87] always_comb on 'ram\.use_cpld_uart_reg' did not result in combinational logic [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:80]
+WARNING: [Synth 8-87] always_comb on 'vga\.write_reg' did not result in combinational logic [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:106]
+WARNING: [Synth 8-3848] Net flash\.use_cpld_uart in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:25]
+WARNING: [Synth 8-3848] Net bootrom\.use_cpld_uart in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:27]
+WARNING: [Synth 8-3848] Net uart\.mask in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:28]
+WARNING: [Synth 8-3848] Net uart\.use_cpld_uart in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:28]
+WARNING: [Synth 8-3848] Net vga\.read in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:29]
+WARNING: [Synth 8-3848] Net vga\.mask in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:29]
+WARNING: [Synth 8-3848] Net vga\.use_cpld_uart in module/entity data_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'data_bus' (18#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'inst_bus' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:43]
+WARNING: [Synth 8-3848] Net cpu\.interrupt in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:24]
+WARNING: [Synth 8-3848] Net ram\.data_w in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:25]
+WARNING: [Synth 8-3848] Net ram\.use_cpld_uart in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:25]
+WARNING: [Synth 8-3848] Net bootrom\.write in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:26]
+WARNING: [Synth 8-3848] Net bootrom\.data_w in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:26]
+WARNING: [Synth 8-3848] Net bootrom\.use_cpld_uart in module/entity inst_bus does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'inst_bus' (19#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'bootrom' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_blockrom' [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/blk_mem_blockrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_blockrom' (20#1) [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/blk_mem_blockrom_stub.v:6]
+WARNING: [Synth 8-3848] Net inst_bus\.data_r2 in module/entity bootrom does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:23]
+WARNING: [Synth 8-3848] Net inst_bus\.interrupt in module/entity bootrom does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:23]
+WARNING: [Synth 8-3848] Net data_bus\.data_r2 in module/entity bootrom does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:24]
+WARNING: [Synth 8-3848] Net data_bus\.interrupt in module/entity bootrom does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'bootrom' (21#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'sram' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv:36]
+WARNING: [Synth 8-3848] Net inst_bus\.data_r2 in module/entity sram does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv:37]
+WARNING: [Synth 8-3848] Net inst_bus\.interrupt in module/entity sram does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv:37]
+WARNING: [Synth 8-3848] Net data_bus\.stall in module/entity sram does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv:38]
+INFO: [Synth 8-6155] done synthesizing module 'sram' (22#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'uart' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'fifo_uart_tx' [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/fifo_uart_tx_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_uart_tx' (23#1) [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/fifo_uart_tx_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'async_transmitter' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:14]
+	Parameter ClkFrequency bound to: 20000000 - type: integer 
+	Parameter Baud bound to: 9600 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BaudTickGen' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:189]
+	Parameter ClkFrequency bound to: 20000000 - type: integer 
+	Parameter Baud bound to: 9600 - type: integer 
+	Parameter Oversampling bound to: 1 - type: integer 
+	Parameter AccWidth bound to: 20 - type: integer 
+	Parameter ShiftLimiter bound to: 3 - type: integer 
+	Parameter Inc bound to: 503 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BaudTickGen' (24#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'async_transmitter' (25#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:14]
+INFO: [Synth 8-155] case statement is not full and has no default [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'fifo_uart_rx' [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/fifo_uart_rx_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_uart_rx' (26#1) [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/fifo_uart_rx_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'async_receiver' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:75]
+	Parameter ClkFrequency bound to: 20000000 - type: integer 
+	Parameter Baud bound to: 9600 - type: integer 
+	Parameter Oversampling bound to: 8 - type: integer 
+	Parameter l2o bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BaudTickGen__parameterized0' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:189]
+	Parameter ClkFrequency bound to: 20000000 - type: integer 
+	Parameter Baud bound to: 9600 - type: integer 
+	Parameter Oversampling bound to: 8 - type: integer 
+	Parameter AccWidth bound to: 20 - type: integer 
+	Parameter ShiftLimiter bound to: 6 - type: integer 
+	Parameter Inc bound to: 4027 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BaudTickGen__parameterized0' (26#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'async_receiver' (27#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/async.v:75]
+WARNING: [Synth 8-350] instance 'receiver' of module 'async_receiver' requires 7 connections, but only 5 given [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv:115]
+WARNING: [Synth 8-3848] Net data_bus\.data_r2 in module/entity uart does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (28#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'flash' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:59]
+WARNING: [Synth 8-5788] Register data_write_reg in module flash is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:34]
+WARNING: [Synth 8-5788] Register flash_t\.address_reg in module flash is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:66]
+WARNING: [Synth 8-3848] Net data_bus\.data_r2 in module/entity flash does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:4]
+WARNING: [Synth 8-3848] Net data_bus\.interrupt in module/entity flash does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'flash' (29#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'vga_ctrl' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_vga' [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/blk_mem_vga_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_vga' (30#1) [G:/cod19grp9/thinpad_top.runs/synth_1/.Xil/Vivado-26856-DESKTOP-KM92HIA/realtime/blk_mem_vga_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga' [G:/cod19grp9/thinpad_top.srcs/sources_1/new/vga.v:15]
+	Parameter WIDTH bound to: 12 - type: integer 
+	Parameter HSIZE bound to: 800 - type: integer 
+	Parameter HFP bound to: 856 - type: integer 
+	Parameter HSP bound to: 976 - type: integer 
+	Parameter HMAX bound to: 1040 - type: integer 
+	Parameter VSIZE bound to: 600 - type: integer 
+	Parameter VFP bound to: 637 - type: integer 
+	Parameter VSP bound to: 643 - type: integer 
+	Parameter VMAX bound to: 666 - type: integer 
+	Parameter HSPP bound to: 1 - type: integer 
+	Parameter VSPP bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga' (31#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/new/vga.v:15]
+WARNING: [Synth 8-689] width (3) of port connection 'hdata' does not match port width (12) of module 'vga' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:62]
+WARNING: [Synth 8-689] width (5) of port connection 'vdata' does not match port width (12) of module 'vga' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:63]
+WARNING: [Synth 8-3848] Net data_bus\.stall in module/entity vga_ctrl does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:24]
+WARNING: [Synth 8-3848] Net data_bus\.data_r1 in module/entity vga_ctrl does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:24]
+WARNING: [Synth 8-3848] Net data_bus\.data_r2 in module/entity vga_ctrl does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:24]
+WARNING: [Synth 8-3848] Net data_bus\.interrupt in module/entity vga_ctrl does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'vga_ctrl' (32#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:23]
+WARNING: [Synth 8-3848] Net led_bits in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:241]
+WARNING: [Synth 8-3848] Net flash_a in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:46]
+WARNING: [Synth 8-3848] Net flash_rp_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:48]
+WARNING: [Synth 8-3848] Net flash_vpen in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:49]
+WARNING: [Synth 8-3848] Net flash_ce_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:50]
+WARNING: [Synth 8-3848] Net flash_oe_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:51]
+WARNING: [Synth 8-3848] Net flash_we_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:52]
+WARNING: [Synth 8-3848] Net flash_byte_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:53]
+WARNING: [Synth 8-3848] Net sl811_a0 in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:56]
+WARNING: [Synth 8-3848] Net sl811_wr_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:58]
+WARNING: [Synth 8-3848] Net sl811_rd_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:59]
+WARNING: [Synth 8-3848] Net sl811_cs_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:60]
+WARNING: [Synth 8-3848] Net sl811_rst_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:61]
+WARNING: [Synth 8-3848] Net sl811_dack_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:62]
+WARNING: [Synth 8-3848] Net dm9k_cmd in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:67]
+WARNING: [Synth 8-3848] Net dm9k_iow_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:69]
+WARNING: [Synth 8-3848] Net dm9k_ior_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:70]
+WARNING: [Synth 8-3848] Net dm9k_cs_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:71]
+WARNING: [Synth 8-3848] Net dm9k_pwrst_n in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:72]
+WARNING: [Synth 8-3848] Net number in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:237]
+WARNING: [Synth 8-3848] Net clk[_10M] in module/entity thinpad_top does not have driver. [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'thinpad_top' (33#1) [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:5]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.stall
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[31]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[30]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[29]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[28]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[27]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[26]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[25]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[24]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[23]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[22]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[21]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[20]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[19]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[18]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[17]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[16]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[15]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[14]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[13]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[12]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[11]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[10]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[9]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[8]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[7]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[6]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[5]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[4]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[3]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[2]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[1]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r1[0]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[31]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[30]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[29]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[28]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[27]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[26]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[25]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[24]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[23]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[22]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[21]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[20]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[19]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[18]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[17]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[16]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[15]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[14]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[13]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[12]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[11]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[10]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[9]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[8]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[7]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[6]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[5]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[4]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[3]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[2]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[1]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_r2[0]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[5]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[4]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[3]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[2]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[1]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.interrupt[0]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[31]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[30]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[29]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[28]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[27]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[26]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[25]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[24]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[23]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[22]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[21]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[20]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.address[19]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.read
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[31]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[30]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[29]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[28]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[27]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[26]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[25]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[24]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[23]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[22]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[21]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[20]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[19]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[18]
+WARNING: [Synth 8-3331] design vga_ctrl has unconnected port data_bus\.data_w[17]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 475.246 ; gain = 207.664
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[31] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[30] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[29] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[28] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[27] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[26] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[25] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[24] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[23] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[22] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[21] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[20] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[19] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[18] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[17] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[16] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[15] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[14] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[13] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[12] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[11] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[10] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[9] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[8] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[7] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[6] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[5] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[4] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[3] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[2] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[1] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin except0:data_virtual_addr[0] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/instance/cpu.sv:354]
+WARNING: [Synth 8-3295] tying undriven pin segL:iDIG[3] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:238]
+WARNING: [Synth 8-3295] tying undriven pin segL:iDIG[2] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:238]
+WARNING: [Synth 8-3295] tying undriven pin segL:iDIG[1] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:238]
+WARNING: [Synth 8-3295] tying undriven pin segL:iDIG[0] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:238]
+WARNING: [Synth 8-3295] tying undriven pin segH:iDIG[3] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [Synth 8-3295] tying undriven pin segH:iDIG[2] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [Synth 8-3295] tying undriven pin segH:iDIG[1] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+WARNING: [Synth 8-3295] tying undriven pin segH:iDIG[0] to constant 0 [G:/cod19grp9/thinpad_top.srcs/sources_1/new/thinpad_top.v:239]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 475.246 ; gain = 207.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 475.246 ; gain = 207.664
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/blk_mem_blockrom/blk_mem_blockrom/blk_mem_blockrom_in_context.xdc] for cell 'bootrom_controller_instance/bootrom'
+Finished Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/blk_mem_blockrom/blk_mem_blockrom/blk_mem_blockrom_in_context.xdc] for cell 'bootrom_controller_instance/bootrom'
+Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/fifo_uart_rx/fifo_uart_rx/fifo_uart_rx_in_context.xdc] for cell 'uart_controller_instance/receiver_fifo'
+Finished Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/fifo_uart_rx/fifo_uart_rx/fifo_uart_rx_in_context.xdc] for cell 'uart_controller_instance/receiver_fifo'
+Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/fifo_uart_tx/fifo_uart_tx/fifo_uart_tx_in_context.xdc] for cell 'uart_controller_instance/transmitter_fifo'
+Finished Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/fifo_uart_tx/fifo_uart_tx/fifo_uart_tx_in_context.xdc] for cell 'uart_controller_instance/transmitter_fifo'
+Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/pll_example/pll_example/pll_example_in_context.xdc] for cell 'clock_gen'
+Finished Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/pll_example/pll_example/pll_example_in_context.xdc] for cell 'clock_gen'
+Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/blk_mem_vga/blk_mem_vga/blk_mem_vga_in_context.xdc] for cell 'vga_controller_instance/gram0'
+Finished Parsing XDC File [g:/cod19grp9/thinpad_top.srcs/sources_1/ip/blk_mem_vga/blk_mem_vga/blk_mem_vga_in_context.xdc] for cell 'vga_controller_instance/gram0'
+Parsing XDC File [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_11M0592_IBUF'. [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:4]
+WARNING: [Vivado 12-507] No nets matched 'clock_btn_IBUF'. [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:20]
+WARNING: [Vivado 12-507] No nets matched 'reset_btn_IBUF'. [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command 'base_2x' is not supported in the xdc constraint file. [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:327]
+CRITICAL WARNING: [Designutils 20-1307] Command 'base' is not supported in the xdc constraint file. [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:338]
+Finished Parsing XDC File [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/thinpad_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/cod19grp9/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/thinpad_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/thinpad_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 872.059 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 872.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 872.059 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 872.059 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'bootrom_controller_instance/bootrom' at clock pin 'clka' is different from the actual clock period '11.111', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_50M. (constraint file  g:/cod19grp9/thinpad_top.srcs/sources_1/ip/pll_example/pll_example/pll_example_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_50M. (constraint file  g:/cod19grp9/thinpad_top.srcs/sources_1/ip/pll_example/pll_example/pll_example_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for bootrom_controller_instance/bootrom. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart_controller_instance/receiver_fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart_controller_instance/transmitter_fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clock_gen. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vga_controller_instance/gram0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "reg1_read_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wreg_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "reg2_read_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5587] ROM size for "reg2_read_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "aluop_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "aluop_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "aluop_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "aluop_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "alusel_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "alusel_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "alusel_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "alusel_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "wreg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wreg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "wreg_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "brflag_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_read_addr_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/ex.v:355]
+INFO: [Synth 8-5546] ROM "mem_write_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_ce_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_new" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "offset" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "except_code0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "except_code0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "base_ram_be" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'TxD_state_reg' in module 'async_transmitter'
+INFO: [Synth 8-802] inferred FSM for state register 'RxD_state_reg' in module 'async_receiver'
+INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OversamplingCnt0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'flash_t\.we_reg' into 'flash_t\.ce_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv:54]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'flash'
+INFO: [Synth 8-5545] ROM "write_flash" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "data_read" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flash_t\.ce" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "vdata" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'reg1_o_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/id.v:837]
+WARNING: [Synth 8-327] inferring latch for variable 'reg2_o_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/id/id.v:861]
+WARNING: [Synth 8-327] inferring latch for variable 'cp0_reg_read_addr_o_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/ex.v:182]
+WARNING: [Synth 8-327] inferring latch for variable 'write_data_o_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/ex/ex.v:212]
+WARNING: [Synth 8-327] inferring latch for variable 'cp0_epc_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:74]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/mem/mem.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'except_req_reg[extra]' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/except.sv:52]
+WARNING: [Synth 8-327] inferring latch for variable 'ram\.use_cpld_uart_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:80]
+WARNING: [Synth 8-327] inferring latch for variable 'vga\.write_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv:106]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                      00000000001 |                             0000
+                  iSTATE |                      00000000010 |                             0100
+                 iSTATE7 |                      00000000100 |                             1000
+                 iSTATE6 |                      00000001000 |                             1001
+                 iSTATE4 |                      00000010000 |                             1010
+                 iSTATE2 |                      00000100000 |                             1011
+                 iSTATE3 |                      00001000000 |                             1100
+                 iSTATE0 |                      00010000000 |                             1101
+                 iSTATE9 |                      00100000000 |                             1110
+                 iSTATE8 |                      01000000000 |                             1111
+                 iSTATE1 |                      10000000000 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'TxD_state_reg' using encoding 'one-hot' in module 'async_transmitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                      00000000001 |                             0000
+                 iSTATE4 |                      00000000010 |                             0001
+                 iSTATE7 |                      00000000100 |                             1000
+                 iSTATE6 |                      00000001000 |                             1001
+                 iSTATE3 |                      00000010000 |                             1010
+                 iSTATE1 |                      00000100000 |                             1011
+                 iSTATE2 |                      00001000000 |                             1100
+                  iSTATE |                      00010000000 |                             1101
+                 iSTATE9 |                      00100000000 |                             1110
+                 iSTATE8 |                      01000000000 |                             1111
+                 iSTATE0 |                      10000000000 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'RxD_state_reg' using encoding 'one-hot' in module 'async_receiver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   RESET |                   00000000000001 | 00000000000000000000000000000001
+            WRITE_BYTE_0 |                   00000000000010 | 00000000000000000000000000000010
+            WRITE_BYTE_1 |                   00000000000100 | 00000000000000000000000000000011
+            WRITE_BYTE_2 |                   00000000001000 | 00000000000000000000000000000100
+            WRITE_BYTE_3 |                   00000000010000 | 00000000000000000000000000000101
+                    INIT |                   00000000100000 | 00000000000000000000000000000000
+           READ_BYTE_0_0 |                   00000001000000 | 00000000000000000000000000000110
+           READ_BYTE_0_1 |                   00000010000000 | 00000000000000000000000000000111
+           READ_BYTE_0_2 |                   00000100000000 | 00000000000000000000000000001000
+           READ_BYTE_0_3 |                   00001000000000 | 00000000000000000000000000001001
+           READ_BYTE_1_0 |                   00010000000000 | 00000000000000000000000000001010
+           READ_BYTE_1_1 |                   00100000000000 | 00000000000000000000000000001011
+           READ_BYTE_1_2 |                   01000000000000 | 00000000000000000000000000001100
+           READ_BYTE_1_3 |                   10000000000000 | 00000000000000000000000000001101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'flash'
+WARNING: [Synth 8-327] inferring latch for variable 'gram_we_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:53]
+WARNING: [Synth 8-327] inferring latch for variable 'gaddr_w_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:49]
+WARNING: [Synth 8-327] inferring latch for variable 'gdata_w_reg' [G:/cod19grp9/thinpad_top.srcs/sources_1/imports/v_src/peripheral/vga_ctrl.sv:51]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'segL' (SEG7_LUT) to 'segH'
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |cp0_reg__GB0     |           1|     46433|
+|2     |cp0_reg__GB1     |           1|     11957|
+|3     |cp0_reg__GB2     |           1|     15267|
+|4     |cp0_reg__GB3     |           1|     31470|
+|5     |cp0_reg__GB4     |           1|     41306|
+|6     |cp0_reg__GB5     |           1|     12052|
+|7     |cpu__GC0         |           1|     31771|
+|8     |thinpad_top__GC0 |           1|      4959|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 11    
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 89    
+	               23 Bit    Registers := 1     
+	               21 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 4     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 59    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 173   
+	  11 Input     32 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 8     
+	   8 Input     32 Bit        Muxes := 1     
+	  14 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	  14 Input     23 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 9     
+	   2 Input     19 Bit        Muxes := 16    
+	   3 Input     18 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  14 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	  14 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	  11 Input     11 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 16    
+	  32 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
+	  26 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 17    
+	  11 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 10    
+	   4 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 3     
+	  14 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 3     
+	  26 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 8     
+	  11 Input      3 Bit        Muxes := 1     
+	  32 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 12    
+	  25 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 156   
+	  26 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 5     
+	  32 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 10    
+	  14 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module thinpad_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module cp0_write_mask__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module cp0_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 32    
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 93    
+	   2 Input     19 Bit        Muxes := 16    
+	   3 Input     18 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 42    
+Module pc_reg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module if_id 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module id 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	  11 Input     32 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	  32 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	  26 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 10    
+	  11 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 3     
+	  26 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	  11 Input      3 Bit        Muxes := 1     
+	  32 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	  25 Input      2 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 14    
+	  11 Input      1 Bit        Muxes := 3     
+	  32 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+Module regfile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 32    
+Module id_ex 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module ex 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 23    
+	   3 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+Module ex_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 8     
+	               15 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module mem 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 7     
+	  14 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 2     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module mem_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module hilo_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+Module ctrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module cp0_write_mask 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module except 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+Module data_bus 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 9     
+Module inst_bus 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 3     
+Module bootrom 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module sram 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     20 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 6     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 23    
+	   4 Input      1 Bit        Muxes := 2     
+Module BaudTickGen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+Module async_transmitter 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module BaudTickGen__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     21 Bit       Adders := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+Module async_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  11 Input      1 Bit        Muxes := 1     
+Module uart 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+Module flash 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               23 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	  14 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 2     
+	  14 Input     23 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  14 Input     16 Bit        Muxes := 1     
+	  14 Input     14 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 10    
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vga_controller_instance/vga800x600at75/vdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/tx_fifo_write_reg' (FDC) to 'i_0/uart_controller_instance/rx_fifo_read_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/tx_fifo_in_reg[7] )
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[31]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[30]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[30]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[29]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[28]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[28]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[27]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[26]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[26]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[25]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[25]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[24]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[23]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[22]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[21]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[21]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[20]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[20]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[19]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[18]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[17]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[17]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[16]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[16]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[15]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[14]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[14]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[13]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[12]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[12]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[11]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[10]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[9]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[8]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[7]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[6]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[5]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[4]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[4]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/uart_controller_instance/currState_reg[3]' (FDCE) to 'i_0/uart_controller_instance/currState_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\uart_controller_instance/rx_fifo_read_reg )
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[10] driven by constant 0
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[4] driven by constant 0
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[3] driven by constant 0
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[2] driven by constant 0
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[1] driven by constant 0
+WARNING: [Synth 8-3917] design cp0_reg__GB3 has port P[0] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[config1][31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\regs_inner_reg[ebase][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\regs_inner_reg[ebase][30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\regs_inner_reg[ebase][31] )
+INFO: [Synth 8-5546] ROM "aluop_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "reg1_read_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "reg2_read_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "aluop_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "aluop_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "alusel_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wreg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "wreg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "cp0_reg_read_addr_o" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP hilo_temp, operation Mode is: A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: Generating DSP hilo_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+DSP Report: operator hilo_temp is absorbed into DSP hilo_temp.
+INFO: [Synth 8-5546] ROM "mem0/mem_write_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem0/mem_ce_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[0]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[8]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[6]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[5]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[3]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[2]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[1]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[4]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[7]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[9]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[10]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[11]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[12]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'pc_reg0/except_info_reg[13]' (FDRE) to 'pc_reg0/except_info_reg[14]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pc_reg0/except_info_reg[14] )
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[0]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[8]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[6]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[5]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[3]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[2]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[1]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[4]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[7]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[9]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[10]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[11]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[12]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'if_id0/id_except_info_reg[13]' (FDRE) to 'if_id0/id_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[0]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[4]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[7]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[9]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[10]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[11]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[12]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'id_ex0/ex_except_info_reg[13]' (FDRE) to 'id_ex0/ex_except_info_reg[14]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][1]' (LD) to 'except0/except_req_reg[extra][2]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][2]' (LD) to 'except0/except_req_reg[extra][3]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][3]' (LD) to 'except0/except_req_reg[extra][4]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][4]' (LD) to 'except0/except_req_reg[extra][5]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][5]' (LD) to 'except0/except_req_reg[extra][6]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][6]' (LD) to 'except0/except_req_reg[extra][7]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][7]' (LD) to 'except0/except_req_reg[extra][8]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][8]' (LD) to 'except0/except_req_reg[extra][9]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][9]' (LD) to 'except0/except_req_reg[extra][10]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][10]' (LD) to 'except0/except_req_reg[extra][11]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][11]' (LD) to 'except0/except_req_reg[extra][12]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][12]' (LD) to 'except0/except_req_reg[extra][13]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][13]' (LD) to 'except0/except_req_reg[extra][14]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][14]' (LD) to 'except0/except_req_reg[extra][15]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][15]' (LD) to 'except0/except_req_reg[extra][16]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][16]' (LD) to 'except0/except_req_reg[extra][17]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][17]' (LD) to 'except0/except_req_reg[extra][18]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][18]' (LD) to 'except0/except_req_reg[extra][19]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][19]' (LD) to 'except0/except_req_reg[extra][20]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][20]' (LD) to 'except0/except_req_reg[extra][21]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][21]' (LD) to 'except0/except_req_reg[extra][22]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][22]' (LD) to 'except0/except_req_reg[extra][23]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][23]' (LD) to 'except0/except_req_reg[extra][24]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][24]' (LD) to 'except0/except_req_reg[extra][25]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][25]' (LD) to 'except0/except_req_reg[extra][26]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][26]' (LD) to 'except0/except_req_reg[extra][27]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][27]' (LD) to 'except0/except_req_reg[extra][28]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][28]' (LD) to 'except0/except_req_reg[extra][29]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][29]' (LD) to 'except0/except_req_reg[extra][30]'
+INFO: [Synth 8-3886] merging instance 'except0/except_req_reg[extra][30]' (LD) to 'except0/except_req_reg[extra][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (except0/\except_req_reg[extra][31] )
+WARNING: [Synth 8-3332] Sequential element (except_req_reg[extra][31]) is unused and will be removed from module except.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (except0/\except_req_reg[extra][0] )
+WARNING: [Synth 8-3332] Sequential element (except_req_reg[extra][0]) is unused and will be removed from module except.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:23 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------+------------+---------------+----------------+
+|Module Name    | RTL Object | Depth x Width | Implemented As | 
++---------------+------------+---------------+----------------+
+|cp0_write_mask | mask       | 32x32         | LUT            | 
++---------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ex          | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |cp0_reg__GB0     |           1|       447|
+|2     |cp0_reg__GB1     |           1|        57|
+|3     |cp0_reg__GB2     |           1|       288|
+|4     |cp0_reg__GB3     |           1|      6668|
+|5     |cp0_reg__GB4     |           1|       840|
+|6     |cp0_reg__GB5     |           1|       428|
+|7     |cpu__GC0         |           1|     11936|
+|8     |thinpad_top__GC0 |           1|      1754|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_gen/clk_out1' to pin 'clock_gen/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_gen/clk_out2' to pin 'clock_gen/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock_gen/clk_out2_noshift' to pin 'clock_gen/bbstub_clk_out2_noshift/O'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:38 . Memory (MB): peak = 872.059 ; gain = 604.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cp0_reg0i_4/\regs_inner_reg[ebase][29] )
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:02:06 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------+------------+----------+
+|      |RTL Partition   |Replication |Instances |
++------+----------------+------------+----------+
+|1     |cp0_reg__GB0    |           1|        17|
+|2     |cp0_reg__GB1    |           1|        13|
+|3     |cp0_reg__GB2    |           1|        10|
+|4     |cp0_reg__GB3    |           1|      5581|
+|5     |cp0_reg__GB4    |           1|        68|
+|6     |cp0_reg__GB5    |           1|        14|
+|7     |thinpad_top_GT0 |           1|     13433|
++------+----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\cpu0/regfile0/regs_reg[0][23] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:02:30 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------+------------+----------+
+|      |RTL Partition   |Replication |Instances |
++------+----------------+------------+----------+
+|1     |cp0_reg__GB0    |           1|         5|
+|2     |cp0_reg__GB1    |           1|         2|
+|3     |cp0_reg__GB2    |           1|         3|
+|4     |cp0_reg__GB3    |           1|      3080|
+|5     |cp0_reg__GB4    |           1|        25|
+|6     |cp0_reg__GB5    |           1|         4|
+|7     |thinpad_top_GT0 |           1|      6220|
++------+----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop cpu0/pc_reg0/ce_reg is being inverted and renamed to cpu0/pc_reg0/ce_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:34 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:34 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:35 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:35 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:35 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:55 ; elapsed = 00:02:35 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |pll_example      |         1|
+|2     |blk_mem_blockrom |         1|
+|3     |fifo_uart_tx     |         1|
+|4     |fifo_uart_rx     |         1|
+|5     |blk_mem_vga      |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_blockrom |     1|
+|2     |blk_mem_vga      |     1|
+|3     |fifo_uart_rx     |     1|
+|4     |fifo_uart_tx     |     1|
+|5     |pll_example      |     1|
+|6     |BUFG             |     4|
+|7     |CARRY4           |   153|
+|8     |DSP48E1          |     4|
+|9     |LUT1             |   158|
+|10    |LUT2             |   425|
+|11    |LUT3             |  1140|
+|12    |LUT4             |   429|
+|13    |LUT5             |   688|
+|14    |LUT6             |  2400|
+|15    |MUXF7            |   532|
+|16    |MUXF8            |    95|
+|17    |FDCE             |    49|
+|18    |FDPE             |     3|
+|19    |FDRE             |  2922|
+|20    |FDSE             |    20|
+|21    |LD               |    41|
+|22    |LDC              |   124|
+|23    |IBUF             |     5|
+|24    |IOBUF            |    64|
+|25    |OBUF             |    85|
+|26    |OBUFT            |    56|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+------------------------------+----------------------------+------+
+|      |Instance                      |Module                      |Cells |
++------+------------------------------+----------------------------+------+
+|1     |top                           |                            |  9493|
+|2     |  bootrom_controller_instance |bootrom                     |    64|
+|3     |  cpu0                        |cpu                         |  8826|
+|4     |    ex0                       |ex                          |   186|
+|5     |    cp0_reg0                  |cp0_reg                     |  1900|
+|6     |      cp0_write_mask_instance |cp0_write_mask              |     1|
+|7     |    ctrl0                     |ctrl                        |     3|
+|8     |    ex_mem0                   |ex_mem                      |  1154|
+|9     |    except0                   |except                      |   212|
+|10    |    hilo_reg0                 |hilo_reg                    |    64|
+|11    |    id0                       |id                          |   110|
+|12    |    id_ex0                    |id_ex                       |  1140|
+|13    |    if_id0                    |if_id                       |   665|
+|14    |    mem0                      |mem                         |    32|
+|15    |    mem_wb0                   |mem_wb                      |  1405|
+|16    |    pc_reg0                   |pc_reg                      |   124|
+|17    |    regfile0                  |regfile                     |  1831|
+|18    |  data_bus_instance           |data_bus                    |     4|
+|19    |  flash_controller_instance   |flash                       |    90|
+|20    |  uart_controller_instance    |uart                        |   174|
+|21    |    receiver                  |async_receiver              |    80|
+|22    |      tickgen                 |BaudTickGen__parameterized0 |    43|
+|23    |    transmitter               |async_transmitter           |    69|
+|24    |      tickgen                 |BaudTickGen                 |    38|
+|25    |  vga_controller_instance     |vga_ctrl                    |   114|
+|26    |    vga800x600at75            |vga                         |    78|
++------+------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:55 ; elapsed = 00:02:35 . Memory (MB): peak = 1054.863 ; gain = 787.281
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 156 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:39 ; elapsed = 00:02:26 . Memory (MB): peak = 1054.863 ; gain = 390.469
+Synthesis Optimization Complete : Time (s): cpu = 00:01:55 ; elapsed = 00:02:37 . Memory (MB): peak = 1054.863 ; gain = 787.281
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1013 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1054.863 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 229 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 64 instances
+  LD => LDCE: 41 instances
+  LDC => LDCE: 124 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+407 Infos, 227 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:41 . Memory (MB): peak = 1054.863 ; gain = 789.738
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1054.863 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'G:/cod19grp9/thinpad_top.runs/synth_1/thinpad_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file thinpad_top_utilization_synth.rpt -pb thinpad_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  6 10:52:27 2019...

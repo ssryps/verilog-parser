@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3310216400000fs"></ZoomStartTime>
+      <ZoomEndTime time="3310310600001fs"></ZoomEndTime>
+      <Cursor1Time time="3310262000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <ValueColumnWidth column_width="184"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="74" />
+   <wvobject fp_name="/tb/dut/openmips0/if_data_i" type="array">
+      <obj_property name="ElementShortName">if_data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/if_addr_o" type="array">
+      <obj_property name="ElementShortName">if_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">if_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/if_sram_ce_o" type="logic">
+      <obj_property name="ElementShortName">if_sram_ce_o</obj_property>
+      <obj_property name="ObjectShortName">if_sram_ce_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/int_i" type="array">
+      <obj_property name="ElementShortName">int_i[5:0]</obj_property>
+      <obj_property name="ObjectShortName">int_i[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_rram_ce_o" type="logic">
+      <obj_property name="ElementShortName">mem_rram_ce_o</obj_property>
+      <obj_property name="ObjectShortName">mem_rram_ce_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_data_i" type="array">
+      <obj_property name="ElementShortName">mem_data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_addr_o" type="array">
+      <obj_property name="ElementShortName">mem_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_data_o" type="array">
+      <obj_property name="ElementShortName">mem_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_data_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_we_o" type="logic">
+      <obj_property name="ElementShortName">mem_we_o</obj_property>
+      <obj_property name="ObjectShortName">mem_we_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_sram_ce_o" type="logic">
+      <obj_property name="ElementShortName">mem_sram_ce_o</obj_property>
+      <obj_property name="ObjectShortName">mem_sram_ce_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/mem_serial_ce_o" type="logic">
+      <obj_property name="ElementShortName">mem_serial_ce_o</obj_property>
+      <obj_property name="ObjectShortName">mem_serial_ce_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/reg4" type="array">
+      <obj_property name="ElementShortName">reg4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/reg19" type="array">
+      <obj_property name="ElementShortName">reg19[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg19[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/pc" type="array">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/virtual_pc" type="array">
+      <obj_property name="ElementShortName">virtual_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">virtual_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/physical_pc" type="array">
+      <obj_property name="ElementShortName">physical_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">physical_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/serial_output_data" type="array">
+      <obj_property name="ElementShortName">serial_output_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">serial_output_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/base_ram_data" type="array">
+      <obj_property name="ElementShortName">base_ram_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">base_ram_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/base_ram_addr" type="array">
+      <obj_property name="ElementShortName">base_ram_addr[19:0]</obj_property>
+      <obj_property name="ObjectShortName">base_ram_addr[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/ext_ram_data" type="array">
+      <obj_property name="ElementShortName">ext_ram_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ext_ram_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/ext_ram_addr" type="array">
+      <obj_property name="ElementShortName">ext_ram_addr[19:0]</obj_property>
+      <obj_property name="ObjectShortName">ext_ram_addr[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/openmips0/regfile1/regs" type="array">
+      <obj_property name="ElementShortName">regs[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regs[0:31][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_rdn" type="logic">
+      <obj_property name="ElementShortName">uart_rdn</obj_property>
+      <obj_property name="ObjectShortName">uart_rdn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_wrn" type="logic">
+      <obj_property name="ElementShortName">uart_wrn</obj_property>
+      <obj_property name="ObjectShortName">uart_wrn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_dataready" type="logic">
+      <obj_property name="ElementShortName">uart_dataready</obj_property>
+      <obj_property name="ObjectShortName">uart_dataready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_tbre" type="logic">
+      <obj_property name="ElementShortName">uart_tbre</obj_property>
+      <obj_property name="ObjectShortName">uart_tbre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_tsre" type="logic">
+      <obj_property name="ElementShortName">uart_tsre</obj_property>
+      <obj_property name="ObjectShortName">uart_tsre</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_stall_mem" type="logic">
+      <obj_property name="ElementShortName">uart_stall_mem</obj_property>
+      <obj_property name="ObjectShortName">uart_stall_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_state" type="array">
+      <obj_property name="ElementShortName">uart_state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_data_to_cpu_ready" type="logic">
+      <obj_property name="ElementShortName">uart_data_to_cpu_ready</obj_property>
+      <obj_property name="ObjectShortName">uart_data_to_cpu_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_data_to_cpu" type="array">
+      <obj_property name="ElementShortName">uart_data_to_cpu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_data_to_cpu[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/uart_data_out_ready" type="logic">
+      <obj_property name="ElementShortName">uart_data_out_ready</obj_property>
+      <obj_property name="ObjectShortName">uart_data_out_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/buffer" type="array">
+      <obj_property name="ElementShortName">buffer[39:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">buffer[39:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/r_en" type="logic">
+      <obj_property name="ElementShortName">r_en</obj_property>
+      <obj_property name="ObjectShortName">r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_w_en" type="logic">
+      <obj_property name="ElementShortName">rram_w_en</obj_property>
+      <obj_property name="ObjectShortName">rram_w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_w_sel" type="array">
+      <obj_property name="ElementShortName">rram_w_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_w_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_w_addr" type="array">
+      <obj_property name="ElementShortName">rram_w_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_w_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_w_data" type="array">
+      <obj_property name="ElementShortName">rram_w_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_w_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_r_en" type="logic">
+      <obj_property name="ElementShortName">rram_r_en</obj_property>
+      <obj_property name="ObjectShortName">rram_r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_r_sel" type="array">
+      <obj_property name="ElementShortName">rram_r_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_r_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_r_addr" type="array">
+      <obj_property name="ElementShortName">rram_r_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_r_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_r_data" type="array">
+      <obj_property name="ElementShortName">rram_r_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rram_r_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_w_en" type="logic">
+      <obj_property name="ElementShortName">xpm_w_en</obj_property>
+      <obj_property name="ObjectShortName">xpm_w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_w_sel" type="array">
+      <obj_property name="ElementShortName">xpm_w_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_w_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_w_addr" type="array">
+      <obj_property name="ElementShortName">xpm_w_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_w_addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_w_data" type="array">
+      <obj_property name="ElementShortName">xpm_w_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_w_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_w_out_data" type="array">
+      <obj_property name="ElementShortName">xpm_w_out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_w_out_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_r_en" type="logic">
+      <obj_property name="ElementShortName">xpm_r_en</obj_property>
+      <obj_property name="ObjectShortName">xpm_r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_r_sel" type="array">
+      <obj_property name="ElementShortName">xpm_r_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_r_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_r_addr" type="array">
+      <obj_property name="ElementShortName">xpm_r_addr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_r_addr[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/xpm_r_data" type="array">
+      <obj_property name="ElementShortName">xpm_r_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">xpm_r_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/state" type="array">
+      <obj_property name="ElementShortName">state[31:0]</obj_property>
+      <obj_property name="ObjectShortName">state[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_update" type="logic">
+      <obj_property name="ElementShortName">os_update</obj_property>
+      <obj_property name="ObjectShortName">os_update</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_insert_or_delete" type="logic">
+      <obj_property name="ElementShortName">os_insert_or_delete</obj_property>
+      <obj_property name="ObjectShortName">os_insert_or_delete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_nxthop" type="array">
+      <obj_property name="ElementShortName">os_nxthop[31:0]</obj_property>
+      <obj_property name="ObjectShortName">os_nxthop[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_ip" type="array">
+      <obj_property name="ElementShortName">os_ip[31:0]</obj_property>
+      <obj_property name="ObjectShortName">os_ip[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_port" type="array">
+      <obj_property name="ElementShortName">os_port[1:0]</obj_property>
+      <obj_property name="ObjectShortName">os_port[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/routing_table_inst/os_mask" type="array">
+      <obj_property name="ElementShortName">os_mask[4:0]</obj_property>
+      <obj_property name="ObjectShortName">os_mask[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_w_en" type="logic">
+      <obj_property name="ElementShortName">packet_w_en</obj_property>
+      <obj_property name="ObjectShortName">packet_w_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_w_addr" type="array">
+      <obj_property name="ElementShortName">packet_w_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_w_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_w_data" type="array">
+      <obj_property name="ElementShortName">packet_w_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_w_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_r_en" type="logic">
+      <obj_property name="ElementShortName">packet_r_en</obj_property>
+      <obj_property name="ObjectShortName">packet_r_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_r_addr" type="array">
+      <obj_property name="ElementShortName">packet_r_addr[10:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_r_addr[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/packet_r_data" type="array">
+      <obj_property name="ElementShortName">packet_r_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">packet_r_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/to_cpu_packet_end" type="logic">
+      <obj_property name="ElementShortName">to_cpu_packet_end</obj_property>
+      <obj_property name="ObjectShortName">to_cpu_packet_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/to_cpu_packet_status" type="logic">
+      <obj_property name="ElementShortName">to_cpu_packet_status</obj_property>
+      <obj_property name="ObjectShortName">to_cpu_packet_status</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/from_cpu_packet_end" type="logic">
+      <obj_property name="ElementShortName">from_cpu_packet_end</obj_property>
+      <obj_property name="ObjectShortName">from_cpu_packet_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/rram_inst/from_cpu_packet_status" type="logic">
+      <obj_property name="ElementShortName">from_cpu_packet_status</obj_property>
+      <obj_property name="ObjectShortName">from_cpu_packet_status</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/eth_rx_axis_mac_tdata" type="array">
+      <obj_property name="ElementShortName">eth_rx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">eth_rx_axis_mac_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/eth_tx_axis_mac_tdata" type="array">
+      <obj_property name="ElementShortName">eth_tx_axis_mac_tdata[7:0]</obj_property>
+      <obj_property name="ObjectShortName">eth_tx_axis_mac_tdata[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/eth_tx_axis_mac_tvalid" type="logic">
+      <obj_property name="ElementShortName">eth_tx_axis_mac_tvalid</obj_property>
+      <obj_property name="ObjectShortName">eth_tx_axis_mac_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/eth_tx_axis_mac_tlast" type="logic">
+      <obj_property name="ElementShortName">eth_tx_axis_mac_tlast</obj_property>
+      <obj_property name="ObjectShortName">eth_tx_axis_mac_tlast</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/dut/routertop0/eth_handler_inst/eth_tx_axis_mac_tready" type="logic">
+      <obj_property name="ElementShortName">eth_tx_axis_mac_tready</obj_property>
+      <obj_property name="ObjectShortName">eth_tx_axis_mac_tready</obj_property>
+   </wvobject>
+</wave_config>

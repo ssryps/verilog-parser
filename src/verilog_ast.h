@@ -2927,6 +2927,7 @@ struct ast_module_declaration_t{
     ast_node_attributes * attributes; //!< Tool specific attributes.
     ast_identifier        identifier; //!< The name of the module.
     ast_identifier    module_comment; //!< mudule comment used for analysis
+    ast_identifier    module_comment_attributes;
     ast_boolean       is_new_style;
     ast_list * always_blocks; //!< ast_statement_block
     ast_list * continuous_assignments; //!< ast_single_assignment

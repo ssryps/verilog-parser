@@ -8,5 +8,6 @@ src/CMakeFiles/parser.dir/main.o
  /home/mason/Desktop/work/verilog-parser/src/verilog_ast_mem.h
  /home/mason/Desktop/work/verilog-parser/src/verilog_ast_util.h
  /home/mason/Desktop/work/verilog-parser/src/verilog_cmd_parser.h
+ /home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.h
  /home/mason/Desktop/work/verilog-parser/src/verilog_parser.h
  /home/mason/Desktop/work/verilog-parser/src/verilog_preprocessor.h

@@ -203,7 +203,7 @@ DOT                 "."
 EQ                  "="
 COLON               ":"
 IDX_PRT_SEL         "+:"|"-:"
-SEMICOLON           ";"
+SEMICOLON           ";"+
 OPEN_BRACKET        "\("
 CLOSE_BRACKET       "\)"
 OPEN_SQ_BRACKET     "\["
@@ -252,7 +252,7 @@ SIMPLE_ID           [a-zA-Z_][a-zA-Z0-9_$]*
 ESCAPED_ID          \\{SIMPLE_ID}
 MACRO_IDENTIFIER    `{SIMPLE_ID}
 
-MACRO_TEXT          .*\n
+MACRO_TEXT          .*
 
 %x in_define
 %x in_define_t
@@ -306,6 +306,7 @@ B_EQU               "^~"|"~^"
 B_NAND              "~&"
 B_NOR               "~|"
 TERNARY             "?"
+
 
 %%
 {ATTRIBUTE_START}      {EMIT_TOKEN(ATTRIBUTE_START);}
@@ -539,8 +540,8 @@ TERNARY             "?"
     else
     {
         // Undefined macro - PANIC!
-        //printf("ERROR: Undefined macro '%s' on line %d\n", yytext, yylineno);
-        //printf("\tIt's probably all going to fall apart now...\n\n");
+        printf("ERROR: Undefined macro '%s' on line %d\n", yytext, yylineno);
+        printf("\tIt's probably all going to fall apart now...\n\n");
     }
 }
 
@@ -764,8 +765,5 @@ TERNARY             "?"
     }
 }
 
-.                      {
-    EMIT_TOKEN(ANY);
-}
 
 %%

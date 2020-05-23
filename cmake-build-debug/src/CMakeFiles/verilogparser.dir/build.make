@@ -183,6 +183,19 @@ src/CMakeFiles/verilogparser.dir/verilog_cmd_parser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/verilogparser.dir/verilog_cmd_parser.s"
 	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mason/Desktop/work/verilog-parser/src/verilog_cmd_parser.c -o CMakeFiles/verilogparser.dir/verilog_cmd_parser.s
 
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: src/CMakeFiles/verilogparser.dir/flags.make
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o: ../src/verilog_new_syntax_check.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o"
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o   -c /home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.c
+
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/verilogparser.dir/verilog_new_syntax_check.i"
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.c > CMakeFiles/verilogparser.dir/verilog_new_syntax_check.i
+
+src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/verilogparser.dir/verilog_new_syntax_check.s"
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.c -o CMakeFiles/verilogparser.dir/verilog_new_syntax_check.s
+
 # Object files for target verilogparser
 verilogparser_OBJECTS = \
 "CMakeFiles/verilogparser.dir/verilog_scanner.o" \
@@ -193,7 +206,8 @@ verilogparser_OBJECTS = \
 "CMakeFiles/verilogparser.dir/verilog_ast_common.o" \
 "CMakeFiles/verilogparser.dir/verilog_parser_wrapper.o" \
 "CMakeFiles/verilogparser.dir/verilog_preprocessor.o" \
-"CMakeFiles/verilogparser.dir/verilog_cmd_parser.o"
+"CMakeFiles/verilogparser.dir/verilog_cmd_parser.o" \
+"CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o"
 
 # External object files for target verilogparser
 verilogparser_EXTERNAL_OBJECTS =
@@ -207,9 +221,10 @@ src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/verilog_ast_common.o
 src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/verilog_parser_wrapper.o
 src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/verilog_preprocessor.o
 src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/verilog_cmd_parser.o
+src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o
 src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/build.make
 src/libverilogparser.a: src/CMakeFiles/verilogparser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libverilogparser.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mason/Desktop/work/verilog-parser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C static library libverilogparser.a"
 	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/verilogparser.dir/cmake_clean_target.cmake
 	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/verilogparser.dir/link.txt --verbose=$(VERBOSE)
 

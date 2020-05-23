@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/pc" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/mem" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/cp0" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/wb" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/instance" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/ex" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/id" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/rom" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/ram" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/include" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/mmu" --include "../../../../thinpad_top.srcs/sim_1/new/include" \
+"../../../../thinpad_top.srcs/sources_1/ip/fifo_uart_rx/sim/fifo_uart_rx.v" \
+"../../../../thinpad_top.srcs/sources_1/ip/fifo_uart_tx/sim/fifo_uart_tx.v" \
+"../../../../thinpad_top.srcs/sources_1/ip/blk_mem_blockrom/sim/blk_mem_blockrom.v" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/28F640P30.v" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/sram_model.v" \
+
+sv xil_defaultlib  --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/pc" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/mem" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/cp0" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/wb" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/instance" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/ex" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/id" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/rom" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/ram" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/include" --include "../../../../thinpad_top.srcs/sources_1/imports/v_src/mmu" --include "../../../../thinpad_top.srcs/sim_1/new/include" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral/bootrom.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/clock.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/bus/data_bus.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral/flash.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/bus/inst_bus.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral/sram.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/peripheral/uart.sv" \
+"../../../../thinpad_top.srcs/sources_1/imports/v_src/test_bench_p/peripheral_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

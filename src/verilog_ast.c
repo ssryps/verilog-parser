@@ -2588,7 +2588,23 @@ ast_module_declaration * ast_new_module_declaration(
     tr -> attributes = attributes;
     tr -> identifier = identifier;
     tr -> module_parameters = parameters;
+
     tr -> module_comment = module_comment;
+
+    if(module_comment != NULL){
+        for(int idx = 0; idx < strlen(module_comment->identifier); idx ++){
+            if(module_comment->identifier[idx] == ' '){
+                char *module_comment_prefix = calloc(1, idx + 1);
+                strncpy(module_comment_prefix, module_comment->identifier, idx);
+                char *attrbute = module_comment->identifier + idx + 1;
+
+                tr->module_comment = ast_new_identifier(module_comment_prefix, 0);
+                tr->module_comment_attributes = ast_new_identifier(attrbute, 0);
+
+                break;
+            }
+        }
+    }
     tr -> is_new_style = is_new_style;
 
     // Are we using the old or new style of port declaration?

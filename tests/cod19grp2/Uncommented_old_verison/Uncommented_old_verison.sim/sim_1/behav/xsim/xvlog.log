@@ -1,0 +1,216 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/pll_example/pll_example_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pll_example
+INFO: [VRFC 10-311] analyzing module pll_example_pll_example_clk_wiz
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/eth_mac/eth_mac_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_reset_sync
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_reset_sync__1
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__1
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__2
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__3
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__4
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_block_sync_block__5
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_clk_en_gen
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_rgmii_v2_0_if
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support_clocking
+INFO: [VRFC 10-311] analyzing module eth_mac_eth_mac_support_resets
+INFO: [VRFC 10-311] analyzing module eth_mac_CRC32_8
+INFO: [VRFC 10-311] analyzing module eth_mac_CRC32_8_5
+INFO: [VRFC 10-311] analyzing module eth_mac_DECODE_FRAME
+INFO: [VRFC 10-311] analyzing module eth_mac_PARAM_CHECK
+INFO: [VRFC 10-311] analyzing module eth_mac_STATE_MACHINES
+INFO: [VRFC 10-311] analyzing module eth_mac_TX_STATE_MACH
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_addr_filter
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_addr_filter_wrap
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_control
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_gmii_mii_rx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_gmii_mii_tx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_pfc_tx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_axi_intf
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_rx_sync_req
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_6
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_7
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_block_8
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset_2
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset_3
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_0
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_1
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_sync_reset__parameterized0_4
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_axi_intf
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_cntl
+INFO: [VRFC 10-311] analyzing module eth_mac_tri_mode_ethernet_mac_v9_0_13_tx_pause
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v" into library fifo_generator_v13_2_3
+INFO: [VRFC 10-311] analyzing module fifo_generator_vlog_beh
+INFO: [VRFC 10-2458] undeclared symbol wr_rst_busy_i, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1249]
+INFO: [VRFC 10-2458] undeclared symbol wr_eop_ad, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1331]
+INFO: [VRFC 10-2458] undeclared symbol rd_eop_ad, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1332]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_axis, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:1574]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wach, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2099]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wdch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2319]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_wrch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2486]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rach, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:2866]
+INFO: [VRFC 10-2458] undeclared symbol rd_rst_busy_rdch, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:3099]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_CONV_VER
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:4153]
+INFO: [VRFC 10-2458] undeclared symbol safety_ckt_rd_rst, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:4361]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_sync_stage
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_as
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_beh_ver_ll_afifo
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_ss
+INFO: [VRFC 10-2458] undeclared symbol srst_wrst_busy, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/fifo_generator_vlog_beh.v:7793]
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_bhv_ver_preload0
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3_axic_reg_slice
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.v" into library fifo_generator_v13_2_3
+INFO: [VRFC 10-311] analyzing module fifo_generator_v13_2_3
+INFO: [VRFC 10-2458] undeclared symbol sleep_i, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/hdl/fifo_generator_v13_2_rfs.v:519]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/tabn_axis_fifo/sim/tabn_axis_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tabn_axis_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" into library blk_mem_gen_v8_4_2
+INFO: [VRFC 10-311] analyzing module STATE_LOGIC_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_muxf7_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_clr_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_pre_v8_4
+INFO: [VRFC 10-311] analyzing module beh_vlog_ff_ce_clr_v8_4
+INFO: [VRFC 10-311] analyzing module write_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module read_netlist_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_write_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_read_wrapper_beh_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_axi_regs_fwd_v8_4
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_output_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_softecc_output_reg_stage
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2_mem_module
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_4_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/SEG7_LUT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEG7_LUT
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arp_module
+INFO: [VRFC 10-311] analyzing module arp_request_sender
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_table.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arp_table
+WARNING: [VRFC 10-756] identifier _output is used before its declaration [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/arp_table.v:28]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/async.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_transmitter
+INFO: [VRFC 10-311] analyzing module async_receiver
+INFO: [VRFC 10-311] analyzing module ASSERTION_ERROR
+INFO: [VRFC 10-311] analyzing module BaudTickGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/buffer_pushing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer_pushing
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_conf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_conf
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_bram_tdp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_bram_tdp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_reset_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_reset_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_rx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_rx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_sync_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_sync_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_tx_client_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_tx_client_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ipv4_module
+INFO: [VRFC 10-2458] undeclared symbol src_ip, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/ipv4_module.v:372]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/lookup_table_trie.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_table_trie
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/multi_byte.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module async_setter
+INFO: [VRFC 10-311] analyzing module async_getter
+INFO: [VRFC 10-311] analyzing module async_equal
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/pkg_classify.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pkg_classify
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/eth_mac_ex/eth_mac_address_swap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_mac_address_swap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/lookup_table.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_table
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/lookup_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lookup_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/if_id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module if_id
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/def_op.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/pc_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pc_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id
+WARNING: [VRFC 10-2096] empty statement in sequential block [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v:185]
+WARNING: [VRFC 10-2096] empty statement in sequential block [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id.v:201]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ex_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented/thinpad_top.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sources_1/new/cpu/ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/28F640P30.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BankLib
+INFO: [VRFC 10-311] analyzing module TimingDataModule
+INFO: [VRFC 10-311] analyzing module TimingLibModule
+INFO: [VRFC 10-311] analyzing module BlockLockModule
+INFO: [VRFC 10-311] analyzing module CFIqueryModule
+INFO: [VRFC 10-311] analyzing module DataErrorModule
+INFO: [VRFC 10-311] analyzing module ConfigRegModule
+INFO: [VRFC 10-311] analyzing module SignatureModule
+INFO: [VRFC 10-311] analyzing module CUIdecoder1
+INFO: [VRFC 10-311] analyzing module CUIdecoder2
+INFO: [VRFC 10-311] analyzing module CUIdecoder_Busy1
+INFO: [VRFC 10-311] analyzing module EraseModule
+INFO: [VRFC 10-311] analyzing module MemoryModule
+INFO: [VRFC 10-311] analyzing module OutputBufferModule
+INFO: [VRFC 10-311] analyzing module ProgramModule
+INFO: [VRFC 10-311] analyzing module BuffEnhancedFactProgramModule
+INFO: [VRFC 10-311] analyzing module ProtectRegModule
+INFO: [VRFC 10-311] analyzing module ReadModule
+INFO: [VRFC 10-311] analyzing module StatusRegModule
+INFO: [VRFC 10-311] analyzing module KernelModule
+INFO: [VRFC 10-311] analyzing module x28fxxxp30
+INFO: [VRFC 10-311] analyzing module BurstModule
+INFO: [VRFC 10-311] analyzing module BlankCheckModule
+INFO: [VRFC 10-311] analyzing module ProgramBufferModule
+INFO: [VRFC 10-311] analyzing module DebugModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-1315] redeclaration of ansi port clk_50M is not allowed [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/clock.v:10]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/cpld_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpld_model
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/flag_sync_cpld.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flag_sync_cpld
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/sram_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/rgmii_model.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rgmii_model
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2458] undeclared symbol clk_125M, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv:136]
+INFO: [VRFC 10-2458] undeclared symbol clk_125M_90deg, assumed default net type wire [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.srcs/sim_1/new/tb.sv:137]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-2845] overwriting previous definition of module glbl [/home/mason/Desktop/work/verilog-parser/tests/cod19grp2/Uncommented_old_verison/Uncommented_old_verison.sim/sim_1/behav/xsim/glbl.v:6]

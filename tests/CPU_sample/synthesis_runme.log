@@ -1,0 +1,1603 @@
+[Wed May 13 16:32:58 2020] Launched synth_1...
+Run output will be captured here: /home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.runs/synth_1/runme.log
+*** Running vivado
+    with args -log cpu.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7a100tfgg676-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10515 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1251.555 ; gain = 63.844 ; free physical = 501 ; free virtual = 6660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/cpu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'registers' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/registers.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'registers' (1#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/registers.v:3]
+INFO: [Synth 8-6157] synthesizing module 'hilo' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/hilo.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'hilo' (2#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/hilo.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cp0' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/cp0.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cp0' (3#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/cp0.v:3]
+INFO: [Synth 8-6157] synthesizing module 'memcontrol' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/memcontrol.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'memcontrol' (4#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/memcontrol.v:9]
+INFO: [Synth 8-6157] synthesizing module 'mmu' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mmu.v:3]
+WARNING: [Synth 8-3936] Found unconnected internal register 'finalAddr_reg' and it is trimmed from '32' to '22' bits. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mmu.v:217]
+INFO: [Synth 8-6155] done synthesizing module 'mmu' (5#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mmu.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rom' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/rom.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (6#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/rom.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sramcontrol' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/sramcontrol.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'sramcontrol' (7#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/sramcontrol.v:9]
+INFO: [Synth 8-6157] synthesizing module 'flashcontrol' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/flashcontrol.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'flashcontrol' (8#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/flashcontrol.v:9]
+INFO: [Synth 8-6157] synthesizing module 'serialcontrol' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/serialcontrol.v:3]
+	Parameter clkFrequency bound to: 12500000 - type: integer 
+	Parameter baudRate bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'async_transmitter' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:13]
+	Parameter ClkFrequency bound to: 12500000 - type: integer 
+	Parameter Baud bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BaudTickGen' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:186]
+	Parameter ClkFrequency bound to: 12500000 - type: integer 
+	Parameter Baud bound to: 115200 - type: integer 
+	Parameter Oversampling bound to: 1 - type: integer 
+	Parameter AccWidth bound to: 15 - type: integer 
+	Parameter ShiftLimiter bound to: 1 - type: integer 
+	Parameter Inc bound to: 302 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BaudTickGen' (9#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'async_transmitter' (10#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:13]
+INFO: [Synth 8-6157] synthesizing module 'async_receiver' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:74]
+	Parameter ClkFrequency bound to: 12500000 - type: integer 
+	Parameter Baud bound to: 115200 - type: integer 
+	Parameter Oversampling bound to: 8 - type: integer 
+	Parameter l2o bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BaudTickGen__parameterized0' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:186]
+	Parameter ClkFrequency bound to: 12500000 - type: integer 
+	Parameter Baud bound to: 115200 - type: integer 
+	Parameter Oversampling bound to: 8 - type: integer 
+	Parameter AccWidth bound to: 15 - type: integer 
+	Parameter ShiftLimiter bound to: 4 - type: integer 
+	Parameter Inc bound to: 2416 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'BaudTickGen__parameterized0' (10#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:186]
+INFO: [Synth 8-6155] done synthesizing module 'async_receiver' (11#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/async.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'serialcontrol' (12#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/serialcontrol.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pc' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/pc.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pc' (13#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/pc.v:3]
+INFO: [Synth 8-6157] synthesizing module 'if_id' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/if_id.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'if_id' (14#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/if_id.v:3]
+INFO: [Synth 8-6157] synthesizing module 'id' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/id.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'id' (15#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/id.v:3]
+INFO: [Synth 8-6157] synthesizing module 'id_ex' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/id_ex.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'id_ex' (16#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/id_ex.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ex' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/EX.v:3]
+INFO: [Synth 8-226] default block is never used [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/EX.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'ex' (17#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/EX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ex_mem' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/ex_mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (18#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/ex_mem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mem.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (19#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mem.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mem_wb' [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mem_wb.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (20#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/mem_wb.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (21#1) [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/cpu.v:3]
+WARNING: [Synth 8-3917] design cpu has port flash_flashByte_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashVpen_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashRP_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashSTS_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashCE1_o driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port flash_flashCE2_o driven by constant 0
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[31]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[30]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[29]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[28]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[27]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[26]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[25]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[24]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[23]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[22]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[21]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[20]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[19]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[18]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[17]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[16]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[7]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[6]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[5]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_Status_i[3]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[31]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[30]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[29]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[28]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[27]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[26]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[25]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[24]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[23]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[22]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[21]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[20]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[19]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[18]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[17]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[16]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[15]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[14]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[13]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[12]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[11]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[10]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[9]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[8]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[7]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[6]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[5]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[4]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[3]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[2]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[1]
+WARNING: [Synth 8-3331] design mem has unconnected port cp0_EntryHi_i[0]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[31]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[30]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[29]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[28]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[27]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[26]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[25]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[24]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[23]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[22]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[21]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[20]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[19]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[18]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[17]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[16]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[15]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[14]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[13]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[12]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[11]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[10]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[9]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[8]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[7]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[6]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[5]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[3]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Status_i[0]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[31]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[30]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[29]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[28]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[27]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[26]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[25]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[24]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[23]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[22]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[21]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[20]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[19]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[18]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[17]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[16]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[15]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[14]
+WARNING: [Synth 8-3331] design mmu has unconnected port cp0_Index_i[13]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1317.164 ; gain = 129.453 ; free physical = 485 ; free virtual = 6650
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1317.164 ; gain = 129.453 ; free physical = 490 ; free virtual = 6656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1317.164 ; gain = 129.453 ; free physical = 490 ; free virtual = 6656
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_50M'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_11M0592'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clk_11M0592_IBUF'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_50M'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_50M]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'clk_11M0592'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:7]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_11M0592]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:7]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clock_btn'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset_btn'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clock_btn_IBUF'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'reset_btn_IBUF'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_wrn'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_rdn'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_tbre'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_tsre'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_dataready'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txd'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_wr_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_drq_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_dack_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_intrq'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[4]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[5]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[6]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_d[7]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_iow_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_ior_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_pwrst_n'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[4]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[5]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[6]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[7]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[8]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[9]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[10]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[11]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[12]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[13]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[14]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[15]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_clk'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_blue[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_blue[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_hsync'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_vsync'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_de'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[4]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[5]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[6]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[7]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[8]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[9]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[10]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[11]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[12]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[13]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[14]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[15]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[4]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[5]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[6]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[7]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[1]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[2]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[3]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[4]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[5]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[6]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[7]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:127]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:127]
+Finished Parsing XDC File [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1695.453 ; gain = 0.000 ; free physical = 140 ; free virtual = 6378
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 234 ; free virtual = 6477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg676-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 234 ; free virtual = 6477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 235 ; free virtual = 6478
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "regs_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "pauseRequest" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pauseRequest" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exceptionMMU_o" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "destination" won't be mapped to RAM because address size (29) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "hit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "VPN2_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "VPN2_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ins_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sramcontrol'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'flashcontrol'
+INFO: [Synth 8-5544] ROM "writeData_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'TxD_state_reg' in module 'async_transmitter'
+INFO: [Synth 8-802] inferred FSM for state register 'RxD_state_reg' in module 'async_receiver'
+INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "OversamplingCnt0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[1]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "regEnable1_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "regEnable1_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regEnable1_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "regEnable2_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "CP0ReadEnable_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branchEnable_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "aluOp_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "aluOp_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "memOp_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "writeReg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "writeRegHiLo_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.srcs/sources_1/new/EX.v:79]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                            00100 |                              000
+*
+                 iSTATE1 |                            00001 |                              100
+                  iSTATE |                            01000 |                              101
+                 iSTATE3 |                            00010 |                              010
+                 iSTATE0 |                            10000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'sramcontrol'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              000
+                 iSTATE1 |                            10000 |                              100
+                  iSTATE |                            00010 |                              111
+                 iSTATE3 |                            00100 |                              001
+                 iSTATE2 |                            01000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'flashcontrol'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE6 |                     000000000001 |                             0000
+                 iSTATE0 |                     000000000010 |                             0100
+                 iSTATE8 |                     000000000100 |                             1000
+                 iSTATE7 |                     000000001000 |                             1001
+                 iSTATE5 |                     000000010000 |                             1010
+                 iSTATE4 |                     000000100000 |                             1011
+                 iSTATE3 |                     000001000000 |                             1100
+                 iSTATE1 |                     000010000000 |                             1101
+                iSTATE10 |                     000100000000 |                             1110
+                 iSTATE9 |                     001000000000 |                             1111
+                 iSTATE2 |                     010000000000 |                             0010
+                  iSTATE |                     100000000000 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'TxD_state_reg' using encoding 'one-hot' in module 'async_transmitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                      00000000001 |                             0000
+                 iSTATE4 |                      00000000010 |                             0001
+                 iSTATE7 |                      00000000100 |                             1000
+                 iSTATE6 |                      00000001000 |                             1001
+                 iSTATE3 |                      00000010000 |                             1010
+                 iSTATE1 |                      00000100000 |                             1011
+                 iSTATE2 |                      00001000000 |                             1100
+                  iSTATE |                      00010000000 |                             1101
+                 iSTATE9 |                      00100000000 |                             1110
+                 iSTATE8 |                      01000000000 |                             1111
+                 iSTATE0 |                      10000000000 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'RxD_state_reg' using encoding 'one-hot' in module 'async_receiver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:40 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 223 ; free virtual = 6467
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 87    
+	               20 Bit    Registers := 32    
+	               19 Bit    Registers := 16    
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 34    
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 102   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 60    
+	  10 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 7     
+	   5 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 2     
+	  88 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	  22 Input     32 Bit        Muxes := 1     
+	   7 Input     32 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 2     
+	   6 Input     23 Bit        Muxes := 1     
+	  10 Input     20 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 3     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   6 Input     16 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+	  12 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   6 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 7     
+	   4 Input      5 Bit        Muxes := 7     
+	  25 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 16    
+	   3 Input      4 Bit        Muxes := 2     
+	  12 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  25 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 7     
+	   3 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 3     
+	  22 Input      3 Bit        Muxes := 8     
+	  25 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	  25 Input      2 Bit        Muxes := 4     
+	  22 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 153   
+	  10 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+	  25 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	  22 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cpu 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+Module registers 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 32    
+Module hilo 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+Module cp0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 31    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 11    
+	  10 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	  10 Input     20 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 32    
+	  10 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 2     
+Module memcontrol 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 3     
+	   5 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module mmu 
+Detailed RTL Component Info : 
++---Registers : 
+	               20 Bit    Registers := 32    
+	               19 Bit    Registers := 16    
+	                8 Bit    Registers := 16    
+	                1 Bit    Registers := 80    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   6 Input     23 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 2     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   6 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   6 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 50    
+	  17 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	  88 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+Module sramcontrol 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+Module flashcontrol 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   3 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module BaudTickGen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+Module async_transmitter 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  12 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module BaudTickGen__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+Module async_receiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  11 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 1     
+Module serialcontrol 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 16    
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+Module pc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module if_id 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module id 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 20    
+	   8 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 2     
+	   3 Input     32 Bit        Muxes := 1     
+	  22 Input     32 Bit        Muxes := 1     
+	  25 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 4     
+	   4 Input      5 Bit        Muxes := 5     
+	   5 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 2     
+	  25 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  22 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   8 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 8     
+	  25 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	  25 Input      2 Bit        Muxes := 4     
+	  22 Input      2 Bit        Muxes := 2     
+	  25 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 1     
+	  22 Input      1 Bit        Muxes := 4     
+Module id_ex 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module ex 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 2     
+Module ex_mem 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module mem 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+Module mem_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "regs_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regs_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hit" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "writeData_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5587] ROM size for "aluOp_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "writeReg_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+DSP Report: Generating DSP writeDataHi_o0, operation Mode is: A*B.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: Generating DSP writeDataHi_o0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: Generating DSP writeDataHi_o0, operation Mode is: A*B.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: Generating DSP writeDataHi_o0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+DSP Report: operator writeDataHi_o0 is absorbed into DSP writeDataHi_o0.
+WARNING: [Synth 8-3917] design cpu has port flash_flashByte_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashVpen_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashRP_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashSTS_o driven by constant 1
+WARNING: [Synth 8-3917] design cpu has port flash_flashCE1_o driven by constant 0
+WARNING: [Synth 8-3917] design cpu has port flash_flashCE2_o driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IF_ID/valid_inst_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_EX/aluOp_o_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3886] merging instance 'SerialControl/transmitter/TxD_shift_reg[6]' (FDE) to 'SerialControl/transmitter/TxD_shift_reg[7]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/nextInDelaySlot_o_reg' (FDRE) to 'ID_EX/writeRegHiLo_o_reg'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insValid_o_reg' (FDRE) to 'ID_EX/writeRegHiLo_o_reg'
+INFO: [Synth 8-3886] merging instance 'ID_EX/exception_o_reg[0]' (FDRE) to 'ID_EX/insAddr_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/exception_o_reg[1]' (FDRE) to 'ID_EX/insAddr_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/exception_o_reg[2]' (FDRE) to 'ID_EX/insAddr_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/exception_o_reg[3]' (FDRE) to 'ID_EX/insAddr_o_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[16]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeRegAddr_o_reg[2]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[1]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/aluOp_o_reg[4]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/memOp_o_reg[2]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/memOp_o_reg[1]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/memOp_o_reg[0]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[31]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[30]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[29]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[28]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[27]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[26]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[25]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[24]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[23]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[22]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[21]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[20]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[19]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[18]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[17]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[16]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[15]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[14]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[13]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[12]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[11]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[10]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[9]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[8]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[7]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[6]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[5]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[4]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[3]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[2]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[1]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/badVAddr_o_reg[0]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[17]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[18]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[19]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[20]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[21]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[22]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[23]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[24]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[25]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[26]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[27]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[28]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[29]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[30]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/insAddr_o_reg[31]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[16]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[17]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[18]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[19]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[20]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[21]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[22]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[23]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[24]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[25]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[26]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[27]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[28]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[29]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[30]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'EX_MEM/insAddr_o_reg[31]' (FDRE) to 'EX_MEM/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[1]' (FDRE) to 'MEM_WB/exception_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/exception_o_reg[3]' (FDRE) to 'MEM_WB/exception_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[16]' (FDRE) to 'MEM_WB/insAddr_o_reg[17]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[17]' (FDRE) to 'MEM_WB/insAddr_o_reg[18]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[18]' (FDRE) to 'MEM_WB/insAddr_o_reg[19]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[19]' (FDRE) to 'MEM_WB/insAddr_o_reg[20]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[20]' (FDRE) to 'MEM_WB/insAddr_o_reg[21]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[21]' (FDRE) to 'MEM_WB/insAddr_o_reg[22]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[22]' (FDRE) to 'MEM_WB/insAddr_o_reg[23]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[23]' (FDRE) to 'MEM_WB/insAddr_o_reg[24]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[24]' (FDRE) to 'MEM_WB/insAddr_o_reg[25]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[25]' (FDRE) to 'MEM_WB/insAddr_o_reg[26]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[26]' (FDRE) to 'MEM_WB/insAddr_o_reg[27]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[27]' (FDRE) to 'MEM_WB/insAddr_o_reg[28]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[28]' (FDRE) to 'MEM_WB/insAddr_o_reg[29]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[29]' (FDRE) to 'MEM_WB/insAddr_o_reg[30]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[30]' (FDRE) to 'MEM_WB/insAddr_o_reg[31]'
+INFO: [Synth 8-3886] merging instance 'MEM_WB/insAddr_o_reg[31]' (FDRE) to 'MEM_WB/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeCP0Addr_o_reg[3]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeCP0Addr_o_reg[4]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeCP0Addr_o_reg[0]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeCP0Addr_o_reg[1]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ID_EX/writeCP0Addr_o_reg[2]' (FDRE) to 'ID_EX/writeRegAddr_o_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_EX/writeRegHiLo_o_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ID_EX/aluOp_o_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\storeByteBuffer_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MEM_WB/exception_o_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MemControl/\memState_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[14][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\MEM_WB/insAddr_o_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (CP0/\regs_reg[12][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (SerialControl/\transmitter/TxD_shift_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][31]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][30]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][29]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][28]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][27]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][26]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][25]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][24]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][23]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][22]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][21]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][20]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][19]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][18]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][17]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][16]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][15]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][14]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][13]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][12]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][11]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][10]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][9]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][8]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][7]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][6]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][5]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][4]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][3]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][2]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][1]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[0][0]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][31]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][30]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][29]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][28]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][27]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][26]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][25]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][24]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][23]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][22]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][21]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][20]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][19]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][18]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][17]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][16]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][15]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][14]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][13]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][12]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][11]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][10]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][9]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][8]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][7]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][6]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][5]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][4]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][3]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][2]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][1]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[1][0]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][31]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][30]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][29]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][28]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][27]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][26]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][25]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][24]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][23]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][22]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][21]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][20]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][19]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][18]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][17]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][16]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][15]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][14]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][13]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][12]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][11]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][10]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][9]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][8]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][7]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][6]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][5]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][4]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][3]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][2]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][1]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[2][0]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[3][31]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[3][30]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[3][29]) is unused and will be removed from module registers.
+WARNING: [Synth 8-3332] Sequential element (regs_reg[3][28]) is unused and will be removed from module registers.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:54 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 291 ; free virtual = 5898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|rom         | ins_o      | 512x32        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ex          | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ex          | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 153 ; free virtual = 5769
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 153 ; free virtual = 5769
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 150 ; free virtual = 5766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    17|
+|4     |LUT2   |    13|
+|5     |LUT3   |    10|
+|6     |LUT4   |    43|
+|7     |LUT5   |    17|
+|8     |LUT6   |    37|
+|9     |FDRE   |    69|
+|10    |FDRE_1 |     4|
+|11    |FDSE   |    34|
+|12    |FDSE_1 |     1|
+|13    |IBUF   |     3|
+|14    |IOBUF  |     1|
+|15    |OBUF   |    72|
+|16    |OBUFT  |    47|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+----------------------------+------+
+|      |Instance        |Module                      |Cells |
++------+----------------+----------------------------+------+
+|1     |top             |                            |   386|
+|2     |  FlashControl  |flashcontrol                |    35|
+|3     |  MemControl    |memcontrol                  |     9|
+|4     |  PC            |pc                          |   107|
+|5     |  SRAMControl   |sramcontrol                 |    11|
+|6     |  SerialControl |serialcontrol               |    95|
+|7     |    receiver    |async_receiver              |    54|
+|8     |      tickgen   |BaudTickGen__parameterized0 |    27|
+|9     |    transmitter |async_transmitter           |    41|
+|10    |      tickgen   |BaudTickGen                 |    26|
++------+----------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 154 ; free virtual = 5766
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3707 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1695.453 ; gain = 129.453 ; free physical = 206 ; free virtual = 5819
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 1695.453 ; gain = 507.742 ; free physical = 206 ; free virtual = 5819
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  FDRE_1 => FDRE (inverted pins: C): 4 instances
+  FDSE_1 => FDSE (inverted pins: C): 1 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+367 Infos, 316 Warnings, 102 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 1695.453 ; gain = 507.898 ; free physical = 224 ; free virtual = 5821
+INFO: [Common 17-1381] The checkpoint '/home/mason/Desktop/work/verilog-parser/tests/Uncommented/thinpad_top/thinpad_top.runs/synth_1/cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1719.465 ; gain = 0.000 ; free physical = 220 ; free virtual = 5821
+INFO: [Common 17-206] Exiting Vivado at Wed May 13 16:34:13 2020...

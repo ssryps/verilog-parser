@@ -19,6 +19,8 @@ verilog_ast_util.h
 /home/mason/Desktop/work/verilog-parser/src/verilog_ast_util.h
 verilog_cmd_parser.h
 /home/mason/Desktop/work/verilog-parser/src/verilog_cmd_parser.h
+verilog_new_syntax_check.h
+/home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.h
 
 /home/mason/Desktop/work/verilog-parser/src/verilog_ast.h
 stdarg.h
@@ -61,6 +63,12 @@ verilog_ast.h
 /home/mason/Desktop/work/verilog-parser/src/verilog_cmd_parser.h
 stdio.h
 -
+
+/home/mason/Desktop/work/verilog-parser/src/verilog_new_syntax_check.h
+verilog_ast.h
+/home/mason/Desktop/work/verilog-parser/src/verilog_ast.h
+verilog_ast_util.h
+/home/mason/Desktop/work/verilog-parser/src/verilog_ast_util.h
 
 /home/mason/Desktop/work/verilog-parser/src/verilog_parser.h
 stdio.h

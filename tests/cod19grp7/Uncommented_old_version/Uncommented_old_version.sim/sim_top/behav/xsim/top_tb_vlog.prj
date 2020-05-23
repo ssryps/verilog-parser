@@ -1,0 +1,64 @@
+# compile verilog/system verilog design source files
+verilog blk_mem_gen_v8_4_2  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Uncommented_old_version.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" \
+
+verilog xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/blk_mem_ascii_rom/sim/blk_mem_ascii_rom.v" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/blk_mem_bootrom/sim/blk_mem_bootrom.v" \
+
+sv xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../Uncommented/src/peripheral/sram_controller.sv" \
+"../../../../../Uncommented/src/intomips_top.sv" \
+
+verilog xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../Uncommented/src/util/seg7_lut.v" \
+
+sv xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../Uncommented/src/cpu/cpu.sv" \
+"../../../../../Uncommented/src/cpu/if/pc_reg.sv" \
+"../../../../../Uncommented/src/cpu/if/if_id.sv" \
+"../../../../../Uncommented/src/cpu/id/id.sv" \
+"../../../../../Uncommented/src/cpu/id/id_ex.sv" \
+"../../../../../Uncommented/src/cpu/ex/ex.sv" \
+"../../../../../Uncommented/src/cpu/ex/ex_mem.sv" \
+"../../../../../Uncommented/src/cpu/mem/mem.sv" \
+"../../../../../Uncommented/src/cpu/mem/mem_wb.sv" \
+"../../../../../Uncommented/src/cpu/registers.sv" \
+"../../../../../Uncommented/src/cpu/id/id_type.sv" \
+"../../../../../Uncommented/src/cpu/hilo.sv" \
+"../../../../../Uncommented/src/cpu/id/branch.sv" \
+"../../../../../Uncommented/src/peripheral/flash_controller.sv" \
+"../../../../../Uncommented/src/cpu/ctrl.sv" \
+"../../../../../Uncommented/src/cpu/cp0.sv" \
+"../../../../../Uncommented/src/cpu/mmu/mmu.sv" \
+"../../../../../Uncommented/src/peripheral/serial_controller.sv" \
+"../../../../../Uncommented/src/peripheral/vga_controller.sv" \
+"../../../../../Uncommented/src/peripheral/ext_serial_controller.sv" \
+"../../../../../Uncommented/src/cpu/mmu/tlb.sv" \
+"../../../../../Uncommented/src/cpu/mmu/tlb_lookup.sv" \
+"../../../../../Uncommented/src/peripheral/async.sv" \
+"../../../../../Uncommented/src/peripheral/bootrom_controller.sv" \
+
+verilog xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/blk_mem_graphics/sim/blk_mem_graphics.v" \
+
+sv xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../Uncommented/src/peripheral/usb_controller.sv" \
+
+verilog xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz/vga_clk_wiz_clk_wiz.v" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz/vga_clk_wiz.v" \
+"../../../../Uncommented_old_version.srcs/sources_1/ip/blk_mem_color/sim/blk_mem_color.v" \
+
+sv xil_defaultlib  --include "../../../../../Uncommented/src" --include "../../../../../Uncommented/src/cpu" --include "../../../../../Uncommented/src/peripheral" --include "../../../../Uncommented_old_version.srcs/sources_1/ip/vga_clk_wiz" --include "../../../../../Uncommented/testbench/model/include" --include "/media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../../Uncommented/testbench/peripheral/fake_sram.sv" \
+"../../../../../Uncommented/testbench/top/top_tb.sv" \
+"../../../../../Uncommented/testbench/top/fake_sram0.sv" \
+"../../../../../Uncommented/testbench/model/28F640P30.sv" \
+"../../../../../Uncommented/testbench/model/sram_model.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -72,7 +72,7 @@ void verilog_signal_singel_value_assignment_check(verilog_source_tree * source);
 void verilog_sequential_logic_check(verilog_source_tree * source);
 void verilog_condition_case_check(verilog_source_tree * source);
 ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, ast_module_declaration* module,
-        ast_list* signals_db, ast_list* outside_assigns);
+        ast_list* signals_db, ast_list* outside_assigns, ast_boolean* error);
 ast_boolean verilog_compare_assignment_list(ast_list* former, ast_list* latter, ast_list* outside_assigns);
 
 void verilog_iter_dependency(ast_module_signal* signal, ast_list* signals_db, ast_list* iter_path, ast_list* result);

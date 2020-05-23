@@ -242,6 +242,21 @@ verilog_cmd_parser.s:
 .PHONY : verilog_cmd_parser.s
 
 # target to build an object file
+verilog_new_syntax_check.o:
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug && $(MAKE) -f src/CMakeFiles/verilogparser.dir/build.make src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.o
+.PHONY : verilog_new_syntax_check.o
+
+# target to preprocess a source file
+verilog_new_syntax_check.i:
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug && $(MAKE) -f src/CMakeFiles/verilogparser.dir/build.make src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.i
+.PHONY : verilog_new_syntax_check.i
+
+# target to generate assembly for a file
+verilog_new_syntax_check.s:
+	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug && $(MAKE) -f src/CMakeFiles/verilogparser.dir/build.make src/CMakeFiles/verilogparser.dir/verilog_new_syntax_check.s
+.PHONY : verilog_new_syntax_check.s
+
+# target to build an object file
 verilog_parser.tab.o:
 	cd /home/mason/Desktop/work/verilog-parser/cmake-build-debug && $(MAKE) -f src/CMakeFiles/verilogparser.dir/build.make src/CMakeFiles/verilogparser.dir/verilog_parser.tab.o
 .PHONY : verilog_parser.tab.o
@@ -330,6 +345,9 @@ help:
 	@echo "... verilog_cmd_parser.o"
 	@echo "... verilog_cmd_parser.i"
 	@echo "... verilog_cmd_parser.s"
+	@echo "... verilog_new_syntax_check.o"
+	@echo "... verilog_new_syntax_check.i"
+	@echo "... verilog_new_syntax_check.s"
 	@echo "... verilog_parser.tab.o"
 	@echo "... verilog_parser.tab.i"
 	@echo "... verilog_parser.tab.s"

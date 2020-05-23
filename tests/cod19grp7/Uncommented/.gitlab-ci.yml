@@ -1,0 +1,30 @@
+variables:
+    PROJECT_DIR: "vivado"
+    VIVADO_PATH: "/opt/Xilinx/Vivado/2018.3/bin/vivado"
+    PROJECT_NAME: "intomips"
+    TOP_DISIGN: "intomips_top"
+    
+
+stages:
+  - build
+
+before_script:
+    - cd ${PROJECT_DIR}
+
+
+
+bitstream:
+  stage: build
+  tags:
+    - vivado
+  image: vivado2018:2018.3
+  script:
+    - env
+    - ${VIVADO_PATH} -mode tcl -source scripts/build.tcl ${PROJECT_NAME}.xpr
+
+  artifacts:
+    paths:
+      - ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/${TOP_DISIGN}.bit
+      - ${PROJECT_DIR}/${PROJECT_NAME}.runs/impl_1/runme.log
+      - ${PROJECT_DIR}/${PROJECT_NAME}.runs/synth_1/runme.log
+
