@@ -292,12 +292,12 @@ Run output will be captured here: /home/mason/Desktop/work/verilog-parser/tests/
 
 | TOOL | 本项目 | verilator | vivado simulation | vivado synthesis |
 | ---- | ------ | --------- | ----------------- | ---------------- |
-| TIME | 0.040s | 0.028s    | 10.5s             | 62.3s            |
+| TIME | 0.040s | 0.028s    | 50s               | 388s             |
 
 #### cod19grp7
 | TOOL | 本项目 | verilator | vivado simulation | vivado synthesis |
 | ---- | ------ | --------- | ----------------- | ---------------- |
-| TIME |  |     | 28.0s             | 119s            |
+| TIME | 0.068s | 0.052s    | 28.0s             |         103s    |
 
 
 #### cod19grp9 --

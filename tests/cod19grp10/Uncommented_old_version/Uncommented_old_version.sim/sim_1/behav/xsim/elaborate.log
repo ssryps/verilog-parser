@@ -1,0 +1,9 @@
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: /media/mason/DATA/cstools/IDE/vivado/Vivado/2018.1/bin/unwrapped/lnx64.o/xelab -wto 5a8f0b566535444ca0914458b06b5886 --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 3 for port op_i [/home/mason/Desktop/work/verilog-parser/tests/cod19grp10/Uncommented_old_version/Uncommented_old_version.srcs/sources_1/new/thinpad_top.v:321]
+WARNING: [VRFC 10-727] function getTime has no return value assignment [/home/mason/Desktop/work/verilog-parser/tests/cod19grp10/Uncommented_old_version/Uncommented_old_version.srcs/sim_1/new/include/TimingData.h:182]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

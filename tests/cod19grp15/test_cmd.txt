@@ -1,0 +1,9 @@
+
+project:
+
+-I /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented -c /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mips.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/pc_reg.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/if_id.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/id.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/id_ex.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/ex.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/ex_mem.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem_wb.v 
+
+
+
+verilator:
+verilator_bin --lint-only -I/home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/mips.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/pc_reg.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/if_id.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/id.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/id_ex.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/ex.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/ex_mem.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/mem.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/mem_wb.v /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Uncommented/thinpad_top.srcs/sources_1/new/Regfile.v 

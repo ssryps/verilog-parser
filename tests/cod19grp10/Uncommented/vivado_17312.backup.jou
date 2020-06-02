@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Dec 25 11:17:21 2019
+# Process ID: 17312
+# Current directory: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16268 D:\onedrive\Tsinghua\Third-A\Computer-Composition\cod19grp10\thinpad_top.xpr
+# Log file: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10/vivado.log
+# Journal file: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10/thinpad_top.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.Coe_File {D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10/thinpad_top.srcs/loader32.coe}] [get_ips bootrom]

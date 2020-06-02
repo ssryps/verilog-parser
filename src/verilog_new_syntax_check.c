@@ -662,7 +662,8 @@ ast_list* verilog_analysis_condition_case_statement(ast_statement* statement, as
                         }
 
                         if (des_signal == NULL) {
-                            printf("Error> assignment left value %s need to be defined early\n",
+                            printf("Error>Module %s assignment left value %s need to be defined early\n",
+                                   module->identifier->identifier,
                                    statement->assignment->procedural->lval->data.identifier->identifier);
                             continue;
                         }
@@ -1069,6 +1070,7 @@ void verilog_analysis_pipeline_tree(ast_pipeline_tree* node){
             if(instance->declaration->module_comment_attributes != NULL &&
                 strcmp(instance->declaration->module_comment_attributes->identifier, "no_check") == 0) {
                 printf("INFO> neglect to check %s\n", instance->declaration->identifier->identifier);
+                continue;
             }
             for(int j = 0; j < instance->declaration->signals_db->items; j++){
                 ast_module_signal* signal_dep = ast_list_get(instance->declaration->signals_db, j);

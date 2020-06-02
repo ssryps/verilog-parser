@@ -1,0 +1,336 @@
+`default_nettype none
+
+module thinpad_top(
+    input wire clk_50M,           //50MHz 鏃堕挓杈撳叆
+    input wire clk_11M0592,       //11.0592MHz 鏃堕挓杈撳叆
+
+    input wire clock_btn,         //BTN5鎵嬪姩鏃堕挓鎸夐挳锟???????????????????鍏筹紝甯︽秷鎶栫數璺紝鎸変笅鏃朵负1
+    input wire reset_btn,         //BTN6鎵嬪姩澶嶄綅鎸夐挳锟???????????????????鍏筹紝甯︽秷鎶栫數璺紝鎸変笅鏃朵负1
+
+    input  wire[3:0]  touch_btn,  //BTN1~BTN4锛屾寜閽紑鍏筹紝鎸変笅鏃朵负1
+    input  wire[31:0] dip_sw,     //32浣嶆嫧鐮佸紑鍏筹紝鎷ㄥ埌鈥淥N鈥濇椂锟???????????????????1
+    output wire[15:0] leds,       //16浣峀ED锛岃緭鍑烘椂1鐐逛寒
+    output wire[7:0]  dpy0,       //鏁扮爜绠′綆浣嶄俊鍙凤紝鍖呮嫭灏忔暟鐐癸紝杈撳嚭1鐐逛寒
+    output wire[7:0]  dpy1,       //鏁扮爜绠￠珮浣嶄俊鍙凤紝鍖呮嫭灏忔暟鐐癸紝杈撳嚭1鐐逛寒
+
+    //CPLD涓插彛鎺у埗鍣ㄤ俊锟???????????????????
+    output wire uart_rdn,         //璇讳覆鍙ｄ俊鍙凤紝浣庢湁锟???????????????????
+    output wire uart_wrn,         //鍐欎覆鍙ｄ俊鍙凤紝浣庢湁锟???????????????????
+    input wire uart_dataready,    //涓插彛鏁版嵁鍑嗗锟???????????????????
+    input wire uart_tbre,         //鍙戯拷?锟芥暟鎹爣锟???????????????????
+    input wire uart_tsre,         //鏁版嵁鍙戯拷?锟藉畬姣曟爣锟???????????????????
+
+    //BaseRAM淇″彿
+    inout wire[31:0] base_ram_data,  //BaseRAM鏁版嵁锛屼綆8浣嶄笌CPLD涓插彛鎺у埗鍣ㄥ叡锟???????????????????
+    output wire[19:0] base_ram_addr, //BaseRAM鍦板潃
+    output wire[3:0] base_ram_be_n,  //BaseRAM瀛楄妭浣胯兘锛屼綆鏈夋晥銆傚鏋滀笉浣跨敤瀛楄妭浣胯兘锛岃淇濇寔锟???????????????????0
+    output wire base_ram_ce_n,       //BaseRAM鐗囷拷?锟斤紝浣庢湁锟???????????????????
+    output wire base_ram_oe_n,       //BaseRAM璇讳娇鑳斤紝浣庢湁锟???????????????????
+    output wire base_ram_we_n,       //BaseRAM鍐欎娇鑳斤紝浣庢湁锟???????????????????
+
+    //ExtRAM淇″彿
+    inout wire[31:0] ext_ram_data,  //ExtRAM鏁版嵁
+    output wire[19:0] ext_ram_addr, //ExtRAM鍦板潃
+    output wire[3:0] ext_ram_be_n,  //ExtRAM瀛楄妭浣胯兘锛屼綆鏈夋晥銆傚鏋滀笉浣跨敤瀛楄妭浣胯兘锛岃淇濇寔锟???????????????????0
+    output wire ext_ram_ce_n,       //ExtRAM鐗囷拷?锟斤紝浣庢湁锟???????????????????
+    output wire ext_ram_oe_n,       //ExtRAM璇讳娇鑳斤紝浣庢湁锟???????????????????
+    output wire ext_ram_we_n,       //ExtRAM鍐欎娇鑳斤紝浣庢湁锟???????????????????
+
+    //鐩磋繛涓插彛淇″彿
+    output wire txd,  //鐩磋繛涓插彛鍙戯拷?锟界
+    input  wire rxd,  //鐩磋繛涓插彛鎺ユ敹锟???????????????????
+
+    //Flash瀛樺偍鍣ㄤ俊鍙凤紝鍙傦拷?? JS28F640 鑺墖鎵嬪唽
+    output wire [22:0]flash_a,      //Flash鍦板潃锛宎0浠呭湪8bit妯″紡鏈夋晥锟???????????????????16bit妯″紡鏃犳剰锟???????????????????
+    inout  wire [15:0]flash_d,      //Flash鏁版嵁
+    output wire flash_rp_n,         //Flash澶嶄綅淇″彿锛屼綆鏈夋晥
+    output wire flash_vpen,         //Flash鍐欎繚鎶や俊鍙凤紝浣庣數骞虫椂涓嶈兘鎿﹂櫎銆佺儳锟???????????????????
+    output wire flash_ce_n,         //Flash鐗囷拷?锟戒俊鍙凤紝浣庢湁锟???????????????????
+    output wire flash_oe_n,         //Flash璇讳娇鑳戒俊鍙凤紝浣庢湁锟???????????????????
+    output wire flash_we_n,         //Flash鍐欎娇鑳戒俊鍙凤紝浣庢湁锟???????????????????
+    output wire flash_byte_n,       //Flash 8bit妯″紡閫夋嫨锛屼綆鏈夋晥銆傚湪浣跨敤flash锟???????????????????16浣嶆ā寮忔椂璇疯锟???????????????????1
+
+    //USB 鎺у埗鍣ㄤ俊鍙凤紝鍙傦拷?? SL811 鑺墖鎵嬪唽
+    output wire sl811_a0,
+    //inout  wire[7:0] sl811_d,     //USB鏁版嵁绾夸笌缃戠粶鎺у埗鍣ㄧ殑dm9k_sd[7:0]鍏变韩
+    output wire sl811_wr_n,
+    output wire sl811_rd_n,
+    output wire sl811_cs_n,
+    output wire sl811_rst_n,
+    output wire sl811_dack_n,
+    input  wire sl811_intrq,
+    input  wire sl811_drq_n,
+
+    //缃戠粶鎺у埗鍣ㄤ俊鍙凤紝鍙傦拷?? DM9000A 鑺墖鎵嬪唽
+    output wire dm9k_cmd,
+    inout  wire[15:0] dm9k_sd,
+    output wire dm9k_iow_n,
+    output wire dm9k_ior_n,
+    output wire dm9k_cs_n,
+    output wire dm9k_pwrst_n,
+    input  wire dm9k_int,
+
+    //鍥惧儚杈撳嚭淇″彿
+    output wire[2:0] video_red,    //绾㈣壊鍍忕礌锟???????????????????3锟???????????????????
+    output wire[2:0] video_green,  //缁胯壊鍍忕礌锟???????????????????3锟???????????????????
+    output wire[1:0] video_blue,   //钃濊壊鍍忕礌锟???????????????????2锟???????????????????
+    output wire video_hsync,       //琛屽悓姝ワ紙姘村钩鍚屾锛変俊锟???????????????????
+    output wire video_vsync,       //鍦哄悓姝ワ紙鍨傜洿鍚屾锛変俊锟???????????????????
+    output wire video_clk,         //鍍忕礌鏃堕挓杈撳嚭
+    output wire video_de           //琛屾暟鎹湁鏁堜俊鍙凤紝鐢ㄤ簬鍖哄垎娑堥殣锟???????????????????
+);
+
+
+/* =========== Demo code begin =========== */
+
+
+reg[15:0] led_bits;
+assign leds = led_bits;
+
+// 绂佺敤cpld涓插彛
+assign uart_rdn = 1'b1;
+assign uart_wrn = 1'b1;
+// PLL鍒嗛绀轰緥
+wire locked, clk_main, clk_bus, clk_peri, clk_200M;
+pll_example clock_gen 
+(
+ // Clock out ports
+ .clk_out1(clk_main), // 鏃堕挓杈撳嚭1锛岄鐜囧湪IP閰嶇疆鐣岄潰涓锟???????????????????
+ .clk_out2(clk_bus), // 鏃堕挓杈撳嚭2锛岄鐜囧湪IP閰嶇疆鐣岄潰涓锟???????????????????
+ .clk_out3(clk_peri),
+ .clk_out4(clk_200M),
+ // Status and control signals
+ .reset(reset_btn), // PLL澶嶄綅杈撳叆
+ .locked(locked), // 閿佸畾杈撳嚭锟???????????????????"1"琛ㄧず鏃堕挓绋冲畾锛屽彲浣滀负鍚庣骇鐢佃矾澶嶄綅
+// Clock in ports
+ .clk_in1(clk_50M) // 澶栭儴鏃堕挓杈撳叆
+);
+
+
+reg reset_of_clk10M;
+// 寮傛澶嶄綅锛屽悓姝ラ噴锟???????????????????
+always@(posedge clk_main or negedge locked) begin
+  if(~locked) reset_of_clk10M <= 1'b1;
+  else        reset_of_clk10M <= 1'b0;
+end
+
+
+
+wire[31:0] if_data;
+wire[31:0] if_addr;
+wire if_ce;
+
+wire[31:0] mem_data_store;
+wire[31:0] mem_addr;
+wire[31:0] mem_data_read;
+wire mem_we;
+wire mem_ce;
+wire[3:0] mem_sel;
+wire timer_int;
+wire[5:0] int;
+
+wire if_sram_ce;
+wire if_flash_ce;
+wire if_rom_ce;
+wire if_serial_ce;
+wire if_vga_ce;
+
+wire mem_sram_ce;
+wire mem_flash_ce;
+wire mem_rom_ce;
+wire mem_serial_ce;
+wire mem_vga_ce;
+
+mips32 cpu(
+	.clk(clk_main),
+	.rst(reset_btn),
+	.int_i(int),
+	.if_data_i(if_data),
+	.if_addr_o(if_addr),
+	.if_ce_o(if_ce),
+	
+	.if_sram_ce_o(if_sram_ce),
+    .if_flash_ce_o(if_flash_ce),
+    .if_rom_ce_o(if_rom_ce),
+    .if_serial_ce_o(if_serial_ce),
+    .if_vga_ce_o(if_vga_ce),
+    
+	.mem_data_i(mem_data_read),
+	.mem_addr_o(mem_addr),
+	.mem_data_o(mem_data_store),
+	.mem_we_o(mem_we),
+	.mem_sel_o(mem_sel),
+	
+	.mem_sram_ce_o(mem_sram_ce),
+    .mem_flash_ce_o(mem_flash_ce),
+    .mem_rom_ce_o(mem_rom_ce),
+    .mem_serial_ce_o(mem_serial_ce),
+    .mem_vga_ce_o(mem_vga_ce),
+	.mem_ce_o(mem_ce),
+	.timer_int_o(timer_int)
+);
+
+wire[31:0] data_out;
+wire[1:0] op;
+wire[3:0] select;
+wire[31:0] data_store;
+wire[19:0] addr_sram;
+wire is_extram;
+wire[7:0] ext_uart_tx;
+wire ext_uart_start;
+wire ext_uart_busy;
+wire[7:0] serial_read_data;
+wire serial_read_status;
+
+bus Bus(
+    // clock and reset
+    .rst(reset_btn),
+
+    // connection with cpu
+    .if_addr_i(if_addr),
+    .if_ce_i(if_ce),
+    
+    .if_sram_ce_i(if_sram_ce),
+    .if_flash_ce_i(if_flash_ce),
+    .if_rom_ce_i(if_rom_ce),
+    .if_serial_ce_i(if_serial_ce),
+    .if_vga_ce_i(if_vga_ce),
+    
+    .mem_addr_i(mem_addr),
+    .mem_data_i(mem_data_store),
+    
+    .mem_ce_i(mem_ce),
+    .mem_we_i(mem_we),
+    .mem_sel_i(mem_sel),
+    
+    .mem_sram_ce_i(mem_sram_ce),
+    .mem_flash_ce_i(mem_flash_ce),
+    .mem_rom_ce_i(mem_rom_ce),
+    .mem_serial_ce_i(mem_serial_ce),
+    .mem_vga_ce_i(mem_vga_ce),
+	.timer_int_i(timer_int),
+	
+    .serial_read_status(serial_read_status),
+    .ext_uart_busy(ext_uart_busy),
+    .serial_read_data(serial_read_data),
+    
+    .ext_uart_start(ext_uart_start),
+    .ext_uart_tx(ext_uart_tx),
+    
+    .dataOrInst_loaded_i(data_out),
+    .op_o(op),
+    .selectSignal_o(select),
+    .data_need_store_o(data_store),
+    .addr_o(addr_sram),
+    .is_extram(is_extram),
+  
+    
+    .if_data_o(if_data),
+    .int_o(int),
+    .mem_data_o(mem_data_read)
+
+
+    // connection with sram
+
+);
+
+
+sram_controller sram(
+    .clk(clk_peri),
+    .rst(reset_btn),
+    .op_i(op),
+    .data_store_i(data_store),
+    .addr_from_cpu_i(addr_sram),
+    .selectSignal_from_cpu_i(select),
+    .is_extram(is_extram),
+    .data_to_cpu_o(data_out),
+
+    .extram_addr_o(ext_ram_addr),
+    .extram_ce_o(ext_ram_ce_n),
+    .extram_oe_o(ext_ram_oe_n),
+    .extram_be_o(ext_ram_be_n),
+    .extram_we_o(ext_ram_we_n),
+    .extram_data_io(ext_ram_data),
+
+
+    .baseram_addr_o(base_ram_addr),
+    .baseram_ce_o(base_ram_ce_n),
+    .baseram_oe_o(base_ram_oe_n),
+    .baseram_be_o(base_ram_be_n),
+    .baseram_we_o(base_ram_we_n),
+    .baseram_data_io(base_ram_data)
+);
+
+
+
+graphics_controller vga_controller(
+    .clk_bus(clk_peri),
+    .clk_ram(clk_200M),
+    .clk_vga(clk_50M),
+    .reset(reset_btn),
+    
+    .op_i(),
+    .addr_i(),
+    .data_store_i(),
+
+    // 浠庢樉瀛樹腑璇诲彇锟???????涓狟yte锛孾0:2]浠ｈ〃绾㈣壊, [3:5]浠ｈ〃缁胯壊锛孾6:7]浠ｈ〃钃濊壊
+    .red_o(video_red),
+    .green_o(video_green),
+    .blue_o(video_blue),
+    .hsync(video_hsync),
+    .vsync(video_vsync),
+    .video_de(video_de)
+);
+
+
+serial Serial(
+    .clk(clk_peri),
+    .reset(reset_btn),
+    .rxd(rxd),
+    .txd(txd),
+    .ext_uart_tx(ext_uart_tx),
+    .ext_uart_start(ext_uart_start),
+    
+    .ext_uart_busy(ext_uart_busy),
+    .serial_read_data(serial_read_data),
+    .serial_read_status(serial_read_status)
+);
+
+// 鏁扮爜绠¤繛鎺ュ叧绯荤ず鎰忓浘锛宒py1鍚岀悊
+// p=dpy0[0] // ---a---
+// c=dpy0[1] // |     |
+// d=dpy0[2] // f     b
+// e=dpy0[3] // |     |
+// b=dpy0[4] // ---g---
+// a=dpy0[5] // |     |
+// f=dpy0[6] // e     c
+// g=dpy0[7] // |     |
+//           // ---d---  p
+
+// 7娈垫暟鐮佺璇戠爜鍣ㄦ紨绀猴紝灏唍umber锟???????????????????16杩涘埗鏄剧ず鍦ㄦ暟鐮佺涓婇潰
+reg[7:0] number;
+SEG7_LUT segL(.oSEG1(dpy0), .iDIG(number[3:0])); //dpy0鏄綆浣嶆暟鐮佺
+SEG7_LUT segH(.oSEG1(dpy1), .iDIG(number[7:4])); //dpy1鏄珮浣嶆暟鐮佺
+
+
+
+// //鍥惧儚杈撳嚭婕旂ず锛屽垎杈ㄧ巼800x600@75Hz锛屽儚绱犳椂閽熶负50MHz
+// wire [11:0] hdata;
+// wire [11:0] vdata;
+// assign video_red = hdata < 266 ? 3'b111 : 0; //绾㈣壊绔栨潯
+// assign video_green = hdata < 532 && hdata >= 266 ? 3'b111 : 0; //缁胯壊绔栨潯
+// assign video_blue = hdata >= 532 ? 2'b11 : 0; //钃濊壊绔栨潯
+// assign video_clk = clk_50M;
+// //WIDTH = 0, HSIZE = 0, HFP = 0, HSP = 0, HMAX = 0, VSIZE = 0, VFP = 0, VSP = 0, VMAX = 0, HSPP = 0, VSPP = 0)
+
+// vga #(12, 800, 856, 976, 1040, 600, 637, 643, 666, 1, 1) vga800x600at75 (
+//    .clk(clk_50M), 
+//    .hdata(hdata), //妯潗锟???????????????????
+//    .vdata(vdata),      //绾靛潗锟???????????????????
+//    .hsync(video_hsync),
+//    .vsync(video_vsync),
+//    .data_enable(video_de)
+// );
+///* =========== Demo code end =========== */
+
+endmodule

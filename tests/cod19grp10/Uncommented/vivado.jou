@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Dec 25 21:38:09 2019
+# Process ID: 17152
+# Current directory: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8472 D:\onedrive\Tsinghua\Third-A\Computer-Composition\cod19grp10\thinpad_top.xpr
+# Log file: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10/vivado.log
+# Journal file: D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/onedrive/Tsinghua/Third-A/Computer-Composition/cod19grp10/thinpad_top.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {50.000} CONFIG.CLKOUT1_JITTER {249.363}] [get_ips pll_example]
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10} CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {10} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {120.000} CONFIG.MMCM_CLKOUT1_DIVIDE {60} CONFIG.MMCM_CLKOUT1_PHASE {20.250} CONFIG.MMCM_CLKOUT2_DIVIDE {30} CONFIG.MMCM_CLKOUT2_PHASE {79.500} CONFIG.MMCM_CLKOUT3_DIVIDE {120} CONFIG.MMCM_CLKOUT3_PHASE {10.125} CONFIG.MMCM_CLKOUT4_DIVIDE {24} CONFIG.MMCM_CLKOUT5_DIVIDE {12} CONFIG.CLKOUT1_JITTER {265.122} CONFIG.CLKOUT1_PHASE_ERROR {154.678} CONFIG.CLKOUT2_JITTER {214.867} CONFIG.CLKOUT2_PHASE_ERROR {154.678} CONFIG.CLKOUT3_JITTER {173.646} CONFIG.CLKOUT3_PHASE_ERROR {154.678} CONFIG.CLKOUT4_JITTER {265.122} CONFIG.CLKOUT4_PHASE_ERROR {154.678} CONFIG.CLKOUT5_JITTER {163.696} CONFIG.CLKOUT5_PHASE_ERROR {154.678} CONFIG.CLKOUT6_JITTER {139.128} CONFIG.CLKOUT6_PHASE_ERROR {154.678}] [get_ips pll_example]

@@ -1,0 +1,808 @@
+looking for header files in /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mips.v 
+INFO> Module mips has comment this 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/pc_reg.v 
+INFO> Module pc_reg has comment this.pc 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/if_id.v 
+INFO> Module if_id has comment this.if_id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/id.v 
+INFO> Module id has comment this.id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/id_ex.v 
+INFO> Module id_ex has comment this.id 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/ex.v 
+INFO> Module ex has comment this.ex 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/ex_mem.v 
+INFO> Module ex_mem has comment this.ex 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem.v 
+INFO> Module mem has comment this.mem 
+source _Text - Parse successful
+INFO > Parsing /home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem_wb.v 
+INFO> Module mem_wb has comment this.mem 
+source _Text - Parse successful
+INFO> mips signal list:
+pc INTERNAL Wire, Dependency: 
+
+id_pc_i INTERNAL Wire, Dependency: 
+
+id_inst_i INTERNAL Wire, Dependency: 
+
+id_aluop_o INTERNAL Wire, Dependency: 
+
+id_alusel_o INTERNAL Wire, Dependency: 
+
+id_reg1_o INTERNAL Wire, Dependency: 
+
+id_reg2_o INTERNAL Wire, Dependency: 
+
+id_wreg_o INTERNAL Wire, Dependency: 
+
+id_wd_o INTERNAL Wire, Dependency: 
+
+id_is_in_delayslot_o INTERNAL Wire, Dependency: 
+
+id_link_address_o INTERNAL Wire, Dependency: 
+
+id_inst_o INTERNAL Wire, Dependency: 
+
+id_excepttype_o INTERNAL Wire, Dependency: 
+
+id_current_inst_address_o INTERNAL Wire, Dependency: 
+
+ex_aluop_i INTERNAL Wire, Dependency: 
+
+ex_alusel_i INTERNAL Wire, Dependency: 
+
+ex_reg1_i INTERNAL Wire, Dependency: 
+
+ex_reg2_i INTERNAL Wire, Dependency: 
+
+ex_wreg_i INTERNAL Wire, Dependency: 
+
+ex_wd_i INTERNAL Wire, Dependency: 
+
+ex_is_in_delayslot_i INTERNAL Wire, Dependency: 
+
+ex_link_address_i INTERNAL Wire, Dependency: 
+
+ex_inst_i INTERNAL Wire, Dependency: 
+
+ex_excepttype_i INTERNAL Wire, Dependency: 
+
+ex_current_inst_address_i INTERNAL Wire, Dependency: 
+
+ex_wreg_o INTERNAL Wire, Dependency: 
+
+ex_wd_o INTERNAL Wire, Dependency: 
+
+ex_wdata_o INTERNAL Wire, Dependency: 
+
+ex_aluop_o INTERNAL Wire, Dependency: 
+
+ex_mem_addr_o INTERNAL Wire, Dependency: 
+
+ex_reg1_o INTERNAL Wire, Dependency: 
+
+ex_reg2_o INTERNAL Wire, Dependency: 
+
+ex_cp0_reg_we_o INTERNAL Wire, Dependency: 
+
+ex_cp0_reg_write_addr_o INTERNAL Wire, Dependency: 
+
+ex_cp0_reg_data_o INTERNAL Wire, Dependency: 
+
+ex_excepttype_o INTERNAL Wire, Dependency: 
+
+ex_current_inst_address_o INTERNAL Wire, Dependency: 
+
+ex_is_in_delayslot_o INTERNAL Wire, Dependency: 
+
+mem_wreg_i INTERNAL Wire, Dependency: 
+
+mem_wd_i INTERNAL Wire, Dependency: 
+
+mem_wdata_i INTERNAL Wire, Dependency: 
+
+mem_aluop_i INTERNAL Wire, Dependency: 
+
+mem_mem_addr_i INTERNAL Wire, Dependency: 
+
+mem_reg1_i INTERNAL Wire, Dependency: 
+
+mem_reg2_i INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_we_i INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_write_addr_i INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_data_i INTERNAL Wire, Dependency: 
+
+mem_excepttype_i INTERNAL Wire, Dependency: 
+
+mem_is_in_delayslot_i INTERNAL Wire, Dependency: 
+
+mem_current_inst_address_i INTERNAL Wire, Dependency: 
+
+mem_wreg_o INTERNAL Wire, Dependency: 
+
+mem_wd_o INTERNAL Wire, Dependency: 
+
+mem_wdata_o INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_we_o INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_write_addr_o INTERNAL Wire, Dependency: 
+
+mem_cp0_reg_data_o INTERNAL Wire, Dependency: 
+
+mem_excepttype_o INTERNAL Wire, Dependency: 
+
+mem_is_in_delayslot_o INTERNAL Wire, Dependency: 
+
+mem_current_inst_address_o INTERNAL Wire, Dependency: 
+
+wb_wreg_i INTERNAL Wire, Dependency: 
+
+wb_wd_i INTERNAL Wire, Dependency: 
+
+wb_wdata_i INTERNAL Wire, Dependency: 
+
+wb_cp0_reg_we_i INTERNAL Wire, Dependency: 
+
+wb_cp0_reg_write_addr_i INTERNAL Wire, Dependency: 
+
+wb_cp0_reg_data_i INTERNAL Wire, Dependency: 
+
+wb_excepttype_i INTERNAL Wire, Dependency: 
+
+wb_is_in_delayslot_i INTERNAL Wire, Dependency: 
+
+wb_current_inst_address_i INTERNAL Wire, Dependency: 
+
+reg1_read INTERNAL Wire, Dependency: 
+
+reg2_read INTERNAL Wire, Dependency: 
+
+reg1_data INTERNAL Wire, Dependency: 
+
+reg2_data INTERNAL Wire, Dependency: 
+
+reg1_addr INTERNAL Wire, Dependency: 
+
+reg2_addr INTERNAL Wire, Dependency: 
+
+is_in_delayslot_i INTERNAL Wire, Dependency: 
+
+is_in_delayslot_o INTERNAL Wire, Dependency: 
+
+next_inst_in_delayslot_o INTERNAL Wire, Dependency: 
+
+id_branch_flag_o INTERNAL Wire, Dependency: 
+
+branch_target_address INTERNAL Wire, Dependency: 
+
+stall INTERNAL Wire, Dependency: 
+
+stallreq_from_id INTERNAL Wire, Dependency: 
+
+stallreq_from_ex INTERNAL Wire, Dependency: 
+
+cp0_data_o INTERNAL Wire, Dependency: 
+
+cp0_raddr_i INTERNAL Wire, Dependency: 
+
+flush INTERNAL Wire, Dependency: 
+
+new_pc INTERNAL Wire, Dependency: 
+
+cp0_count INTERNAL Wire, Dependency: 
+
+cp0_compare INTERNAL Wire, Dependency: 
+
+cp0_status INTERNAL Wire, Dependency: 
+
+cp0_cause INTERNAL Wire, Dependency: 
+
+cp0_epc INTERNAL Wire, Dependency: 
+
+cp0_config INTERNAL Wire, Dependency: 
+
+cp0_prid INTERNAL Wire, Dependency: 
+
+latest_epc INTERNAL Wire, Dependency: 
+
+ex_is_load INTERNAL Wire, Dependency: 
+
+ram_we_o_original INTERNAL Wire, Dependency: 
+
+mem_we INTERNAL Wire, Dependency: 
+
+clk INPUT Wire, Dependency: 
+
+rst INPUT Wire, Dependency: 
+
+rom_data_i INPUT Wire, Dependency: 
+
+rom_addr_o OUTPUT Wire, Dependency: 0 pc, 
+
+rom_ce_o OUTPUT Wire, Dependency: 
+
+mem_uart_busy_i INPUT Wire, Dependency: 
+
+ram_data_i INPUT Wire, Dependency: 
+
+ram_addr_o OUTPUT Wire, Dependency: 
+
+ram_data_o OUTPUT Wire, Dependency: 
+
+ram_sel_o OUTPUT Wire, Dependency: 
+
+ram_we_o OUTPUT Wire, Dependency: 
+
+ram_ce_o OUTPUT Wire, Dependency: 
+
+mem_sram_ce_o OUTPUT Wire, Dependency: 
+
+mem_uart_ce_o OUTPUT Wire, Dependency: 
+
+int_i INPUT Wire, Dependency: 
+
+timer_int_o OUTPUT Wire, Dependency: 
+
+INFO> pc_reg signal list:
+clk INPUT Wire, Comment: clock, Dependency: 
+
+rst INPUT Wire, Comment: reset, Dependency: 
+
+stall INPUT Wire, Dependency: 
+
+flush INPUT Wire, Dependency: 
+
+new_pc INPUT Wire, Dependency: 
+
+branch_flag_i INPUT Wire, Dependency: 
+
+branch_target_address_i INPUT Wire, Dependency: 
+
+pc OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 ce, 0 new_pc, 0 flush, 0 branch_target_address_i, 0 stall, 0 branch_flag_i, 0 pc, 
+
+ce OUTPUT Reg, Dependency: 1 clk, 0 rst, 
+
+INFO> if_id signal list:
+clk INPUT Wire, Comment: clock, Dependency: 
+
+rst INPUT Wire, Comment: reset, Dependency: 
+
+stall INPUT Wire, Dependency: 
+
+flush INPUT Wire, Dependency: 
+
+if_pc INPUT Wire, Comment: in_signal, Dependency: 
+
+if_inst INPUT Wire, Comment: in_signal, Dependency: 
+
+id_pc OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 if_pc, 
+
+id_inst OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 if_inst, 
+
+INFO> id signal list:
+op INTERNAL Wire, Dependency: 0 inst_i, 
+
+op2 INTERNAL Wire, Dependency: 0 inst_i, 
+
+op3 INTERNAL Wire, Dependency: 0 inst_i, 
+
+op4 INTERNAL Wire, Dependency: 0 inst_i, 
+
+pc_plus_8 INTERNAL Wire, Dependency: 0 pc_i, 
+
+pc_plus_4 INTERNAL Wire, Dependency: 0 pc_i, 
+
+imm_sll2_signedext INTERNAL Wire, Dependency: 0 inst_i, 
+
+pre_inst_is_load INTERNAL Wire, Dependency: 0 ex_aluop_i, 
+
+imm INTERNAL Reg, Dependency: 0 rst, 0 inst_i, 0 op, 0 op3, 
+
+instvalid INTERNAL Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+excepttype_is_syscall INTERNAL Reg, Dependency: 0 rst, 0 op, 0 op3, 
+
+excepttype_is_eret INTERNAL Reg, Dependency: 0 rst, 0 inst_i, 
+
+reg1_pc INTERNAL Reg, Dependency: 0 rst, 0 op, 
+
+stallreq_for_reg1_loadrelate INTERNAL Reg, Dependency: 0 rst, 0 pre_inst_is_load, 0 ex_wd_i, 0 reg1_addr_o, 0 reg1_read_o, 
+
+stallreq_for_reg2_loadrelate INTERNAL Reg, Dependency: 0 rst, 0 pre_inst_is_load, 0 ex_wd_i, 0 reg2_addr_o, 0 reg2_read_o, 
+
+rst INPUT Wire, Dependency: 
+
+pc_i INPUT Wire, Comment: in_signal, Dependency: 
+
+inst_i INPUT Wire, Comment: in_signal, Dependency: 
+
+reg1_data_i INPUT Wire, Dependency: 
+
+reg2_data_i INPUT Wire, Dependency: 
+
+is_in_delayslot_i INPUT Wire, Comment: back this.id, Dependency: 
+
+ex_wreg_i INPUT Wire, Comment: back this.ex, Dependency: 
+
+ex_wdata_i INPUT Wire, Comment: back this.ex, Dependency: 
+
+ex_wd_i INPUT Wire, Comment: back this.ex, Dependency: 
+
+mem_wreg_i INPUT Wire, Comment: back this.mem, Dependency: 
+
+mem_wdata_i INPUT Wire, Comment: back this.mem, Dependency: 
+
+mem_wd_i INPUT Wire, Comment: back this.mem, Dependency: 
+
+ex_aluop_i INPUT Wire, Comment: back this.ex, Dependency: 
+
+reg1_read_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+reg2_read_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+reg1_addr_o OUTPUT Reg, Dependency: 0 rst, 0 inst_i, 
+
+reg2_addr_o OUTPUT Reg, Dependency: 0 rst, 0 inst_i, 
+
+aluop_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+alusel_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+reg1_o OUTPUT Reg, Dependency: 0 rst, 0 reg1_o, 0 pre_inst_is_load, 0 ex_wd_i, 0 reg1_addr_o, 0 reg1_read_o, 0 ex_wdata_i, 0 ex_wreg_i, 0 mem_wdata_i, 0 mem_wreg_i, 0 mem_wd_i, 0 reg1_data_i, 0 pc_i, 0 reg1_pc, 0 imm, 
+
+reg2_o OUTPUT Reg, Dependency: 0 rst, 0 reg2_o, 0 pre_inst_is_load, 0 ex_wd_i, 0 reg2_addr_o, 0 reg2_read_o, 0 ex_wdata_i, 0 ex_wreg_i, 0 mem_wdata_i, 0 mem_wreg_i, 0 mem_wd_i, 0 reg2_data_i, 0 imm, 
+
+wd_o OUTPUT Reg, Dependency: 0 rst, 0 inst_i, 0 op, 0 op3, 
+
+wreg_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 inst_i, 
+
+inst_o OUTPUT Wire, Dependency: 0 inst_i, 
+
+excepttype_o OUTPUT Wire, Dependency: 0 excepttype_is_eret, 0 instvalid, 0 excepttype_is_syscall, 
+
+current_inst_address_o OUTPUT Wire, Dependency: 0 pc_i, 
+
+stallreq OUTPUT Wire, Dependency: 0 stallreq_for_reg1_loadrelate, 0 stallreq_for_reg2_loadrelate, 
+
+next_inst_in_delayslot_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 reg1_o, 0 reg2_o, 
+
+branch_flag_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 reg1_o, 0 reg2_o, 
+
+branch_target_address_o OUTPUT Reg, Dependency: 0 rst, 0 reg1_o, 0 op, 0 op2, 0 op3, 0 pc_plus_4, 0 inst_i, 0 imm_sll2_signedext, 0 reg2_o, 
+
+link_addr_o OUTPUT Reg, Dependency: 0 rst, 0 op, 0 op2, 0 op3, 0 pc_plus_8, 
+
+is_in_delayslot_o OUTPUT Reg, Dependency: 0 rst, 0 is_in_delayslot_i, 
+
+INFO> id_ex signal list:
+clk INPUT Wire, Comment: clock, Dependency: 
+
+rst INPUT Wire, Comment: reset, Dependency: 
+
+id_aluop INPUT Wire, Dependency: 
+
+id_alusel INPUT Wire, Dependency: 
+
+id_reg1 INPUT Wire, Dependency: 
+
+id_reg2 INPUT Wire, Dependency: 
+
+id_wd INPUT Wire, Dependency: 
+
+id_wreg INPUT Wire, Dependency: 
+
+stall INPUT Wire, Dependency: 
+
+id_link_address INPUT Wire, Dependency: 
+
+id_is_in_delayslot INPUT Wire, Dependency: 
+
+next_inst_in_delayslot_i INPUT Wire, Dependency: 
+
+id_inst INPUT Wire, Dependency: 
+
+flush INPUT Wire, Dependency: 
+
+id_current_inst_address INPUT Wire, Dependency: 
+
+id_excepttype INPUT Wire, Dependency: 
+
+ex_aluop OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_aluop, 
+
+ex_alusel OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_alusel, 
+
+ex_reg1 OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_reg1, 
+
+ex_reg2 OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_reg2, 
+
+ex_wd OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_wd, 
+
+ex_wreg OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_wreg, 
+
+ex_link_address OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_link_address, 
+
+ex_is_in_delayslot OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_is_in_delayslot, 
+
+is_in_delayslot_o OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 next_inst_in_delayslot_i, 0 stall, 
+
+ex_inst OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_inst, 
+
+ex_excepttype OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_excepttype, 
+
+ex_current_inst_address OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 id_current_inst_address, 
+
+INFO> ex signal list:
+logicout INTERNAL Reg, Dependency: 0 rst, 0 reg1_i, 0 reg2_i, 0 aluop_i, 
+
+arithout INTERNAL Reg, Dependency: 0 reg1_i, 0 reg2_i, 0 rst, 0 aluop_i, 
+
+shiftres INTERNAL Reg, Dependency: 0 rst, 0 reg2_i, 0 reg1_i, 0 aluop_i, 
+
+moveres INTERNAL Reg, Dependency: 0 rst, 0 cp0_reg_data_i, 0 aluop_i, 0 mem_cp0_reg_data, 0 mem_cp0_reg_we, 0 mem_cp0_reg_write_addr, 0 inst_i, 0 wb_cp0_reg_data, 0 wb_cp0_reg_we, 0 wb_cp0_reg_write_addr, 
+
+rst INPUT Wire, Dependency: 
+
+inst_i INPUT Wire, Comment: in_signal, Dependency: 
+
+aluop_i INPUT Wire, Comment: in_signal, Dependency: 
+
+alusel_i INPUT Wire, Comment: in_signal, Dependency: 
+
+reg1_i INPUT Wire, Comment: in_signal, Dependency: 
+
+reg2_i INPUT Wire, Comment: in_signal, Dependency: 
+
+wd_i INPUT Wire, Comment: in_signal, Dependency: 
+
+wreg_i INPUT Wire, Comment: in_signal, Dependency: 
+
+excepttype_i INPUT Wire, Comment: in_signal, Dependency: 
+
+current_inst_address_i INPUT Wire, Comment: in_signal, Dependency: 
+
+link_address_i INPUT Wire, Comment: in_signal, Dependency: 
+
+is_in_delayslot_i INPUT Wire, Comment: in_signal, Dependency: 
+
+mem_cp0_reg_we INPUT Wire, Comment: back this.mem, Dependency: 
+
+mem_cp0_reg_write_addr INPUT Wire, Comment: back this.mem, Dependency: 
+
+mem_cp0_reg_data INPUT Wire, Comment: back this.mem, Dependency: 
+
+wb_cp0_reg_we INPUT Wire, Comment: back this.mem, Dependency: 
+
+wb_cp0_reg_write_addr INPUT Wire, Comment: back this.mem, Dependency: 
+
+wb_cp0_reg_data INPUT Wire, Comment: back this.mem, Dependency: 
+
+cp0_reg_data_i INPUT Wire, Dependency: 
+
+cp0_reg_read_addr_o OUTPUT Reg, Dependency: 0 inst_i, 0 rst, 0 aluop_i, 
+
+cp0_reg_we_o OUTPUT Reg, Dependency: 0 rst, 0 aluop_i, 
+
+cp0_reg_write_addr_o OUTPUT Reg, Dependency: 0 rst, 0 inst_i, 0 aluop_i, 
+
+cp0_reg_data_o OUTPUT Reg, Dependency: 0 rst, 0 reg1_i, 0 aluop_i, 
+
+wd_o OUTPUT Reg, Dependency: 0 wd_i, 
+
+wreg_o OUTPUT Reg, Dependency: 0 wreg_i, 
+
+wdata_o OUTPUT Reg, Dependency: 0 logicout, 0 alusel_i, 0 arithout, 0 shiftres, 0 link_address_i, 0 moveres, 
+
+aluop_o OUTPUT Wire, Dependency: 0 aluop_i, 
+
+mem_addr_o OUTPUT Wire, Dependency: 0 reg1_i, 0 inst_i, 0 aluop_i, 
+
+reg2_o OUTPUT Wire, Dependency: 0 reg2_i, 
+
+is_load_o OUTPUT Wire, Dependency: 0 aluop_i, 
+
+excepttype_o OUTPUT Wire, Dependency: 0 excepttype_i, 
+
+is_in_delayslot_o OUTPUT Wire, Dependency: 0 is_in_delayslot_i, 
+
+current_inst_address_o OUTPUT Wire, Dependency: 0 current_inst_address_i, 
+
+stallreq OUTPUT Reg, Dependency: 
+
+INFO> ex_mem signal list:
+clk INPUT Wire, Comment: clock, Dependency: 
+
+rst INPUT Wire, Comment: reset, Dependency: 
+
+stall INPUT Wire, Dependency: 
+
+flush INPUT Wire, Dependency: 
+
+ex_wd INPUT Wire, Dependency: 
+
+ex_wreg INPUT Wire, Dependency: 
+
+ex_wdata INPUT Wire, Dependency: 
+
+ex_aluop INPUT Wire, Dependency: 
+
+ex_mem_addr INPUT Wire, Dependency: 
+
+ex_reg2 INPUT Wire, Dependency: 
+
+ex_cp0_reg_we INPUT Wire, Dependency: 
+
+ex_cp0_reg_write_addr INPUT Wire, Dependency: 
+
+ex_cp0_reg_data INPUT Wire, Dependency: 
+
+ex_excepttype INPUT Wire, Dependency: 
+
+ex_is_in_delayslot INPUT Wire, Dependency: 
+
+ex_current_inst_address INPUT Wire, Dependency: 
+
+mem_wd OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_wd, 
+
+mem_wreg OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_wreg, 
+
+mem_wdata OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_wdata, 
+
+mem_aluop OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_aluop, 
+
+mem_mem_addr OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_mem_addr, 
+
+mem_reg2 OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_reg2, 
+
+mem_cp0_reg_we OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_cp0_reg_we, 
+
+mem_cp0_reg_write_addr OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_cp0_reg_write_addr, 
+
+mem_cp0_reg_data OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_cp0_reg_data, 
+
+mem_excepttype OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_excepttype, 
+
+mem_is_in_delayslot OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_is_in_delayslot, 
+
+mem_current_inst_address OUTPUT Reg, Comment: out_signal, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 ex_current_inst_address, 
+
+INFO> mem signal list:
+zero32 INTERNAL Wire, Dependency: 
+
+cp0_status INTERNAL Reg, Dependency: 0 rst, 0 wb_cp0_reg_data, 0 wb_cp0_reg_we, 0 wb_cp0_reg_write_addr, 0 cp0_status_i, 
+
+cp0_cause INTERNAL Reg, Dependency: 0 rst, 0 wb_cp0_reg_data, 0 wb_cp0_reg_we, 0 wb_cp0_reg_write_addr, 0 cp0_cause_i, 
+
+cp0_epc INTERNAL Reg, Dependency: 0 rst, 0 wb_cp0_reg_data, 0 wb_cp0_reg_we, 0 wb_cp0_reg_write_addr, 0 cp0_epc_i, 
+
+mem_we INTERNAL Reg, Dependency: 0 rst, 0 aluop_i, 0 uart_busy_i, 0 backup_aluop_i, 
+
+backup_wd_i INTERNAL Reg, Dependency: 0 wd_i, 0 mem_ce_o, 
+
+backup_wreg_i INTERNAL Reg, Dependency: 0 wreg_i, 0 mem_ce_o, 
+
+backup_wdata_i INTERNAL Reg, Dependency: 0 wdata_i, 0 mem_ce_o, 
+
+backup_aluop_i INTERNAL Reg, Dependency: 0 aluop_i, 0 mem_ce_o, 
+
+backup_mem_addr_i INTERNAL Reg, Dependency: 0 mem_addr_i, 0 mem_ce_o, 
+
+rst INPUT Wire, Dependency: 
+
+wd_i INPUT Wire, Comment: in_signal, Dependency: 
+
+wreg_i INPUT Wire, Comment: in_signal, Dependency: 
+
+wdata_i INPUT Wire, Comment: in_signal, Dependency: 
+
+aluop_i INPUT Wire, Comment: in_signal, Dependency: 
+
+mem_addr_i INPUT Wire, Comment: in_signal, Dependency: 
+
+reg2_i INPUT Wire, Comment: in_signal, Dependency: 
+
+mem_data_i INPUT Wire, Dependency: 
+
+mem_addr_o OUTPUT Reg, Dependency: 0 rst, 0 mem_addr_i, 0 aluop_i, 0 backup_mem_addr_i, 0 uart_busy_i, 0 backup_aluop_i, 
+
+mem_we_o OUTPUT Wire, Dependency: 0 mem_we, 
+
+mem_sel_o OUTPUT Reg, Dependency: 0 rst, 0 aluop_i, 0 mem_addr_i, 0 uart_busy_i, 0 backup_aluop_i, 0 backup_mem_addr_i, 
+
+mem_data_o OUTPUT Reg, Dependency: 0 rst, 0 reg2_i, 0 aluop_i, 0 uart_busy_i, 0 backup_aluop_i, 
+
+mem_ce_o OUTPUT Reg, Dependency: 0 rst, 0 aluop_i, 0 uart_busy_i, 0 backup_aluop_i, 
+
+cp0_reg_we_i INPUT Wire, Comment: in_signal, Dependency: 
+
+cp0_reg_write_addr_i INPUT Wire, Comment: in_signal, Dependency: 
+
+cp0_reg_data_i INPUT Wire, Comment: in_signal, Dependency: 
+
+excepttype_i INPUT Wire, Comment: in_signal, Dependency: 
+
+is_in_delayslot_i INPUT Wire, Comment: in_signal, Dependency: 
+
+current_inst_address_i INPUT Wire, Comment: in_signal, Dependency: 
+
+cp0_status_i INPUT Wire, Dependency: 
+
+cp0_cause_i INPUT Wire, Dependency: 
+
+cp0_epc_i INPUT Wire, Dependency: 
+
+wb_cp0_reg_we INPUT Wire, Comment: back this.mem, Dependency: 
+
+wb_cp0_reg_write_addr INPUT Wire, Comment: back this.mem, Dependency: 
+
+wb_cp0_reg_data INPUT Wire, Comment: back this.mem, Dependency: 
+
+wd_o OUTPUT Reg, Dependency: 0 rst, 0 wd_i, 0 backup_wd_i, 0 uart_busy_i, 
+
+wreg_o OUTPUT Reg, Dependency: 0 rst, 0 wreg_i, 0 backup_wreg_i, 0 uart_busy_i, 
+
+wdata_o OUTPUT Reg, Dependency: 0 rst, 0 wdata_i, 0 mem_data_i, 0 aluop_i, 0 mem_addr_i, 0 uart_busy_i, 0 backup_aluop_i, 0 backup_mem_addr_i, 
+
+cp0_reg_we_o OUTPUT Reg, Dependency: 0 rst, 0 cp0_reg_we_i, 
+
+cp0_reg_write_addr_o OUTPUT Reg, Dependency: 0 rst, 0 cp0_reg_write_addr_i, 
+
+cp0_reg_data_o OUTPUT Reg, Dependency: 0 rst, 0 cp0_reg_data_i, 
+
+excepttype_o OUTPUT Reg, Dependency: 0 rst, 0 current_inst_address_i, 0 cp0_cause, 0 cp0_status, 0 excepttype_i, 
+
+cp0_epc_o OUTPUT Wire, Dependency: 0 cp0_epc, 
+
+is_in_delayslot_o OUTPUT Wire, Dependency: 0 is_in_delayslot_i, 
+
+current_inst_address_o OUTPUT Wire, Dependency: 0 current_inst_address_i, 
+
+uart_busy_i INPUT Wire, Dependency: 
+
+sram_ce_o OUTPUT Reg, Dependency: 0 mem_ce_o, 0 mem_addr_i, 
+
+uart_ce_o OUTPUT Reg, Dependency: 0 mem_ce_o, 0 mem_addr_i, 
+
+INFO> mem_wb signal list:
+clk INPUT Wire, Comment: clock, Dependency: 
+
+rst INPUT Wire, Comment: reset, Dependency: 
+
+stall INPUT Wire, Dependency: 
+
+flush INPUT Wire, Dependency: 
+
+mem_cp0_reg_we INPUT Wire, Dependency: 
+
+mem_cp0_reg_write_addr INPUT Wire, Dependency: 
+
+mem_cp0_reg_data INPUT Wire, Dependency: 
+
+mem_wd INPUT Wire, Dependency: 
+
+mem_wreg INPUT Wire, Dependency: 
+
+mem_wdata INPUT Wire, Dependency: 
+
+wb_wd OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_wd, 
+
+wb_wreg OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_wreg, 
+
+wb_wdata OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_wdata, 
+
+wb_cp0_reg_we OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_cp0_reg_we, 
+
+wb_cp0_reg_write_addr OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_cp0_reg_write_addr, 
+
+wb_cp0_reg_data OUTPUT Reg, Dependency: 1 clk, 0 rst, 0 flush, 0 stall, 0 mem_cp0_reg_data, 
+
+INFO> can't solve module regfile
+INFO> can't solve module ctrl
+INFO> can't solve module cp0_reg
+INFO> start analysing pipeline structure
+this
+INFO>if_id.if_pc has right dependency
+Error>if_id.if_inst has wrong dependency
+INFO>id.pc_i has right dependency
+INFO>id.inst_i has right dependency
+INFO>id.is_in_delayslot_i has right dependency
+INFO>id.ex_wreg_i has right dependency
+INFO>id.ex_wdata_i has right dependency
+INFO>id.ex_wd_i has right dependency
+INFO>id.mem_wreg_i has right dependency
+INFO>id.mem_wdata_i has right dependency
+INFO>id.mem_wd_i has right dependency
+INFO>id.ex_aluop_i has right dependency
+INFO>ex.inst_i has right dependency
+INFO>ex.aluop_i has right dependency
+INFO>ex.alusel_i has right dependency
+INFO>ex.reg1_i has right dependency
+INFO>ex.reg2_i has right dependency
+INFO>ex.wd_i has right dependency
+INFO>ex.wreg_i has right dependency
+INFO>ex.excepttype_i has right dependency
+INFO>ex.current_inst_address_i has right dependency
+INFO>ex.link_address_i has right dependency
+INFO>ex.is_in_delayslot_i has right dependency
+INFO>ex.mem_cp0_reg_we has right dependency
+INFO>ex.mem_cp0_reg_write_addr has right dependency
+INFO>ex.mem_cp0_reg_data has right dependency
+INFO>ex.wb_cp0_reg_we has right dependency
+INFO>ex.wb_cp0_reg_write_addr has right dependency
+INFO>ex.wb_cp0_reg_data has right dependency
+INFO>mem.wd_i has right dependency
+INFO>mem.wreg_i has right dependency
+INFO>mem.wdata_i has right dependency
+INFO>mem.aluop_i has right dependency
+INFO>mem.mem_addr_i has right dependency
+INFO>mem.reg2_i has right dependency
+INFO>mem.cp0_reg_we_i has right dependency
+INFO>mem.cp0_reg_write_addr_i has right dependency
+INFO>mem.cp0_reg_data_i has right dependency
+INFO>mem.excepttype_i has right dependency
+INFO>mem.is_in_delayslot_i has right dependency
+INFO>mem.current_inst_address_i has right dependency
+INFO>mem.wb_cp0_reg_we has right dependency
+INFO>mem.wb_cp0_reg_write_addr has right dependency
+INFO>mem.wb_cp0_reg_data has right dependency
+leaf node : this.pc
+INFO>pc_reg.pc has right dependency
+leaf node : this.if_id
+INFO>if_id.id_pc has right dependency
+INFO>if_id.id_inst has right dependency
+leaf node : this.id
+INFO>id_ex.ex_aluop has right dependency
+INFO>id_ex.ex_alusel has right dependency
+INFO>id_ex.ex_reg1 has right dependency
+INFO>id_ex.ex_reg2 has right dependency
+INFO>id_ex.ex_wd has right dependency
+INFO>id_ex.ex_wreg has right dependency
+INFO>id_ex.ex_link_address has right dependency
+INFO>id_ex.ex_is_in_delayslot has right dependency
+INFO>id_ex.ex_inst has right dependency
+INFO>id_ex.ex_excepttype has right dependency
+INFO>id_ex.ex_current_inst_address has right dependency
+leaf node : this.ex
+INFO>ex_mem.mem_wd has right dependency
+INFO>ex_mem.mem_wreg has right dependency
+INFO>ex_mem.mem_wdata has right dependency
+INFO>ex_mem.mem_aluop has right dependency
+INFO>ex_mem.mem_mem_addr has right dependency
+INFO>ex_mem.mem_reg2 has right dependency
+INFO>ex_mem.mem_cp0_reg_we has right dependency
+INFO>ex_mem.mem_cp0_reg_write_addr has right dependency
+INFO>ex_mem.mem_cp0_reg_data has right dependency
+INFO>ex_mem.mem_excepttype has right dependency
+INFO>ex_mem.mem_is_in_delayslot has right dependency
+INFO>ex_mem.mem_current_inst_address has right dependency
+leaf node : this.mem
+INFO> start check verilog syntaxs
+INFO> start check verilog signal assignment
+INFO> Pass signal assignment check 
+INFO> start check verilog sequential assignment
+INFO> Pass sequential trigger check 
+INFO> start check verilog condition case statement syntaxs
+Error> Case statement(end at line 98) in ex(/home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/ex.v) should provide assignment to a same set of signals in every case branch
+branch1: logicout
+branch2: arithout
+Error> Conditional statement(end at line 161) in mem(/home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem.v) should provide assignment to a same set of signals in every branch
+branch1: sram_ce_o
+branch1: uart_ce_o
+Error> Case statement(end at line 392) in mem(/home/mason/Desktop/work/verilog-parser/tests/cod19grp15/Commented/mem.v) should provide assignment to a same set of signals in every case branch
+branch1: mem_addr_o mem_we mem_ce_o wdata_o mem_sel_o
+branch5: mem_addr_o mem_we mem_data_o mem_ce_o mem_sel_o
+
+real	0m0.057s
+user	0m0.053s
+sys	0m0.004s

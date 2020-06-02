@@ -1,0 +1,8 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: file C:\Users\acer\Desktop\temp\mips32lab\_TEST\kern.bin could not be opened
+Failed to open BaseRAM init file
+BaseRAM Init Size(words):           0
+WARNING: file C:\Users\acer\Desktop\temp\mips32lab\_TEST\ext.bin could not be opened
+Failed to open ExtRAM init file
+ExtRAM Init Size(words):           0
